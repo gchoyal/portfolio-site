@@ -1,5 +1,5 @@
 ﻿// Windows & Doors Hero — Interactive Client Demo Scripts
-// Designed by Gaurav Choyal (@gchoyal_websitedeveloper)
+// Designed by Girdhari Choyal (@gchoyal_websitedeveloper)
 
 document.addEventListener('DOMContentLoaded', () => {
     initMobileNav();
