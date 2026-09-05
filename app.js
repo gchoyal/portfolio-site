@@ -1,9 +1,10 @@
-// Windows & Doors Hero — Interactive Client Demo Scripts
-// Designed by Girdhari Choyal (@gchoyal_websitedeveloper)
+// Windows & Doors Hero — Interactive Client Engine
+// Designed & Developed by Girdhari Choyal (@gchoyal_websitedeveloper)
 
 document.addEventListener("DOMContentLoaded", function() {
     initMobileNav();
     calculateQuote();
+    initScrollAnimations();
 });
 
 // Cost Estimator Logic
@@ -45,6 +46,66 @@ function calculateQuote() {
     priceDisplay.textContent = "$" + baseMin.toLocaleString() + " – $" + baseMax.toLocaleString() + " CAD";
 }
 
+// Quote Form Submit Handler
+function handleQuoteSubmit() {
+    var postal = document.getElementById("postalCode").value;
+    var service = document.getElementById("quoteService").value;
+    var price = document.getElementById("estimatedPrice").textContent;
+
+    var modal = document.getElementById("thankYouModal");
+    var msg = document.getElementById("thankYouMsg");
+
+    if (msg) {
+        msg.textContent = "Your " + service + " baseline estimate (" + price + ") for postal area " + postal + " has been locked in! A Windows & Doors Hero specialist will reach out within 2 hours.";
+    }
+
+    if (modal) {
+        modal.classList.add("active");
+    }
+}
+
+// Contact Form Submit Handler
+function handleContactSubmit(e) {
+    e.preventDefault();
+    var name = document.getElementById("fullName").value;
+    var service = document.getElementById("serviceType").value;
+
+    var modal = document.getElementById("thankYouModal");
+    var msg = document.getElementById("thankYouMsg");
+
+    if (msg) {
+        msg.textContent = "Thank you " + name + "! Your consultation request for " + service + " has been recorded. Our team will contact you shortly.";
+    }
+
+    if (modal) {
+        modal.classList.add("active");
+    }
+
+    document.getElementById("consultationForm").reset();
+}
+
+// Close Thank You Modal
+function closeThankYouModal() {
+    var modal = document.getElementById("thankYouModal");
+    if (modal) {
+        modal.classList.remove("active");
+    }
+}
+
+// FAQ Accordion Toggle
+function toggleFaq(button) {
+    var item = button.parentElement;
+    var allItems = document.querySelectorAll(".faq-item");
+
+    allItems.forEach(function(el) {
+        if (el !== item) {
+            el.classList.remove("active");
+        }
+    });
+
+    item.classList.toggle("active");
+}
+
 // Mobile Menu Navigation Toggle
 function initMobileNav() {
     var mobileToggle = document.getElementById("mobileToggle");
@@ -52,11 +113,27 @@ function initMobileNav() {
 
     if (mobileToggle && navMenu) {
         mobileToggle.addEventListener("click", function() {
-            if (navMenu.classList.contains("active")) {
+            navMenu.classList.toggle("active");
+        });
+
+        // Close when clicking nav items
+        var navLinks = navMenu.querySelectorAll("a");
+        navLinks.forEach(function(link) {
+            link.addEventListener("click", function() {
                 navMenu.classList.remove("active");
-            } else {
-                navMenu.classList.add("active");
-            }
+            });
         });
     }
+}
+
+// Scroll Micro-Animations
+function initScrollAnimations() {
+    var widget = document.getElementById("floatingWidget");
+
+    window.addEventListener("scroll", function() {
+        if (widget) {
+            var scrollPos = window.scrollY;
+            widget.style.transform = "rotate(" + (scrollPos % 360) + "deg)";
+        }
+    });
 }

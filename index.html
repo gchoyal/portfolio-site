@@ -16,6 +16,20 @@
 </head>
 <body>
 
+    <!-- Floating Cleaning Squeegee Micro-Animation Widget -->
+    <div class="floating-squeegee-widget" id="floatingWidget" title="Windows & Doors Hero Cleaning in Action">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+    </div>
+
+    <!-- Floating WhatsApp Action Button -->
+    <a href="https://wa.me/16475558392?text=Hello%20Windows%20%26%20Doors%20Hero,%20I%20would%20like%20a%20free%20quote" target="_blank" class="floating-whatsapp" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Chat with us live!</span>
+    </a>
+
     <!-- Top Announcement Bar -->
     <div class="top-bar">
         <div class="container top-bar-content">
@@ -25,6 +39,8 @@
                 <span><i class="fa-solid fa-award"></i> Master Technicians • Fully Insured & WSIB Certified</span>
             </div>
             <div class="top-bar-right">
+                <a href="https://wa.me/16475558392" target="_blank" class="top-wa-link"><i class="fa-brands fa-whatsapp"></i> WhatsApp Support</a>
+                <span class="divider">|</span>
                 <a href="tel:6475558392" class="top-phone"><i class="fa-solid fa-phone-volume"></i> (647) 555-8392</a>
             </div>
         </div>
@@ -67,9 +83,11 @@
                     </div>
                 </div>
 
+                <a href="#process" class="nav-item">Our Process</a>
                 <a href="#about" class="nav-item">About Us</a>
+                <a href="#team" class="nav-item">Our Team</a>
                 <a href="#locations" class="nav-item">Coverage</a>
-                <a href="#reviews" class="nav-item">Client Stories</a>
+                <a href="#faq" class="nav-item">FAQ</a>
                 <a href="#contact" class="nav-item">Contact</a>
             </nav>
 
@@ -113,6 +131,11 @@
                     </div>
                 </div>
 
+                <div class="hero-cta-button-group">
+                    <a href="#quote" class="btn btn-primary btn-lg"><i class="fa-solid fa-calculator"></i> Calculate Estimate</a>
+                    <a href="tel:6475558392" class="btn btn-white btn-lg"><i class="fa-solid fa-phone"></i> (647) 555-8392</a>
+                </div>
+
                 <div class="google-rating-box">
                     <div class="stars">
                         <i class="fa-solid fa-star"></i>
@@ -131,7 +154,7 @@
                     <h3>Project Cost Estimator</h3>
                     <p>Select your scope to receive immediate baseline pricing.</p>
                 </div>
-                <form class="quote-form" onsubmit="event.preventDefault(); calculateQuote();">
+                <form class="quote-form" onsubmit="event.preventDefault(); handleQuoteSubmit();">
                     <div class="form-group">
                         <label>Primary Service Needed</label>
                         <select id="quoteService" onchange="calculateQuote()">
@@ -162,7 +185,7 @@
                         <span class="est-price" id="estimatedPrice">$159 – $219 CAD</span>
                     </div>
 
-                    <a href="#contact" class="btn btn-primary btn-block">Lock In Estimate & Reserve</a>
+                    <button type="submit" class="btn btn-primary btn-block">Lock In Estimate & Reserve</button>
                 </form>
             </div>
         </div>
@@ -189,6 +212,7 @@
                         <li><i class="fa-solid fa-check"></i> Deep Sills & Channel Clean</li>
                         <li><i class="fa-solid fa-check"></i> Multi-Story Carbon Fibre Access</li>
                     </ul>
+                    <a href="#quote" class="service-card-cta">Get Glass Estimate &rarr;</a>
                 </div>
 
                 <!-- Service 2 -->
@@ -201,6 +225,7 @@
                         <li><i class="fa-solid fa-check"></i> Solar Heat Gain Optimization</li>
                         <li><i class="fa-solid fa-check"></i> Non-Prorated 25-Year Warranty</li>
                     </ul>
+                    <a href="#quote" class="service-card-cta">Get Window Estimate &rarr;</a>
                 </div>
 
                 <!-- Service 3 -->
@@ -213,6 +238,7 @@
                         <li><i class="fa-solid fa-check"></i> Thermal Barrier Thresholds</li>
                         <li><i class="fa-solid fa-check"></i> Custom Frosted Privacy Glass</li>
                     </ul>
+                    <a href="#quote" class="service-card-cta">Get Door Estimate &rarr;</a>
                 </div>
 
                 <!-- Service 4 -->
@@ -225,6 +251,7 @@
                         <li><i class="fa-solid fa-check"></i> Seam & Bracket Reinforcement</li>
                         <li><i class="fa-solid fa-check"></i> Clog-Free Guarantee</li>
                     </ul>
+                    <a href="#quote" class="service-card-cta">Get Gutter Estimate &rarr;</a>
                 </div>
 
                 <!-- Service 5 -->
@@ -237,6 +264,7 @@
                         <li><i class="fa-solid fa-check"></i> Algae & Mildew Eradication</li>
                         <li><i class="fa-solid fa-check"></i> Surface Sealing Application</li>
                     </ul>
+                    <a href="#quote" class="service-card-cta">Get Power Wash Estimate &rarr;</a>
                 </div>
 
                 <!-- Service 6 / Guarantee Card -->
@@ -245,6 +273,63 @@
                     <h3>The Hero Promise</h3>
                     <p>If rain, dust, or weather causes any imperfection within 72 hours of your glass detailing appointment, our mobile unit returns for a complimentary touch-up.</p>
                     <a href="#quote" class="btn btn-white btn-sm">Calculate Price</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotional Call-to-Action Strip -->
+    <section class="promo-strip">
+        <div class="container promo-content">
+            <div class="promo-text">
+                <h3><i class="fa-solid fa-tag"></i> Special Seasonal Bundle Offer</h3>
+                <p>Combine Window Detailing & Gutter Clearing today to save <strong>15% instantly</strong>.</p>
+            </div>
+            <div class="promo-actions">
+                <a href="#quote" class="btn btn-white">Claim 15% Discount</a>
+                <a href="tel:6475558392" class="btn btn-outline-white"><i class="fa-solid fa-phone"></i> Call (647) 555-8392</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our 4-Step Process Section -->
+    <section class="process-section section-padding" id="process">
+        <div class="container">
+            <div class="section-title-wrap text-center">
+                <span class="sub-badge">HOW IT WORKS</span>
+                <h2 class="section-heading">Our Streamlined 4-Step Process</h2>
+                <p class="section-subtext">From instant pricing to final spotless inspection — zero friction, total reliability.</p>
+            </div>
+
+            <div class="process-steps-grid">
+                
+                <div class="step-card">
+                    <div class="step-num">01</div>
+                    <div class="step-icon"><i class="fa-solid fa-laptop"></i></div>
+                    <h4>Instant Online Estimate</h4>
+                    <p>Use our real-time calculator to choose your service and receive transparent upfront pricing in seconds.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-num">02</div>
+                    <div class="step-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                    <h4>Confirmed Arrival Window</h4>
+                    <p>Receive SMS appointment alerts and live GPS tracking when our uniformed mobile unit is en route.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-num">03</div>
+                    <div class="step-icon"><i class="fa-solid fa-sparkles"></i></div>
+                    <h4>Master Craft Execution</h4>
+                    <p>Our certified technicians execute pure water decontamination or precision door & window installations.</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-num">04</div>
+                    <div class="step-icon"><i class="fa-solid fa-circle-check"></i></div>
+                    <h4>72-Hour Shield Activated</h4>
+                    <p>We review the work together. Your 72-hour spot-free warranty and manufacturer warranties are confirmed.</p>
                 </div>
 
             </div>
@@ -288,6 +373,77 @@
                         </div>
                     </div>
                 </div>
+
+                <div style="margin-top: 28px;">
+                    <a href="#contact" class="btn btn-primary">Schedule Consultation</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meet The Heroes (Team Section) -->
+    <section class="team-section section-padding" id="team">
+        <div class="container">
+            <div class="section-title-wrap text-center">
+                <span class="sub-badge">OUR DEDICATED CREW</span>
+                <h2 class="section-heading">Meet The Heroes Behind The Craft</h2>
+                <p class="section-subtext">Certified, background-checked specialists dedicated to treating your property with supreme care.</p>
+            </div>
+
+            <div class="team-grid">
+                
+                <!-- Team Member 1 -->
+                <div class="team-card">
+                    <div class="team-photo-wrap">
+                        <img src="assets/team-marcus.jpg" alt="Marcus Vance - Lead Glass Detailing Specialist" class="team-img">
+                        <span class="team-badge">Field Lead</span>
+                    </div>
+                    <div class="team-info">
+                        <h4>Marcus Vance</h4>
+                        <span class="team-role">Senior Glass Detailing Specialist</span>
+                        <p>Over 8 years mastering pure water deionization and high-altitude carbon pole safety across Toronto residences.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-card">
+                    <div class="team-photo-wrap">
+                        <img src="assets/team-sarah.jpg" alt="Sarah Jenkins - Thermal Window Architect" class="team-img">
+                        <span class="team-badge">Master Tech</span>
+                    </div>
+                    <div class="team-info">
+                        <h4>Sarah Jenkins</h4>
+                        <span class="team-role">Thermal Window System Architect</span>
+                        <p>Specializes in Energy Star® triple-glazing retrofits, airtight framing, and structural building envelope integrity.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="team-card">
+                    <div class="team-photo-wrap">
+                        <img src="assets/team-david.jpg" alt="David Rodriguez - Senior Entrance Craftsman" class="team-img">
+                        <span class="team-badge">Craftsman</span>
+                    </div>
+                    <div class="team-info">
+                        <h4>David Rodriguez</h4>
+                        <span class="team-role">Senior Entrance & Door Craftsman</span>
+                        <p>Master carpenter dedicated to custom pivot systems, multi-point security hardware, and weather-seal calibration.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="team-card">
+                    <div class="team-photo-wrap">
+                        <img src="assets/team-emily.jpg" alt="Emily Chen - Client Operations Lead" class="team-img">
+                        <span class="team-badge">Operations</span>
+                    </div>
+                    <div class="team-info">
+                        <h4>Emily Chen</h4>
+                        <span class="team-role">Client Operations & Scheduling Lead</span>
+                        <p>Coordinates real-time dispatch, seamless estimate workflows, and our 72-hour warranty fulfillment program.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -367,7 +523,72 @@
         </div>
     </section>
 
-    <!-- Contact Section (Static Non-Working Dummy Contact Form) -->
+    <!-- Frequently Asked Questions (FAQ) Section -->
+    <section class="faq-section section-padding" id="faq">
+        <div class="container">
+            <div class="section-title-wrap text-center">
+                <span class="sub-badge">FREQUENT QUESTIONS</span>
+                <h2 class="section-heading">Answers to Common Inquiries</h2>
+                <p class="section-subtext">Everything you need to know about our techniques, pricing, and guarantees.</p>
+            </div>
+
+            <div class="faq-accordion-wrap">
+                
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>How does pure water glass detailing differ from regular soapy washing?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Traditional soapy washing leaves microscopic detergent films that attract dust, pollen, and water stains within days. Our quad-stage filtration strips all dissolved solids down to 0 PPM (parts per million), creating a sterile ionic wash that dries spotless and stays clean twice as long.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>What is your 72-Hour Spotless Shield guarantee?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>If rain, dust, or weather causes any water spotting or imperfection on your exterior glass within 72 hours of your service, simply notify us. We will dispatch a mobile unit to touch up affected panes at zero cost.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>How much energy savings can I expect from thermal window replacement?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Our argon-filled triple-glazed Low-E window systems typically reduce residential heating and cooling loss by 20% to 35%, significantly reducing monthly HVAC expenditures and eliminating condensation.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Are your technicians insured, certified, and background-checked?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes. Every team member is full-time, background-screened, and certified in fall protection safety. We carry $5,000,000 in comprehensive commercial liability coverage and active WSIB compliance.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Do I need to be home for the exterior service appointment?</span>
+                        <i class="fa-solid fa-plus"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Not for exterior services! As long as backyard gates are unlocked and exterior water spigots are accessible, our crew will complete the service, take before/after verification photos, and email you the completion report.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (With Interactive Thank You Modal) -->
     <section class="contact-section section-padding" id="contact">
         <div class="container contact-container">
             
@@ -387,6 +608,13 @@
                         </div>
                     </div>
                     <div class="info-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <div>
+                            <strong>WhatsApp Instant Chat</strong>
+                            <p>Available Mon–Sat 7:30 AM – 7:30 PM</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
                         <i class="fa-solid fa-envelope"></i>
                         <div>
                             <strong>Email Inquiries</strong>
@@ -403,11 +631,11 @@
                 </div>
             </div>
 
-            <!-- Static Non-Working Dummy Form -->
+            <!-- Contact Form with Interactive Feedback -->
             <div class="contact-form-col">
                 <div class="dummy-form-card">
-                    <h3>Request Consultation</h3>
-                    <form onsubmit="event.preventDefault(); document.getElementById('dummyNotice').style.display = 'block';">
+                    <h3>Request Free Consultation</h3>
+                    <form id="consultationForm" onsubmit="handleContactSubmit(event)">
                         <div class="form-row">
                             <div class="form-field">
                                 <label for="fullName">Client Name</label>
@@ -446,17 +674,43 @@
                             <textarea id="comments" rows="3" placeholder="Specify requirements, timeframe, or property characteristics..."></textarea>
                         </div>
 
-                        <button type="submit" class="btn btn-primary btn-block">Submit Consultation Request</button>
-
-                        <div class="dummy-notice" id="dummyNotice" style="display: none;">
-                            <i class="fa-solid fa-circle-check"></i> Inquiry received successfully. (Demonstration Mode)
-                        </div>
+                        <button type="submit" class="btn btn-primary btn-block"><i class="fa-solid fa-paper-plane"></i> Submit Consultation Request</button>
                     </form>
                 </div>
             </div>
 
         </div>
     </section>
+
+    <!-- Thank You Popup Modal -->
+    <div class="thank-you-overlay" id="thankYouModal">
+        <div class="thank-you-modal-box">
+            <button class="close-modal-btn" onclick="closeThankYouModal()">&times;</button>
+            <div class="modal-check-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <h3>Thank You for Reaching Out!</h3>
+            <p id="thankYouMsg">Your request has been recorded. A senior project specialist from Windows & Doors Hero will contact you within 2 business hours with full particulars.</p>
+            <div class="modal-actions">
+                <a href="https://wa.me/16475558392" target="_blank" class="btn btn-primary btn-sm"><i class="fa-brands fa-whatsapp"></i> Chat On WhatsApp</a>
+                <button class="btn btn-white btn-sm" onclick="closeThankYouModal()">Done</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Sticky Bottom Call & Contact Bar -->
+    <div class="mobile-sticky-bottom-bar">
+        <a href="tel:6475558392" class="mobile-bar-btn btn-call">
+            <i class="fa-solid fa-phone"></i>
+            <span>Call Now</span>
+        </a>
+        <a href="https://wa.me/16475558392" target="_blank" class="mobile-bar-btn btn-wa">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+        <a href="#quote" class="mobile-bar-btn btn-quote">
+            <i class="fa-solid fa-calculator"></i>
+            <span>Get Quote</span>
+        </a>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
@@ -467,6 +721,10 @@
                     <span class="logo-text">Windows & Doors<strong>Hero</strong></span>
                 </a>
                 <p>Delivering architectural entrance systems, thermal window installations, and pure-water glass restorations across Southern Ontario.</p>
+                <div class="footer-contact-quick">
+                    <p><i class="fa-solid fa-phone"></i> (647) 555-8392</p>
+                    <p><i class="fa-solid fa-envelope"></i> hello@windowsanddoorshero.com</p>
+                </div>
             </div>
 
             <div class="footer-links-group">
@@ -474,8 +732,11 @@
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
+                    <li><a href="#process">Our Process</a></li>
                     <li><a href="#about">About Us</a></li>
+                    <li><a href="#team">Our Team</a></li>
                     <li><a href="#locations">Coverage Areas</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -487,6 +748,7 @@
                     <li><a href="#service-thermal-windows">Thermal Windows</a></li>
                     <li><a href="#service-designer-doors">Entrance Systems</a></li>
                     <li><a href="#service-drainage">Roofline Drainage</a></li>
+                    <li><a href="#service-power-wash">Surface Care</a></li>
                 </ul>
             </div>
         </div>
