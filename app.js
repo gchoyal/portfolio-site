@@ -1,139 +1,90 @@
-// Windows & Doors Hero — Interactive Client Engine
-// Designed & Developed by Girdhari Choyal (@gchoyal_websitedeveloper)
+// Girdhari Choyal Portfolio Hub — Interactive Logic
+// Web Developer & UI/UX Specialist (@gchoyal_websitedeveloper)
 
-document.addEventListener("DOMContentLoaded", function() {
-    initMobileNav();
-    calculateQuote();
-    initScrollAnimations();
-});
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Mobile Menu Toggle
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
 
-// Cost Estimator Logic
-function calculateQuote() {
-    var serviceEl = document.getElementById("quoteService");
-    var sizeEl = document.getElementById("homeSize");
-    var priceDisplay = document.getElementById("estimatedPrice");
-
-    if (!serviceEl || !sizeEl || !priceDisplay) return;
-
-    var service = serviceEl.value;
-    var size = parseInt(sizeEl.value, 10) || 1;
-
-    var baseMin = 159;
-    var baseMax = 219;
-
-    if (service === "Window Cleaning") {
-        if (size === 1) { baseMin = 159; baseMax = 219; }
-        else if (size === 2) { baseMin = 229; baseMax = 299; }
-        else { baseMin = 339; baseMax = 469; }
-    } else if (service === "Window Replacement") {
-        if (size === 1) { baseMin = 1250; baseMax = 2600; }
-        else if (size === 2) { baseMin = 2600; baseMax = 5900; }
-        else { baseMin = 5900; baseMax = 12500; }
-    } else if (service === "Door Installation") {
-        if (size === 1) { baseMin = 890; baseMax = 1650; }
-        else if (size === 2) { baseMin = 1450; baseMax = 2900; }
-        else { baseMin = 2300; baseMax = 4700; }
-    } else if (service === "Gutter Cleaning") {
-        if (size === 1) { baseMin = 139; baseMax = 189; }
-        else if (size === 2) { baseMin = 199; baseMax = 259; }
-        else { baseMin = 279; baseMax = 379; }
-    } else if (service === "Full Exterior Package") {
-        if (size === 1) { baseMin = 369; baseMax = 519; }
-        else if (size === 2) { baseMin = 519; baseMax = 769; }
-        else { baseMin = 769; baseMax = 1249; }
-    }
-
-    priceDisplay.textContent = "$" + baseMin.toLocaleString() + " – $" + baseMax.toLocaleString() + " CAD";
-}
-
-// Quote Form Submit Handler
-function handleQuoteSubmit() {
-    var postal = document.getElementById("postalCode").value;
-    var service = document.getElementById("quoteService").value;
-    var price = document.getElementById("estimatedPrice").textContent;
-
-    var modal = document.getElementById("thankYouModal");
-    var msg = document.getElementById("thankYouMsg");
-
-    if (msg) {
-        msg.textContent = "Your " + service + " baseline estimate (" + price + ") for postal area " + postal + " has been locked in! A Windows & Doors Hero specialist will reach out within 2 hours.";
-    }
-
-    if (modal) {
-        modal.classList.add("active");
-    }
-}
-
-// Contact Form Submit Handler
-function handleContactSubmit(e) {
-    e.preventDefault();
-    var name = document.getElementById("fullName").value;
-    var service = document.getElementById("serviceType").value;
-
-    var modal = document.getElementById("thankYouModal");
-    var msg = document.getElementById("thankYouMsg");
-
-    if (msg) {
-        msg.textContent = "Thank you " + name + "! Your consultation request for " + service + " has been recorded. Our team will contact you shortly.";
-    }
-
-    if (modal) {
-        modal.classList.add("active");
-    }
-
-    document.getElementById("consultationForm").reset();
-}
-
-// Close Thank You Modal
-function closeThankYouModal() {
-    var modal = document.getElementById("thankYouModal");
-    if (modal) {
-        modal.classList.remove("active");
-    }
-}
-
-// FAQ Accordion Toggle
-function toggleFaq(button) {
-    var item = button.parentElement;
-    var allItems = document.querySelectorAll(".faq-item");
-
-    allItems.forEach(function(el) {
-        if (el !== item) {
-            el.classList.remove("active");
-        }
-    });
-
-    item.classList.toggle("active");
-}
-
-// Mobile Menu Navigation Toggle
-function initMobileNav() {
-    var mobileToggle = document.getElementById("mobileToggle");
-    var navMenu = document.getElementById("navMenu");
-
-    if (mobileToggle && navMenu) {
-        mobileToggle.addEventListener("click", function() {
-            navMenu.classList.toggle("active");
+    if (mobileToggle && navLinks) {
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileToggle.querySelector('i');
+            if (icon) {
+                if (navLinks.classList.contains('active')) {
+                    icon.classList.remove('fa-bars');
+                    icon.classList.add('fa-xmark');
+                } else {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
+            }
         });
 
-        // Close when clicking nav items
-        var navLinks = navMenu.querySelectorAll("a");
-        navLinks.forEach(function(link) {
-            link.addEventListener("click", function() {
-                navMenu.classList.remove("active");
+        // Close on link click
+        navLinks.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = mobileToggle.querySelector('i');
+                if (icon) {
+                    icon.classList.remove('fa-xmark');
+                    icon.classList.add('fa-bars');
+                }
             });
         });
     }
-}
 
-// Scroll Micro-Animations
-function initScrollAnimations() {
-    var widget = document.getElementById("floatingWidget");
+    // 2. Project Category Filter
+    const filterTabs = document.querySelectorAll('.filter-tab');
+    const projectCards = document.querySelectorAll('.project-card');
 
-    window.addEventListener("scroll", function() {
-        if (widget) {
-            var scrollPos = window.scrollY;
-            widget.style.transform = "rotate(" + (scrollPos % 360) + "deg)";
+    filterTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+            filterTabs.forEach(t => t.classList.remove('active'));
+            tab.classList.add('active');
+
+            const filterValue = tab.getAttribute('data-filter');
+
+            projectCards.forEach(card => {
+                const category = card.getAttribute('data-category');
+                if (filterValue === 'all' || category.includes(filterValue)) {
+                    card.style.display = 'flex';
+                    card.style.opacity = '1';
+                } else {
+                    card.style.display = 'none';
+                    card.style.opacity = '0';
+                }
+            });
+        });
+    });
+
+    // 3. Client Contact / Commission Form
+    const clientContactForm = document.getElementById('clientContactForm');
+    const hubThankYouModal = document.getElementById('hubThankYouModal');
+    const modalCloseBtns = document.querySelectorAll('.modal-close');
+
+    if (clientContactForm) {
+        clientContactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (hubThankYouModal) {
+                hubThankYouModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+            clientContactForm.reset();
+        });
+    }
+
+    modalCloseBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            document.querySelectorAll('.modal-overlay').forEach(m => m.classList.remove('active'));
+            document.body.style.overflow = 'auto';
+        });
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target.classList.contains('modal-overlay')) {
+            e.target.classList.remove('active');
+            document.body.style.overflow = 'auto';
         }
     });
-}
+});
