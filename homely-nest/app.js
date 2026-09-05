@@ -1,4 +1,4 @@
-﻿/**
+/**
  * HOMELY NEST — MODERN RENTAL REAL ESTATE MARKETPLACE
  * Complete 40-Rental Database, Multi-Filter Engine, Calendar & Application Wizard
  * Author: Girdhari Choyal (@gchoyal_websitedeveloper)
@@ -1282,7 +1282,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const sorted = sortListings(filtered);
 
         if (totalResultsCount) {
-            totalResultsCount.innerHTML = Showing <strong></strong> available rental properties;
+            totalResultsCount.innerHTML = `Showing <strong>${sorted.length}</strong> available rental properties`;
         }
 
         renderActiveFilterChips();
@@ -1290,14 +1290,14 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!listingsGrid) return;
 
         if (sorted.length === 0) {
-            listingsGrid.innerHTML = 
+            listingsGrid.innerHTML = `
                 <div class="no-results-box text-center" style="grid-column: 1/-1; padding: 4rem 1rem;">
                     <i class="fa-solid fa-house-circle-xmark text-muted" style="font-size: 3rem; margin-bottom: 1rem;"></i>
                     <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem;">No rental properties match your search</h3>
                     <p class="text-muted" style="max-width: 420px; margin: 0 auto 1.5rem;">Try adjusting your budget, bedrooms, or removing some of your filter criteria.</p>
                     <button class="btn btn-primary btn-sm" id="resetAllFiltersBtn"><i class="fa-solid fa-rotate-left"></i> Reset All Filters</button>
                 </div>
-            ;
+            `;
             const rBtn = document.getElementById('resetAllFiltersBtn');
             if (rBtn) rBtn.onclick = resetFilters;
             if (paginationContainer) paginationContainer.innerHTML = '';
@@ -1318,53 +1318,53 @@ document.addEventListener('DOMContentLoaded', () => {
             const petBadgeClass = item.petPolicy === 'none' ? 'badge-neutral' : 'badge-emerald';
             const petIcon = item.petPolicy === 'none' ? 'fa-ban' : 'fa-paw';
             
-            return 
-                <div class="property-card" data-property-id="">
+            return `
+                <div class="property-card" data-property-id="${item.id}">
                     <div class="card-img-wrap">
-                        <img src="" alt="" class="card-img" loading="lazy">
+                        <img src="${item.images[0]}" alt="${item.title}" class="card-img" loading="lazy">
                         <div class="card-badges-top">
-                            
-                            <span class="badge "><i class="fa-solid "></i> </span>
+                            ${item.featured ? '<span class="badge badge-coral"><i class="fa-solid fa-star"></i> Featured</span>' : ''}
+                            <span class="badge ${petBadgeClass}"><i class="fa-solid ${petIcon}"></i> ${item.petLabel}</span>
                         </div>
-                        <button class="card-favorite-btn " data-fav-id="" aria-label="Save to My Nest">
-                            <i class=" fa-heart"></i>
+                        <button class="card-favorite-btn ${isSaved ? 'active' : ''}" data-fav-id="${item.id}" aria-label="Save to My Nest">
+                            <i class="${isSaved ? 'fa-solid' : 'fa-regular'} fa-heart"></i>
                         </button>
                     </div>
 
                     <div class="card-body">
                         <div class="card-price-row">
                             <div>
-                                <span class="card-rent">{item.rent.toLocaleString()}</span>
+                                <span class="card-rent">$${item.rent.toLocaleString()}</span>
                                 <span class="card-rent-period">/mo</span>
                             </div>
-                            <span class="card-type-tag"></span>
+                            <span class="card-type-tag">${item.typeLabel}</span>
                         </div>
 
-                        <h3 class="card-title open-detail-btn" data-detail-id=""></h3>
-                        <p class="card-address"><i class="fa-solid fa-location-dot text-primary"></i>  • </p>
+                        <h3 class="card-title open-detail-btn" data-detail-id="${item.id}">${item.title}</h3>
+                        <p class="card-address"><i class="fa-solid fa-location-dot text-primary"></i> ${item.address} • ${item.neighborhood}</p>
 
                         <div class="card-specs-row">
-                            <div class="spec-item"><i class="fa-solid fa-bed text-primary"></i> <strong></strong></div>
-                            <div class="spec-item"><i class="fa-solid fa-bath text-primary"></i> <strong> Bath</strong></div>
-                            <div class="spec-item"><i class="fa-solid fa-ruler-combined text-primary"></i> <strong></strong> sqft</div>
+                            <div class="spec-item"><i class="fa-solid fa-bed text-primary"></i> <strong>${item.beds === 0 ? 'Studio' : item.beds + ' Bed'}</strong></div>
+                            <div class="spec-item"><i class="fa-solid fa-bath text-primary"></i> <strong>${item.baths} Bath</strong></div>
+                            <div class="spec-item"><i class="fa-solid fa-ruler-combined text-primary"></i> <strong>${item.sqft.toLocaleString()}</strong> sqft</div>
                         </div>
 
                         <div class="card-footer-tags">
-                            <span class="avail-date-text"><i class="fa-solid fa-circle-check"></i> </span>
+                            <span class="avail-date-text"><i class="fa-solid fa-circle-check"></i> ${item.availableDate}</span>
                             <span class="text-muted" style="font-size: 0.76rem;"><i class="fa-solid fa-shield-halved text-primary"></i> Verified Landlord</span>
                         </div>
 
                         <div class="card-action-btns">
-                            <button class="btn btn-outline btn-sm open-detail-btn" data-detail-id="">
+                            <button class="btn btn-outline btn-sm open-detail-btn" data-detail-id="${item.id}">
                                 <i class="fa-regular fa-eye"></i> View Details
                             </button>
-                            <button class="btn btn-primary btn-sm trigger-apply-btn" data-property-title="" data-property-rent="">
+                            <button class="btn btn-primary btn-sm trigger-apply-btn" data-property-title="${item.title}" data-property-rent="${item.rent}">
                                 <i class="fa-solid fa-file-pen"></i> Apply Now
                             </button>
                         </div>
                     </div>
                 </div>
-            ;
+            `;
         }).join('');
 
         renderPagination(totalPages);
@@ -1380,32 +1380,32 @@ document.addEventListener('DOMContentLoaded', () => {
         const chips = [];
 
         if (filterState.keyword) {
-            chips.push(<span class="active-tag-chip">Keyword: "" <i class="fa-solid fa-xmark remove-chip" data-key="keyword"></i></span>);
+            chips.push(`<span class="active-tag-chip">Keyword: "${filterState.keyword}" <i class="fa-solid fa-xmark remove-chip" data-key="keyword"></i></span>`);
         }
         if (filterState.neighborhood !== 'all') {
-            chips.push(<span class="active-tag-chip">Area:  <i class="fa-solid fa-xmark remove-chip" data-key="neighborhood"></i></span>);
+            chips.push(`<span class="active-tag-chip">Area: ${filterState.neighborhood} <i class="fa-solid fa-xmark remove-chip" data-key="neighborhood"></i></span>`);
         }
         if (filterState.propertyType !== 'all') {
-            chips.push(<span class="active-tag-chip">Type:  <i class="fa-solid fa-xmark remove-chip" data-key="propertyType"></i></span>);
+            chips.push(`<span class="active-tag-chip">Type: ${filterState.propertyType} <i class="fa-solid fa-xmark remove-chip" data-key="propertyType"></i></span>`);
         }
         if (filterState.beds !== 'all') {
-            chips.push(<span class="active-tag-chip">Beds:  <i class="fa-solid fa-xmark remove-chip" data-key="beds"></i></span>);
+            chips.push(`<span class="active-tag-chip">Beds: ${filterState.beds} <i class="fa-solid fa-xmark remove-chip" data-key="beds"></i></span>`);
         }
         if (filterState.maxRent < 6000) {
-            chips.push(<span class="active-tag-chip">Max Rent: {filterState.maxRent.toLocaleString()} <i class="fa-solid fa-xmark remove-chip" data-key="maxRent"></i></span>);
+            chips.push(`<span class="active-tag-chip">Max Rent: $${filterState.maxRent.toLocaleString()} <i class="fa-solid fa-xmark remove-chip" data-key="maxRent"></i></span>`);
         }
         if (filterState.furnished !== 'all') {
-            chips.push(<span class="active-tag-chip">Furnished:  <i class="fa-solid fa-xmark remove-chip" data-key="furnished"></i></span>);
+            chips.push(`<span class="active-tag-chip">Furnished: ${filterState.furnished === 'yes' ? 'Yes' : 'No'} <i class="fa-solid fa-xmark remove-chip" data-key="furnished"></i></span>`);
         }
         if (filterState.petPolicy !== 'all') {
-            chips.push(<span class="active-tag-chip">Pets:  <i class="fa-solid fa-xmark remove-chip" data-key="petPolicy"></i></span>);
+            chips.push(`<span class="active-tag-chip">Pets: ${filterState.petPolicy} <i class="fa-solid fa-xmark remove-chip" data-key="petPolicy"></i></span>`);
         }
         filterState.amenities.forEach(a => {
-            chips.push(<span class="active-tag-chip"> <i class="fa-solid fa-xmark remove-amenity" data-amenity=""></i></span>);
+            chips.push(`<span class="active-tag-chip">${a} <i class="fa-solid fa-xmark remove-amenity" data-amenity="${a}"></i></span>`);
         });
 
         if (chips.length > 0) {
-            activeFiltersContainer.innerHTML = chips.join('') + <button class="clear-all-btn" id="clearAllFiltersBtn"><i class="fa-solid fa-trash-can"></i> Clear All</button>;
+            activeFiltersContainer.innerHTML = chips.join('') + `<button class="clear-all-btn" id="clearAllFiltersBtn"><i class="fa-solid fa-trash-can"></i> Clear All</button>`;
             
             // Attach chip remover listeners
             activeFiltersContainer.querySelectorAll('.remove-chip').forEach(btn => {
@@ -1484,11 +1484,11 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        let html = <button class="page-btn" id="prevPageBtn" ><i class="fa-solid fa-chevron-left"></i></button>;
+        let html = `<button class="page-btn" id="prevPageBtn" ${currentPage === 1 ? 'disabled' : ''}><i class="fa-solid fa-chevron-left"></i></button>`;
         for (let i = 1; i <= totalPages; i++) {
-            html += <button class="page-btn " data-page=""></button>;
+            html += `<button class="page-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</button>`;
         }
-        html += <button class="page-btn" id="nextPageBtn" ><i class="fa-solid fa-chevron-right"></i></button>;
+        html += `<button class="page-btn" id="nextPageBtn" ${currentPage === totalPages ? 'disabled' : ''}><i class="fa-solid fa-chevron-right"></i></button>`;
 
         paginationContainer.innerHTML = html;
 

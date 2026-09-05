@@ -58,7 +58,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 3. Client Contact / Commission Form
+    // 3. FAQ Accordion Logic
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        const questionBtn = item.querySelector('.faq-question');
+        if (questionBtn) {
+            questionBtn.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all other FAQ items
+                faqItems.forEach(otherItem => {
+                    otherItem.classList.remove('active');
+                    const otherBtn = otherItem.querySelector('.faq-question');
+                    if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
+                });
+
+                // Toggle clicked item
+                if (!isActive) {
+                    item.classList.add('active');
+                    questionBtn.setAttribute('aria-expanded', 'true');
+                }
+            });
+        }
+    });
+
+    // 4. Client Contact / Commission Form
     const clientContactForm = document.getElementById('clientContactForm');
     const hubThankYouModal = document.getElementById('hubThankYouModal');
     const modalCloseBtns = document.querySelectorAll('.modal-close');
