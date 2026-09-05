@@ -3,46 +3,80 @@
 <head>
     <meta charset=UTF-8>
     <meta name=viewport content=width=device-width, initial-scale=1.0>
-    <title>AURA — Curated Essentials for Modern Living</title>
-    <meta name=description content=Elevate your space with AURA. Curated ceramics, organic textiles, and modern minimalist essentials for timeless living.>
+    <title>Windows & Doors Hero | Toronto Window Cleaning & Door Installation</title>
+    <meta name=description content=Toronto's trusted window cleaning, window replacement, and door installation specialists. 5-star rated, fully insured & WSIB covered. Get your instant quote today!>
     <!-- Google Fonts -->
     <link rel=preconnect href=https://fonts.googleapis.com>
     <link rel=preconnect href=https://fonts.gstatic.com crossorigin>
-    <link href=https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap rel=stylesheet>
-    <!-- Font Awesome -->
+    <link href=https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap rel=stylesheet>
+    <!-- FontAwesome Icons -->
     <link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css>
-    <!-- Stylesheet -->
+    <!-- Main CSS -->
     <link rel=stylesheet href=styles.css>
 </head>
 <body>
 
-    <!-- Top Announcement Bar -->
+    <!-- Top Info Notification Bar -->
     <div class=top-bar>
-        <span>Complimentary Worldwide Shipping on Orders Over  • Enjoy 15% Off Your First Purchase with Code <strong>AURA15</strong></span>
+        <div class=container top-bar-content>
+            <div class=top-bar-left>
+                <span><i class=fa-solid fa-clock></i> Mon – Sat: 8:00 AM – 8:00 PM</span>
+                <span class=divider>|</span>
+                <span><i class=fa-solid fa-shield-halved></i> Fully Insured & WSIB Covered</span>
+            </div>
+            <div class=top-bar-right>
+                <a href=tel:4165550199 class=top-phone><i class=fa-solid fa-phone></i> (416) 555-0199</a>
+            </div>
+        </div>
     </div>
 
-    <!-- Main Navigation Bar -->
+    <!-- Main Navigation Header -->
     <header class=navbar>
         <div class=container nav-container>
-            <a href=# class=brand-logo>AURA</a>
+            <!-- Brand Logo -->
+            <a href=#home class=brand-logo>
+                <span class=logo-icon><i class=fa-solid fa-table-cells-large></i></span>
+                <span class=logo-text>Windows & Doors<strong>Hero</strong></span>
+            </a>
 
-            <nav class=nav-links id=navLinks>
-                <a href=#shop class=nav-link>SHOP</a>
-                <a href=#story class=nav-link>STORY</a>
-                <a href=#featured class=nav-link>JOURNAL</a>
-                <a href=#contact class=nav-link>CONTACT</a>
+            <!-- Navigation Menu -->
+            <nav class=nav-menu id=navMenu>
+                <a href=#home class=nav-item>Home</a>
+
+                <!-- Services Dropdown -->
+                <div class=dropdown>
+                    <a href=#services class=nav-item dropdown-toggle>
+                        Services <i class=fa-solid fa-chevron-down></i>
+                    </a>
+                    <div class=dropdown-menu>
+                        <a href=#service-window-cleaning class=dropdown-link>
+                            <i class=fa-solid fa-spray-can-sparkles></i> Residential Window Cleaning
+                        </a>
+                        <a href=#service-window-replacement class=dropdown-link>
+                            <i class=fa-solid fa-window-maximize></i> Window Replacement & Installation
+                        </a>
+                        <a href=#service-door-installation class=dropdown-link>
+                            <i class=fa-solid fa-door-open></i> Door Installation & Entry Systems
+                        </a>
+                        <a href=#service-eavestrough class=dropdown-link>
+                            <i class=fa-solid fa-water></i> Gutter & Eavestrough Cleaning
+                        </a>
+                        <a href=#service-pressure-washing class=dropdown-link>
+                            <i class=fa-solid fa-soap></i> Pressure Washing & Exterior Cleaning
+                        </a>
+                    </div>
+                </div>
+
+                <a href=#about class=nav-item>About Us</a>
+                <a href=#locations class=nav-item>Locations</a>
+                <a href=#reviews class=nav-item>Reviews</a>
+                <a href=#contact class=nav-item>Contact</a>
             </nav>
 
+            <!-- Nav Action Buttons -->
             <div class=nav-actions>
-                <div class=search-box>
-                    <i class=fa-solid fa-magnifying-glass search-icon></i>
-                    <input type=text placeholder=Search class=search-input>
-                </div>
-                <button class=cart-btn id=cartToggle aria-label=View Shopping Cart>
-                    <i class=fa-solid fa-cart-shopping></i>
-                    <span>Cart (<span id=cartCount>3</span>)</span>
-                </button>
-                <button class=mobile-menu-btn id=mobileMenuBtn aria-label=Toggle Navigation Menu>
+                <a href=#quote class=btn btn-primary>Get Instant Quote</a>
+                <button class=mobile-toggle id=mobileToggle aria-label=Toggle navigation>
                     <i class=fa-solid fa-bars></i>
                 </button>
             </div>
@@ -50,326 +84,421 @@
     </header>
 
     <!-- Hero Section -->
-    <section class=hero id=home>
-        <div class=container hero-layout>
-            
-            <!-- Left Hero Content -->
-            <div class=hero-content>
-                <span class=hero-tag>NEW COLLECTION 2026</span>
-                <h1 class=hero-title>
-                    ELEVATE<br>YOUR SPACE.
-                </h1>
-                <p class=hero-subtitle>
-                    Curated Essentials for Modern Living.
-                </p>
-                <div class=hero-cta-group>
-                    <a href=#shop class=btn btn-dark>SHOP THE COLLECTION</a>
-                    <a href=#story class=btn btn-outline>EXPLORE NOW</a>
-                </div>
-            </div>
-
-            <!-- Right Hero Visual Showcase with Floating Cards -->
-            <div class=hero-visual-wrapper>
-                <div class=hero-main-image-card>
-                    <img src=assets/hero-vase.jpg alt=AURA Handcrafted Flora Ceramic Vase class=hero-img>
-                    
-                    <!-- Floating Glass Card 1: Top Left -->
-                    <div class=glass-float-card card-top-left>
-                        <img src=assets/silk-scarf.jpg alt=Silk Scarf class=mini-thumb>
-                        <div class=float-text>
-                            <span class=mini-label>New Arrivals:</span>
-                            <strong>Silk Scarf</strong>
-                        </div>
-                    </div>
-
-                    <!-- Floating Glass Card 2: Bottom Left -->
-                    <div class=glass-float-card card-bottom-left>
-                        <div class=mini-icon-box><i class=fa-solid fa-camera></i></div>
-                        <div class=float-text>
-                            <span class=mini-label>Editorial</span>
-                            <strong>Featured Story</strong>
-                        </div>
-                    </div>
-
-                    <!-- Floating Glass Card 3: Top Right -->
-                    <div class=glass-float-card card-top-right>
-                        <div class=mini-icon-box check-icon><i class=fa-solid fa-shield-check></i></div>
-                        <div class=float-text>
-                            <span class=mini-label>Guaranteed</span>
-                            <strong>Secure Checkout</strong>
-                        </div>
-                    </div>
-
-                    <!-- Carousel Dots -->
-                    <div class=carousel-indicators>
-                        <span class=indicator active></span>
-                        <span class=indicator></span>
-                        <span class=indicator></span>
-                        <span class=indicator></span>
-                        <span class=indicator></span>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-        <!-- Metrics Stats Counter Bar -->
-        <div class=container>
-            <div class=stats-bar>
-                <div class=stat-item>
-                    <h3 class=stat-number>2,450+</h3>
-                    <p class=stat-label>Happy Customers</p>
-                </div>
-                <div class=stat-divider></div>
-                <div class=stat-item>
-                    <h3 class=stat-number>850+</h3>
-                    <p class=stat-label>Products</p>
-                </div>
-                <div class=stat-divider></div>
-                <div class=stat-item>
-                    <h3 class=stat-number>12</h3>
-                    <p class=stat-label>Active Awards</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Product Showcase Section -->
-    <section class=shop-section section-padding id=shop>
-        <div class=container>
-            <div class=section-header>
-                <div>
-                    <span class=section-tag>CURATED PIECES</span>
-                    <h2 class=section-heading>Featured Collection</h2>
-                </div>
-                <!-- Filter Pills -->
-                <div class=filter-group>
-                    <button class=filter-pill active data-category=all>All</button>
-                    <button class=filter-pill data-category=ceramics>Ceramics</button>
-                    <button class=filter-pill data-category=textiles>Textiles</button>
-                    <button class=filter-pill data-category=lighting>Lighting</button>
-                </div>
-            </div>
-
-            <!-- Product Grid -->
-            <div class=product-grid>
-                
-                <!-- Product 1 -->
-                <div class=product-card data-category=ceramics>
-                    <div class=product-image-wrap>
-                        <span class=badge-tag>Best Seller</span>
-                        <img src=assets/hero-vase.jpg alt=Artisanal Flora Ceramic Vase class=product-img>
-                        <button class=quick-add-btn onclick=addToCart('Artisanal Flora Ceramic Vase', 120, 'assets/hero-vase.jpg')>
-                            <i class=fa-solid fa-plus></i> Add to Cart
-                        </button>
-                    </div>
-                    <div class=product-details>
-                        <span class=product-category>Ceramics & Decor</span>
-                        <h4 class=product-name>Artisanal Flora Ceramic Vase</h4>
-                        <div class=product-price>.00</div>
-                    </div>
-                </div>
-
-                <!-- Product 2 -->
-                <div class=product-card data-category=textiles>
-                    <div class=product-image-wrap>
-                        <span class=badge-tag new-tag>New Season</span>
-                        <img src=assets/silk-scarf.jpg alt=Mulberry Botanical Silk Scarf class=product-img>
-                        <button class=quick-add-btn onclick=addToCart('Mulberry Botanical Silk Scarf', 185, 'assets/silk-scarf.jpg')>
-                            <i class=fa-solid fa-plus></i> Add to Cart
-                        </button>
-                    </div>
-                    <div class=product-details>
-                        <span class=product-category>Luxury Textiles</span>
-                        <h4 class=product-name>Mulberry Botanical Silk Scarf</h4>
-                        <div class=product-price>.00</div>
-                    </div>
-                </div>
-
-                <!-- Product 3 -->
-                <div class=product-card data-category=lighting>
-                    <div class=product-image-wrap>
-                        <img src=assets/globe-lamp.jpg alt=Brushed Brass Travertine Globe Lamp class=product-img>
-                        <button class=quick-add-btn onclick=addToCart('Brushed Brass Travertine Globe Lamp', 240, 'assets/globe-lamp.jpg')>
-                            <i class=fa-solid fa-plus></i> Add to Cart
-                        </button>
-                    </div>
-                    <div class=product-details>
-                        <span class=product-category>Modern Lighting</span>
-                        <h4 class=product-name>Brushed Brass Travertine Globe Lamp</h4>
-                        <div class=product-price>.00</div>
-                    </div>
-                </div>
-
-                <!-- Product 4 -->
-                <div class=product-card data-category=ceramics>
-                    <div class=product-image-wrap>
-                        <img src=assets/ceramic-set.jpg alt=Handcrafted Stoneware Dining Set class=product-img>
-                        <button class=quick-add-btn onclick=addToCart('Handcrafted Stoneware Dining Set', 160, 'assets/ceramic-set.jpg')>
-                            <i class=fa-solid fa-plus></i> Add to Cart
-                        </button>
-                    </div>
-                    <div class=product-details>
-                        <span class=product-category>Dining & Kitchen</span>
-                        <h4 class=product-name>Handcrafted Stoneware Dining Set</h4>
-                        <div class=product-price>.00</div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Brand Philosophy / Story -->
-    <section class=story-section section-padding id=story>
-        <div class=container story-grid>
-            <div class=story-image-box>
-                <img src=assets/globe-lamp.jpg alt=AURA Aesthetic Living class=story-img>
-            </div>
-            <div class=story-text-box>
-                <span class=section-tag>OUR PHILOSOPHY</span>
-                <h2 class=section-heading>Designed for Serenity & Longevity</h2>
-                <p class=story-p>
-                    At AURA, we believe the objects surrounding you should evoke tranquility, intention, and timeless craftsmanship. Each creation is ethically shaped by master artisans using organic stone, spun silk, and hand-thrown clay.
-                </p>
-                <div class=story-features>
-                    <div class=feature-item>
-                        <i class=fa-solid fa-leaf></i>
-                        <div>
-                            <strong>100% Sustainable Materials</strong>
-                            <p>Naturally sourced elements that age with grace.</p>
-                        </div>
-                    </div>
-                    <div class=feature-item>
-                        <i class=fa-solid fa-hands-holding></i>
-                        <div>
-                            <strong>Master Artisan Crafted</strong>
-                            <p>Handmade in limited batches with uncompromising attention.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Slide-Out Shopping Cart Drawer -->
-    <div class=cart-overlay id=cartOverlay></div>
-    <div class=cart-drawer id=cartDrawer>
-        <div class=cart-header>
-            <h3>Your Bag (<span id=drawerItemCount>3</span>)</h3>
-            <button class=close-cart-btn id=closeCart aria-label=Close Shopping Bag>&times;</button>
-        </div>
+    <section class=hero-section id=home>
+        <div class=hero-bg-overlay></div>
+        <img src=assets/hero-home.jpg alt=Modern Canadian Home with Crystal Clear Windows and Doors class=hero-bg-img>
         
-        <div class=cart-free-shipping>
-            <div class=shipping-msg>You have unlocked <strong>Free Worldwide Shipping</strong>! 🎉</div>
-            <div class=progress-bar><div class=progress-fill style=width: 100%;></div></div>
-        </div>
+        <div class=container hero-container>
+            <!-- Left Hero Copy -->
+            <div class=hero-text-content>
+                <div class=trust-badge>
+                    <i class=fa-solid fa-star text-gold></i>
+                    <span>Toronto's #1 Rated Window & Door Specialists</span>
+                </div>
+                <h1 class=hero-title>
+                    Transforming Toronto Homes With Sparkling Windows & Modern Doors
+                </h1>
+                <p class=hero-description>
+                    Professional streak-free window cleaning, high-efficiency window replacement, and premium entry door installations across the GTA.
+                </p>
 
-        <div class=cart-items-list id=cartItemsList>
-            <!-- Item 1 -->
-            <div class=cart-item>
-                <img src=assets/hero-vase.jpg alt=Artisanal Flora Ceramic Vase>
-                <div class=cart-item-info>
-                    <h4>Artisanal Flora Ceramic Vase</h4>
-                    <span class=cart-item-price>.00</span>
-                    <div class=cart-qty-control>
-                        <button class=qty-btn onclick=updateItemQty(0, -1)>-</button>
-                        <span>1</span>
-                        <button class=qty-btn onclick=updateItemQty(0, 1)>+</button>
+                <div class=hero-badges-row>
+                    <div class=badge-item>
+                        <i class=fa-solid fa-circle-check></i>
+                        <span>100% Streak-Free Guarantee</span>
+                    </div>
+                    <div class=badge-item>
+                        <i class=fa-solid fa-circle-check></i>
+                        <span>Upfront Transparent Pricing</span>
                     </div>
                 </div>
-                <button class=remove-btn onclick=removeItem(0)>&times;</button>
+
+                <div class=google-rating-box>
+                    <div class=stars>
+                        <i class=fa-solid fa-star></i>
+                        <i class=fa-solid fa-star></i>
+                        <i class=fa-solid fa-star></i>
+                        <i class=fa-solid fa-star></i>
+                        <i class=fa-solid fa-star></i>
+                    </div>
+                    <span><strong>4.9 / 5.0 Rating</strong> based on 500+ GTA Homeowner Reviews</span>
+                </div>
             </div>
 
-            <!-- Item 2 -->
-            <div class=cart-item>
-                <img src=assets/silk-scarf.jpg alt=Mulberry Botanical Silk Scarf>
-                <div class=cart-item-info>
-                    <h4>Mulberry Botanical Silk Scarf</h4>
-                    <span class=cart-item-price>.00</span>
-                    <div class=cart-qty-control>
-                        <button class=qty-btn onclick=updateItemQty(1, -1)>-</button>
-                        <span>1</span>
-                        <button class=qty-btn onclick=updateItemQty(1, 1)>+</button>
-                    </div>
+            <!-- Right Instant Quote Calculator Card -->
+            <div class=hero-quote-card id=quote>
+                <div class=card-header>
+                    <h3>Instant Quote Calculator</h3>
+                    <p>Get a fast, accurate price estimate in 30 seconds.</p>
                 </div>
-                <button class=remove-btn onclick=removeItem(1)>&times;</button>
-            </div>
+                <form class=quote-form onsubmit=event.preventDefault(); calculateQuote();>
+                    <div class=form-group>
+                        <label>Select Service Required</label>
+                        <select id=quoteService onchange=calculateQuote()>
+                            <option value=Window Cleaning>Residential Window Cleaning</option>
+                            <option value=Window Replacement>Window Replacement & Installation</option>
+                            <option value=Door Installation>Entry & Patio Door Installation</option>
+                            <option value=Gutter Cleaning>Gutter & Eavestrough Cleaning</option>
+                            <option value=Full Exterior Package>Complete Exterior Package</option>
+                        </select>
+                    </div>
 
-            <!-- Item 3 -->
-            <div class=cart-item>
-                <img src=assets/globe-lamp.jpg alt=Brushed Brass Travertine Globe Lamp>
-                <div class=cart-item-info>
-                    <h4>Brushed Brass Travertine Globe Lamp</h4>
-                    <span class=cart-item-price>.00</span>
-                    <div class=cart-qty-control>
-                        <button class=qty-btn onclick=updateItemQty(2, -1)>-</button>
-                        <span>1</span>
-                        <button class=qty-btn onclick=updateItemQty(2, 1)>+</button>
+                    <div class=form-group>
+                        <label>Home Type / Size</label>
+                        <select id=homeSize onchange=calculateQuote()>
+                            <option value=1>Townhouse / Semi-Detached (Up to 1,500 sq ft)</option>
+                            <option value=2>2-Storey Detached (1,500 – 2,800 sq ft)</option>
+                            <option value=3>Large Estate / 3-Storey (2,800+ sq ft)</option>
+                        </select>
                     </div>
-                </div>
-                <button class=remove-btn onclick=removeItem(2)>&times;</button>
+
+                    <div class=form-group>
+                        <label>Your Postal Code (GTA)</label>
+                        <input type=text placeholder=e.g. M5V 2T6 id=postalCode required>
+                    </div>
+
+                    <div class=estimate-result-box>
+                        <span class=est-label>Estimated Price:</span>
+                        <span class=est-price id=estimatedPrice> –  CAD</span>
+                    </div>
+
+                    <a href=#contact class=btn btn-primary btn-block>Lock In This Price & Book</a>
+                </form>
             </div>
         </div>
+    </section>
 
-        <div class=cart-footer>
-            <div class=cart-subtotal>
-                <span>Subtotal:</span>
-                <strong id=cartSubtotal>.00</strong>
+    <!-- Services Overview Section -->
+    <section class=services-section section-padding id=services>
+        <div class=container>
+            <div class=section-title-wrap text-center>
+                <span class=sub-badge>WHAT WE DO</span>
+                <h2 class=section-heading>Our Professional Exterior Services</h2>
+                <p class=section-subtext>Delivering top-tier craftsmanship, reliability, and crystal-clear results for homes across Ontario.</p>
             </div>
-            <p class=taxes-note>Shipping & taxes calculated at checkout.</p>
-            <button class=btn btn-dark btn-block onclick=alert('Demo Order Checkout initiated! Designed by Gaurav Choyal.')>PROCEED TO CHECKOUT</button>
+
+            <div class=services-grid>
+                
+                <!-- Service 1 -->
+                <div class=service-box id=service-window-cleaning>
+                    <div class=service-icon><i class=fa-solid fa-spray-can-sparkles></i></div>
+                    <h3>Residential Window Cleaning</h3>
+                    <p>Interior and exterior streak-free glass cleaning using triple-filtered pure water technology. Screens, tracks, and frames cleaned thoroughly.</p>
+                    <ul class=service-check-list>
+                        <li><i class=fa-solid fa-check></i> Pure Water Fed Pole System</li>
+                        <li><i class=fa-solid fa-check></i> Screen & Track Detailing</li>
+                        <li><i class=fa-solid fa-check></i> Safe 3-Storey Reach</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class=service-box id=service-window-replacement>
+                    <div class=service-icon><i class=fa-solid fa-window-maximize></i></div>
+                    <h3>Window Replacement & Installation</h3>
+                    <p>High-efficiency double and triple-pane Energy Star® certified vinyl and hybrid windows that lower heating and cooling bills year-round.</p>
+                    <ul class=service-check-list>
+                        <li><i class=fa-solid fa-check></i> Energy Star® Certified</li>
+                        <li><i class=fa-solid fa-check></i> Noise & Draft Reduction</li>
+                        <li><i class=fa-solid fa-check></i> Lifetime Manufacturer Warranty</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class=service-box id=service-door-installation>
+                    <div class=service-icon><i class=fa-solid fa-door-open></i></div>
+                    <h3>Door Installation & Entry Systems</h3>
+                    <p>Custom modern steel, fiberglass, and architectural pivot doors, sliding patio doors, and French entryways engineered for Canadian winters.</p>
+                    <ul class=service-check-list>
+                        <li><i class=fa-solid fa-check></i> Enhanced Multi-Point Security</li>
+                        <li><i class=fa-solid fa-check></i> Weather-Tight Seals</li>
+                        <li><i class=fa-solid fa-check></i> Custom Sidelights & Transoms</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class=service-box id=service-eavestrough>
+                    <div class=service-icon><i class=fa-solid fa-water></i></div>
+                    <h3>Gutter & Eavestrough Cleaning</h3>
+                    <p>Complete hand clearing of leaves and debris, downspout flush, and gutter guard installation to protect your foundation from water damage.</p>
+                    <ul class=service-check-list>
+                        <li><i class=fa-solid fa-check></i> Full Downspout Flush</li>
+                        <li><i class=fa-solid fa-check></i> Leak & Slope Inspection</li>
+                        <li><i class=fa-solid fa-check></i> Premium Micro-Mesh Guards</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div class=service-box id=service-pressure-washing>
+                    <div class=service-icon><i class=fa-solid fa-soap></i></div>
+                    <h3>Pressure Washing & Surface Care</h3>
+                    <p>Commercial-grade power washing for driveways, stone patios, composite decks, walkways, and house siding to restore curb appeal.</p>
+                    <ul class=service-check-list>
+                        <li><i class=fa-solid fa-check></i> Interlock & Patio Restoration</li>
+                        <li><i class=fa-solid fa-check></i> Eco-Friendly Detergents</li>
+                        <li><i class=fa-solid fa-check></i> Siding & Vinyl Soft Wash</li>
+                    </ul>
+                </div>
+
+                <!-- Service 6 / Guarantee Card -->
+                <div class=service-box service-highlight-box>
+                    <div class=service-icon text-white><i class=fa-solid fa-medal></i></div>
+                    <h3>The Hero Guarantee</h3>
+                    <p>If you see a single streak, smudge, or water spot within 48 hours of service, we will return and re-clean it free of charge. No questions asked.</p>
+                    <a href=#quote class=btn btn-white btn-sm>Get Your Estimate</a>
+                </div>
+
+            </div>
         </div>
-    </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class=about-section section-padding id=about>
+        <div class=container about-grid>
+            <div class=about-image-wrap>
+                <img src=assets/service-window.jpg alt=Professional Window Cleaner class=about-img>
+                <div class=experience-card>
+                    <strong>10+</strong>
+                    <span>Years Serving the Greater Toronto Area</span>
+                </div>
+            </div>
+
+            <div class=about-content>
+                <span class=sub-badge>ABOUT US</span>
+                <h2 class=section-heading>Your Trusted Local Window & Door Craftsmen</h2>
+                <p class=about-text>
+                    Founded with a passion for quality and transparent service, <strong>Windows & Doors Hero</strong> has become the preferred exterior home specialist for over 1,000 homeowners across the GTA.
+                </p>
+                <p class=about-text>
+                    Whether restoring your view with pure water window cleaning or replacing drafty frames with high-efficiency energy-saving systems, our fully insured, WSIB-compliant technicians take immense pride in treating your home like our own.
+                </p>
+
+                <div class=about-features-grid>
+                    <div class=feature-card>
+                        <i class=fa-solid fa-user-shield></i>
+                        <div>
+                            <h4>Certified & Insured</h4>
+                            <p> Commercial Liability & Full WSIB Coverage</p>
+                        </div>
+                    </div>
+                    <div class=feature-card>
+                        <i class=fa-solid fa-hand-holding-dollar></i>
+                        <div>
+                            <h4>No Hidden Fees</h4>
+                            <p>All quotes are upfront, transparent, and binding</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations Served Section (Clean List of Locations Without Links) -->
+    <section class=locations-section section-padding id=locations>
+        <div class=container>
+            <div class=section-title-wrap text-center>
+                <span class=sub-badge>SERVICE COVERAGE</span>
+                <h2 class=section-heading>Areas We Proudly Serve</h2>
+                <p class=section-subtext>Providing prompt, reliable service throughout the Greater Toronto Area and surrounding communities.</p>
+            </div>
+
+            <div class=locations-pill-grid>
+                <div class=location-pill><i class=fa-solid fa-location-dot></i> Toronto</div>
+                <div class=location-pill><i class=fa-solid fa-location-dot></i> North York</div>
+                <div class=location-pill><i class=fa-solid fa-location-dot></i> Etobicoke</div>
+                <div class=location-pill><i class=fa-solid fa-location-dot></i> Scarborough</div>
+                <div class=location-pill><i class=fa-solid fa-location-dot></i> Mississauga</div>
+                <div class=location-pill><i class=fa-solid fa-location-dot></i> Brampton</div>
+                <div class=location-pill><i class=fa-solid fa-location-dot></i> Oakville</div>
+                <div class=location-pill><i class=fa-solid fa-location-dot></i> Vaughan</div>
+                <div class=location-pill><i class=fa-solid fa-location-dot></i> Markham</div>
+                <div class=location-pill><i class=fa-solid fa-location-dot></i> Richmond Hill</div>
+                <div class=location-pill><i class=fa-solid fa-location-dot></i> Burlington</div>
+                <div class=location-pill><i class=fa-solid fa-location-dot></i> Milton</div>
+                <div class=location-pill><i class=fa-solid fa-location-dot></i> Newmarket</div>
+                <div class=location-pill><i class=fa-solid fa-location-dot></i> Aurora</div>
+                <div class=location-pill><i class=fa-solid fa-location-dot></i> Ajax & Pickering</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class=reviews-section section-padding id=reviews>
+        <div class=container>
+            <div class=section-title-wrap text-center>
+                <span class=sub-badge>TESTIMONIALS</span>
+                <h2 class=section-heading>What Our Clients Say</h2>
+                <p class=section-subtext>Real experiences from local homeowners and property managers.</p>
+            </div>
+
+            <div class=reviews-grid>
+                <div class=review-card>
+                    <div class=stars>
+                        <i class=fa-solid fa-star></i><i class=fa-solid fa-star></i><i class=fa-solid fa-star></i><i class=fa-solid fa-star></i><i class=fa-solid fa-star></i>
+                    </div>
+                    <p class=review-text>Windows & Doors Hero did a phenomenal job on our 3-storey home. The windows haven't looked this clean since the day we moved in! Highly recommended.</p>
+                    <div class=reviewer-meta>
+                        <strong>David K.</strong>
+                        <span>North York, ON</span>
+                    </div>
+                </div>
+
+                <div class=review-card>
+                    <div class=stars>
+                        <i class=fa-solid fa-star></i><i class=fa-solid fa-star></i><i class=fa-solid fa-star></i><i class=fa-solid fa-star></i><i class=fa-solid fa-star></i>
+                    </div>
+                    <p class=review-text>Had our front entrance door replaced and all windows cleaned. Super polite crew, arrived on time, and left zero mess behind. Top tier service.</p>
+                    <div class=reviewer-meta>
+                        <strong>Jennifer M.</strong>
+                        <span>Oakville, ON</span>
+                    </div>
+                </div>
+
+                <div class=review-card>
+                    <div class=stars>
+                        <i class=fa-solid fa-star></i><i class=fa-solid fa-star></i><i class=fa-solid fa-star></i><i class=fa-solid fa-star></i><i class=fa-solid fa-star></i>
+                    </div>
+                    <p class=review-text>Very professional quote process. The instant calculator on their site gave an exact estimate that they honored completely. Will book annually!</p>
+                    <div class=reviewer-meta>
+                        <strong>Robert S.</strong>
+                        <span>Mississauga, ON</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section (Static Non-Working Dummy Contact Form) -->
+    <section class=contact-section section-padding id=contact>
+        <div class=container contact-container>
+            
+            <div class=contact-info-col>
+                <span class=sub-badge>GET IN TOUCH</span>
+                <h2 class=section-heading>Ready for Sparkling Windows & New Doors?</h2>
+                <p class=contact-lead-text>
+                    Fill out the form to request a free on-site consultation or get immediate assistance from our team.
+                </p>
+
+                <div class=info-list>
+                    <div class=info-item>
+                        <i class=fa-solid fa-phone></i>
+                        <div>
+                            <strong>Direct Phone Line</strong>
+                            <p>(416) 555-0199</p>
+                        </div>
+                    </div>
+                    <div class=info-item>
+                        <i class=fa-solid fa-envelope></i>
+                        <div>
+                            <strong>Email Inquiries</strong>
+                            <p>info@windowsanddoorshero.ca</p>
+                        </div>
+                    </div>
+                    <div class=info-item>
+                        <i class=fa-solid fa-location-dot></i>
+                        <div>
+                            <strong>Headquarters</strong>
+                            <p>Greater Toronto Area, Ontario, Canada</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Static Non-Working Dummy Form -->
+            <div class=contact-form-col>
+                <div class=dummy-form-card>
+                    <h3>Request Free Estimate</h3>
+                    <form onsubmit=event.preventDefault(); document.getElementById('dummyNotice').style.display = 'block';>
+                        <div class=form-row>
+                            <div class=form-field>
+                                <label for=fullName>Full Name</label>
+                                <input type=text id=fullName placeholder=John Doe required>
+                            </div>
+                            <div class=form-field>
+                                <label for=phoneNum>Phone Number</label>
+                                <input type=tel id=phoneNum placeholder=(416) 000-0000 required>
+                            </div>
+                        </div>
+
+                        <div class=form-row>
+                            <div class=form-field>
+                                <label for=emailAddr>Email Address</label>
+                                <input type=email id=emailAddr placeholder=john@example.com required>
+                            </div>
+                            <div class=form-field>
+                                <label for=serviceType>Service Desired</label>
+                                <select id=serviceType>
+                                    <option>Window Cleaning</option>
+                                    <option>Window Replacement</option>
+                                    <option>Door Installation</option>
+                                    <option>Gutter Cleaning</option>
+                                    <option>Pressure Washing</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class=form-field>
+                            <label for=address>Street Address / City</label>
+                            <input type=text id=address placeholder=123 Queen St W, Toronto>
+                        </div>
+
+                        <div class=form-field>
+                            <label for=comments>Project Details / Special Requests</label>
+                            <textarea id=comments rows=3 placeholder=Tell us how many windows/doors, storeys, etc...></textarea>
+                        </div>
+
+                        <button type=submit class=btn btn-primary btn-block>Submit Free Estimate Request</button>
+
+                        <div class=dummy-notice id=dummyNotice style=display: none;>
+                            <i class=fa-solid fa-circle-check></i> Thank you! Your request has been recorded. (Static Demo Form)
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class=footer id=contact>
-        <div class=container footer-layout>
-            <div class=footer-col brand-col>
-                <h2 class=footer-logo>AURA</h2>
-                <p class=footer-tagline>Curated Essentials for Modern Living.</p>
-                <div class=footer-social-links>
-                    <a href=https://www.instagram.com/gchoyal_websitedeveloper/ target=_blank aria-label=Instagram><i class=fa-brands fa-instagram></i></a>
-                    <a href=https://github.com/gchoyal/portfolio-site target=_blank aria-label=GitHub><i class=fa-brands fa-github></i></a>
-                </div>
+    <footer class=footer>
+        <div class=container footer-content>
+            <div class=footer-brand>
+                <a href=#home class=brand-logo footer-logo>
+                    <span class=logo-icon><i class=fa-solid fa-table-cells-large></i></span>
+                    <span class=logo-text>Windows & Doors<strong>Hero</strong></span>
+                </a>
+                <p>Toronto's premier residential & commercial window cleaning, window replacement, and door installation company.</p>
             </div>
 
-            <div class=footer-col>
-                <h4>Collections</h4>
+            <div class=footer-links-group>
+                <h4>Quick Navigation</h4>
                 <ul>
-                    <li><a href=#shop>Ceramics & Vases</a></li>
-                    <li><a href=#shop>Mulberry Silk Textiles</a></li>
-                    <li><a href=#shop>Lighting & Accents</a></li>
-                    <li><a href=#shop>Dining & Living</a></li>
+                    <li><a href=#home>Home</a></li>
+                    <li><a href=#services>Services</a></li>
+                    <li><a href=#about>About Us</a></li>
+                    <li><a href=#locations>Locations</a></li>
+                    <li><a href=#contact>Contact</a></li>
                 </ul>
             </div>
 
-            <div class=footer-col>
-                <h4>Client Care</h4>
+            <div class=footer-links-group>
+                <h4>Services</h4>
                 <ul>
-                    <li><a href=#>Shipping & Returns</a></li>
-                    <li><a href=#>Care Instructions</a></li>
-                    <li><a href=#>Sustainability Report</a></li>
-                    <li><a href=#>Contact Concierge</a></li>
+                    <li><a href=#service-window-cleaning>Window Cleaning</a></li>
+                    <li><a href=#service-window-replacement>Window Replacement</a></li>
+                    <li><a href=#service-door-installation>Door Installation</a></li>
+                    <li><a href=#service-eavestrough>Gutter Cleaning</a></li>
                 </ul>
-            </div>
-
-            <div class=footer-col newsletter-col>
-                <h4>Join the AURA Circle</h4>
-                <p>Receive exclusive private access to limited artisan drops and interior edits.</p>
-                <form class=newsletter-form onsubmit=event.preventDefault(); alert('Subscribed to AURA newsletter!');>
-                    <input type=email placeholder=Enter your email required>
-                    <button type=submit class=btn btn-dark>JOIN</button>
-                </form>
             </div>
         </div>
 
         <div class=footer-bottom text-center>
-            <p>© 2026 AURA Living. All Rights Reserved. • Designed & Engineered by <a href=https://www.instagram.com/gchoyal_websitedeveloper/ target=_blank class=dev-link>Gaurav Choyal (@gchoyal_websitedeveloper)</a></p>
+            <div class=container>
+                <p>© 2026 Windows & Doors Hero. All Rights Reserved. • Designed & Developed by <a href=https://www.instagram.com/gchoyal_websitedeveloper/ target=_blank class=author-tag>Gaurav Choyal (@gchoyal_websitedeveloper)</a></p>
+            </div>
         </div>
     </footer>
 
-    <!-- App Scripts -->
+    <!-- App JS -->
     <script src=app.js></script>
 </body>
 </html>
