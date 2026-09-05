@@ -1,4 +1,4 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    Windows & Doors Hero — Professional Website Stylesheet
    Designed & Developed by Girdhari Choyal (@gchoyal_websitedeveloper)
    ========================================================================== */
@@ -94,7 +94,7 @@ body {
 
 .btn-primary {
     background-color: var(--primary);
-    color: #ffffff;
+    color: #ffffff !important;
     box-shadow: 0 4px 14px var(--primary-glow);
 }
 
@@ -106,7 +106,7 @@ body {
 
 .btn-white {
     background-color: #ffffff;
-    color: var(--dark);
+    color: var(--dark) !important;
 }
 
 .btn-white:hover {
@@ -312,7 +312,7 @@ body {
 .hero-section {
     position: relative;
     padding: 80px 0 100px;
-    min-height: 600px;
+    min-height: 620px;
     display: flex;
     align-items: center;
     background-color: var(--dark);
