@@ -302,11 +302,11 @@ button, input, select, textarea {
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: clamp(1rem, 1.8vw, 1.8rem);
+    gap: clamp(0.75rem, 1.2vw, 1.4rem);
 }
 
 .nav-link {
-    font-size: 0.88rem;
+    font-size: 0.84rem;
     font-weight: 600;
     color: var(--text-muted);
     padding: 6px 0;
@@ -1178,25 +1178,7 @@ button, input, select, textarea {
     font-weight: 700;
 }
 
-/* ==========================================================================
-   RESPONSIVE
-   ========================================================================== */
-@media (max-width: 1024px) {
-    .hero-grid {
-        grid-template-columns: 1fr;
-    }
-    .investment-metrics-dashboard {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    .modal-content-grid {
-        grid-template-columns: 1fr;
-    }
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
     .nav-menu {
         position: fixed;
         top: 64px;
@@ -1215,6 +1197,24 @@ button, input, select, textarea {
     .mobile-toggle {
         display: block;
     }
+}
+
+@media (max-width: 1024px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+    .investment-metrics-dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .modal-content-grid {
+        grid-template-columns: 1fr;
+    }
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
     .hero-stats-strip {
         grid-template-columns: repeat(2, 1fr);
     }

@@ -329,12 +329,12 @@ button, input, select, textarea {
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: clamp(1rem, 2vw, 2rem);
+    gap: clamp(0.75rem, 1.3vw, 1.4rem);
 }
 
 .nav-link {
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 0.85rem;
+    font-weight: 600;
     color: var(--text-muted);
     position: relative;
     padding: 6px 0;
@@ -1694,6 +1694,29 @@ textarea.form-control {
 /* ==========================================================================
    RESPONSIVE BREAKPOINTS
    ========================================================================== */
+@media (max-width: 1080px) {
+    .nav-menu {
+        position: fixed;
+        top: 68px;
+        left: 0;
+        right: 0;
+        background: var(--bg-surface);
+        flex-direction: column;
+        padding: 2rem;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow-lg);
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .mobile-toggle {
+        display: block;
+    }
+}
+
 @media (max-width: 1024px) {
     .hero-grid {
         grid-template-columns: 1fr;
@@ -1740,26 +1763,6 @@ textarea.form-control {
 }
 
 @media (max-width: 768px) {
-    .nav-menu {
-        position: fixed;
-        top: 68px;
-        left: 0;
-        right: 0;
-        background: var(--bg-surface);
-        flex-direction: column;
-        padding: 2rem;
-        border-bottom: 1px solid var(--border);
-        box-shadow: var(--shadow-lg);
-        display: none;
-    }
-
-    .nav-menu.active {
-        display: flex;
-    }
-
-    .mobile-toggle {
-        display: block;
-    }
 
     .hero-stats-row {
         grid-template-columns: repeat(2, 1fr);

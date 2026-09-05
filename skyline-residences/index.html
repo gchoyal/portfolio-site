@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,55 +20,44 @@
 <body>
 
     <!-- Top Announcement Bar -->
-    <div class="top-announcement-bar">
-        <div class="container d-flex-between">
-            <div class="announcement-left">
-                <span class="gold-pulse-dot"></span>
-                <span>NOW COMMENCING PRIVATE PREVIEWS • OCCUPANCY Q4 2026</span>
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div>
+                <i class="fa-solid fa-gem text-gold"></i>
+                <strong style="color:#ffffff; letter-spacing:0.06em;">SKYLINE RESIDENCES</strong> — 111 Central Park South, New York • Occupancy Q4 2026
             </div>
-            <div class="announcement-right">
-                <a href="#elevation" class="top-link"><i class="fa-solid fa-layer-group"></i> 60 Floors Interactive Stack</a>
-                <span class="top-sep">|</span>
-                <a href="#contact" class="top-link"><i class="fa-solid fa-compass"></i> Sales Gallery: 111 Central Park South</a>
-                <span class="top-sep">|</span>
-                <a href="../index.html" class="top-hub-link"><i class="fa-solid fa-arrow-left"></i> Master Portfolio</a>
+            <div>
+                <a href="../index.html" class="hub-link"><i class="fa-solid fa-arrow-left"></i> Master Portfolio Hub</a>
             </div>
         </div>
     </div>
 
     <!-- Main Navigation Header -->
-    <header class="main-header" id="mainHeader">
+    <header class="navbar" id="navbar">
         <div class="container nav-container">
+            <!-- Brand Monogram & Title -->
             <a href="index.html" class="brand-logo">
-                <div class="logo-mark">
-                    <span class="logo-letters">SR</span>
-                    <div class="logo-lines">
-                        <span class="l1"></span><span class="l2"></span><span class="l3"></span>
-                    </div>
-                </div>
-                <div class="logo-text-group">
-                    <span class="logo-brand">SKYLINE</span>
-                    <span class="logo-sub">RESIDENCES • NEW YORK</span>
+                <div class="brand-monogram">SR</div>
+                <div class="brand-meta">
+                    <h2>SKYLINE</h2>
+                    <span>111 Central Park South</span>
                 </div>
             </a>
 
+            <!-- Desktop Menu -->
             <nav class="nav-menu" id="navMenu">
-                <a href="#overview" class="nav-link">Overview</a>
-                <a href="#elevation" class="nav-link"><span class="highlight-pill">60-Floor</span> Elevation</a>
+                <a href="#overview" class="nav-link active">Overview</a>
+                <a href="#elevation" class="nav-link">60 Floors</a>
                 <a href="#residences" class="nav-link">Residences</a>
                 <a href="#amenities" class="nav-link">Amenities</a>
                 <a href="#architecture" class="nav-link">Architecture</a>
                 <a href="#views" class="nav-link">360° Views</a>
-                <a href="#neighborhood" class="nav-link">Neighborhood</a>
                 <a href="#contact" class="nav-link">Private Gallery</a>
-                <div class="nav-mobile-cta">
-                    <button class="btn btn-gold w-100 trigger-appointment-modal">Schedule Private Viewing</button>
-                    <a href="../index.html" class="btn btn-outline w-100 mt-2"><i class="fa-solid fa-grid-2"></i> All Portfolio Projects</a>
-                </div>
             </nav>
 
-            <div class="header-actions">
-                <button class="btn btn-gold trigger-appointment-modal">
+            <!-- Nav Actions -->
+            <div class="nav-actions">
+                <button class="btn btn-gold btn-sm trigger-appointment-modal">
                     <i class="fa-regular fa-calendar-check"></i> Private Viewing
                 </button>
                 <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
@@ -78,824 +67,634 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero-section" id="overview">
-        <div class="hero-bg-overlay"></div>
-        <div class="hero-backdrop" style="background-image: url('https://images.unsplash.com/photo-1534430480872-3498386e7856?auto=format&fit=crop&w=2000&q=85');"></div>
-        
-        <div class="container hero-content">
-            <div class="hero-badge">
-                <span class="badge-gold-pill"><i class="fa-solid fa-gem"></i> 111 CENTRAL PARK SOUTH • BILLIONAIRES' ROW</span>
-            </div>
-            
-            <h1 class="hero-title heading-monument">
-                THE PINNACLE OF <br>
-                <span class="text-gold">MANHATTAN LIVING</span>
-            </h1>
-            
-            <p class="hero-subtitle">
-                Rising 1,050 feet above Central Park, Skyline Residences redefines the New York silhouette. 60 stories of sculpted fluted bronze and acoustic crystal glass, housing 84 one-of-a-kind bespoke tower residences and triplex sky mansions.
-            </p>
+    <!-- Editorial Architectural Hero -->
+    <section class="hero" id="overview">
+        <div class="container hero-grid">
+            <div class="hero-text-col">
+                <div class="hero-tagline">
+                    111 Central Park South • Billionaires' Row
+                </div>
+                
+                <h1 class="hero-headline">
+                    THE PINNACLE OF <span>MANHATTAN LIVING</span>
+                </h1>
+                
+                <p class="hero-description">
+                    Rising 1,050 feet above Central Park, Skyline Residences redefines the New York silhouette. 60 stories of sculpted fluted bronze and acoustic crystal glass, housing 84 bespoke tower residences and triplex sky mansions.
+                </p>
 
-            <div class="hero-actions">
-                <a href="#elevation" class="btn btn-gold btn-lg">
-                    <i class="fa-solid fa-building"></i> Explore 60-Floor Elevation
-                </a>
-                <a href="#residences" class="btn btn-outline btn-lg">
-                    <i class="fa-solid fa-bed"></i> Available Residences Matrix
-                </a>
-                <button class="btn btn-glass btn-lg trigger-appointment-modal">
-                    <i class="fa-solid fa-key"></i> Inquire Sales Gallery
-                </button>
+                <div class="hero-ctas">
+                    <a href="#elevation" class="btn btn-gold">
+                        <i class="fa-solid fa-layer-group"></i> Explore 60 Floors
+                    </a>
+                    <a href="#residences" class="btn btn-outline-gold">
+                        <i class="fa-solid fa-compass-drafting"></i> Floor Plans & Pricing
+                    </a>
+                </div>
+
+                <div class="hero-stats-row">
+                    <div class="hero-stat">
+                        <h4>60</h4>
+                        <p>Tower Stories</p>
+                    </div>
+                    <div class="hero-stat">
+                        <h4>1,050'</h4>
+                        <p>Pinnacle Height</p>
+                    </div>
+                    <div class="hero-stat">
+                        <h4>84</h4>
+                        <p>Bespoke Residences</p>
+                    </div>
+                    <div class="hero-stat">
+                        <h4>360°</h4>
+                        <p>Park & River Panoramas</p>
+                    </div>
+                </div>
             </div>
 
-            <!-- Key Architectural Metrics Bar -->
-            <div class="hero-metrics-bar">
-                <div class="metric-item">
-                    <span class="metric-val">60</span>
-                    <span class="metric-label">Stories High</span>
-                </div>
-                <div class="metric-sep"></div>
-                <div class="metric-item">
-                    <span class="metric-val">1,050 <span class="metric-unit">FT</span></span>
-                    <span class="metric-label">Architectural Height</span>
-                </div>
-                <div class="metric-sep"></div>
-                <div class="metric-item">
-                    <span class="metric-val">84</span>
-                    <span class="metric-label">Custom Residences</span>
-                </div>
-                <div class="metric-sep"></div>
-                <div class="metric-item">
-                    <span class="metric-val">360°</span>
-                    <span class="metric-label">Unobstructed Panoramas</span>
-                </div>
-                <div class="metric-sep"></div>
-                <div class="metric-item">
-                    <span class="metric-val">Q4 2026</span>
-                    <span class="metric-label">First Occupancies</span>
+            <!-- Hero Visual Media Frame -->
+            <div class="hero-visual-col">
+                <div class="hero-img-card">
+                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=85" alt="Skyline Residences 111 Central Park South NYC" loading="eager">
+                    <div class="hero-floating-badge">
+                        <div>
+                            <div style="font-size:0.7rem; text-transform:uppercase; color:var(--gold-primary); font-weight:700; letter-spacing:0.08em;">NOW PREVIEWING</div>
+                            <div style="font-family:var(--font-heading); font-size:1.1rem; color:#ffffff; font-weight:700;">Full-Floor Tower Estates</div>
+                        </div>
+                        <span class="badge-gold-pill" style="margin-bottom:0;">From $8.9M – $65M</span>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <a href="#elevation" class="scroll-down-indicator" aria-label="Scroll to Elevation Selector">
-            <span class="scroll-text">EXPLORE STACK</span>
-            <i class="fa-solid fa-chevron-down"></i>
-        </a>
     </section>
 
-    <!-- 60-Floor Interactive Elevation Section -->
-    <section class="section-elevation" id="elevation">
+    <!-- Interactive 60-Floor Elevation Stack -->
+    <section class="section section-subtle" id="elevation">
         <div class="container">
-            <div class="section-header text-center">
-                <span class="badge-gold-pill"><i class="fa-solid fa-layer-group"></i> TOWER VERTICAL SELECTOR</span>
-                <h2 class="section-title heading-monument">60-FLOOR BUILDING ELEVATION</h2>
+            <div class="text-center">
+                <span class="badge-gold-pill"><i class="fa-solid fa-layer-group"></i> INTERACTIVE TOWER STACK</span>
+                <h2 class="section-title">60-Story Elevation Selector</h2>
                 <p class="section-subtitle">
-                    Select any floor from the street-level podium up to the 60th-floor Crown Triplex Penthouse. Explore floor plans, elevations, views, and available residences across all 4 architectural collection zones.
+                    Select any floor from Level 01 to 60 to view architectural tier classification, slab-to-ceiling heights, and bespoke residential layouts.
                 </p>
             </div>
 
-            <!-- Elevation Stack Quick Zone Switcher -->
-            <div class="elevation-zones-bar">
-                <button class="zone-pill-btn active" data-zone="all">
-                    <span class="zone-dot"></span> Entire Tower (01-60)
-                </button>
-                <button class="zone-pill-btn" data-zone="penthouses">
-                    <span class="zone-dot gold"></span> Sky Penthouses (51-60)
-                </button>
-                <button class="zone-pill-btn" data-zone="tower">
-                    <span class="zone-dot blue"></span> Tower Residences (31-50)
-                </button>
-                <button class="zone-pill-btn" data-zone="park">
-                    <span class="zone-dot green"></span> Central Park Suites (16-30)
-                </button>
-                <button class="zone-pill-btn" data-zone="podium">
-                    <span class="zone-dot purple"></span> Podium Collection (01-15)
-                </button>
-            </div>
+            <div class="elevation-wrapper">
+                <!-- Left Stack Panel -->
+                <div class="floor-stack-panel">
+                    <div class="floor-stack-header">
+                        <strong style="color:#ffffff; font-size:0.95rem; font-family:var(--font-heading);">Tower Floor Matrix</strong>
+                        <span style="font-size:0.75rem; color:var(--gold-primary); font-weight:700;">60 Levels</span>
+                    </div>
 
-            <!-- Master Two-Column Elevation Workspace -->
-            <div class="elevation-workspace-grid">
-                
-                <!-- Left: 60-Floor Interactive Vertical Stack Container -->
-                <div class="elevation-stack-sidebar">
-                    <div class="stack-sidebar-header">
-                        <div>
-                            <span class="stack-header-title"><i class="fa-solid fa-arrow-up-wide-short"></i> TOWER VERTICAL ELEVATION</span>
-                            <p class="stack-header-sub">Click any floor to view residence plans & specs</p>
+                    <!-- Tiers Legend -->
+                    <div class="floor-tiers-guide">
+                        <div class="tier-legend-row">
+                            <span class="tier-indicator penthouse"></span>
+                            <span>Floors 51–60: The Sky Penthouses</span>
                         </div>
-                        <span class="stack-altitude-tag" id="currentAltitudeIndicator">Top: 1,050 FT</span>
+                        <div class="tier-legend-row">
+                            <span class="tier-indicator tower"></span>
+                            <span>Floors 31–50: The Tower Residences</span>
+                        </div>
+                        <div class="tier-legend-row">
+                            <span class="tier-indicator suites"></span>
+                            <span>Floors 16–30: Central Park Suites</span>
+                        </div>
+                        <div class="tier-legend-row">
+                            <span class="tier-indicator podium"></span>
+                            <span>Floors 01–15: The Podium Collection</span>
+                        </div>
                     </div>
 
                     <!-- Scrollable 60 Floors List -->
                     <div class="floor-stack-scroll" id="floorStackScroll">
-                        <!-- Populated dynamically by app.js with 60 Floor items -->
+                        <!-- Populated by JavaScript -->
                     </div>
                 </div>
 
-                <!-- Right: Selected Floor Live Blueprint & Specs Panel -->
-                <div class="elevation-detail-panel">
-                    <div class="selected-floor-header">
-                        <div class="floor-meta-block">
-                            <span class="floor-zone-tag" id="selectedFloorZone">THE SKY PENTHOUSES</span>
-                            <h3 class="floor-name-heading" id="selectedFloorName">Floor 60 — The Triplex Crown Sky Mansion</h3>
-                            <div class="floor-stats-row">
-                                <span class="f-stat"><i class="fa-solid fa-up-down"></i> Elevation: <strong id="selectedFloorElevation">1,050 FT</strong></span>
-                                <span class="f-stat"><i class="fa-solid fa-arrows-to-eye"></i> View: <strong id="selectedFloorViews">Full Central Park & 360° Manhattan</strong></span>
-                                <span class="f-stat"><i class="fa-solid fa-chart-area"></i> Ceiling: <strong id="selectedFloorCeiling">18 Ft Double-Height</strong></span>
-                            </div>
+                <!-- Right Detail Panel -->
+                <div class="floor-details-content">
+                    <div class="floor-detail-summary">
+                        <div>
+                            <span id="activeFloorTier" class="badge-gold-pill" style="margin-bottom:0.5rem;">The Sky Penthouses</span>
+                            <h3 id="activeFloorTitle" style="font-family:var(--font-heading); font-size:2.2rem; color:#ffffff; font-weight:700; margin-bottom:0.3rem;">Sky Penthouse Level 60</h3>
+                            <p id="activeFloorHighlights" style="color:var(--text-muted); font-size:0.92rem; max-width:580px;">
+                                Double-height great halls, 360° panoramic Central Park & river views, private elevator vestibules.
+                            </p>
                         </div>
-                        <div class="floor-actions">
-                            <button class="btn btn-gold btn-sm trigger-appointment-modal">
-                                <i class="fa-regular fa-envelope"></i> Inquire Floor
-                            </button>
+                        <div style="text-align:right;">
+                            <div style="font-size:0.72rem; text-transform:uppercase; color:var(--text-light); font-weight:700;">Ceiling Slab</div>
+                            <div id="activeFloorCeiling" style="font-family:var(--font-heading); font-size:1.6rem; font-weight:700; color:var(--gold-primary);">18.0 ft</div>
+                            <div id="activeFloorUnitsCount" style="font-size:0.8rem; color:var(--text-muted); font-weight:600;">1 Luxury Unit</div>
                         </div>
                     </div>
 
-                    <p class="floor-narrative-desc" id="selectedFloorDesc">
-                        Occupying the pinnacle 60th story, this triplex aerie features monumental ceiling heights, private glass infinity pool cantilevered over Central Park South, and private keyed high-speed elevator access.
-                    </p>
-
-                    <!-- Available Units on This Floor Grid -->
-                    <div class="floor-units-container">
-                        <div class="units-container-header">
-                            <h4 class="units-header-title"><i class="fa-solid fa-house-chimney"></i> Residences On Selected Level</h4>
-                            <span class="units-count-badge" id="selectedFloorUnitsCount">1 Residence</span>
-                        </div>
-
-                        <div class="floor-units-grid" id="floorUnitsGrid">
-                            <!-- Populated dynamically by app.js -->
-                        </div>
+                    <!-- Cards for Units on this Floor -->
+                    <div class="floor-units-cards-grid" id="floorUnitsGrid">
+                        <!-- Populated dynamically by JavaScript -->
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- All Residences Matrix & Inventory Search -->
-    <section class="section-residences" id="residences">
+    <!-- Residences & Floor Plans Matrix -->
+    <section class="section" id="residences">
         <div class="container">
-            <div class="section-header text-center">
-                <span class="badge-gold-pill"><i class="fa-solid fa-key"></i> BESPOKE HOMES</span>
-                <h2 class="section-title heading-monument">RESIDENCES MATRIX & PRICING</h2>
+            <div class="text-center">
+                <span class="badge-gold-pill"><i class="fa-solid fa-gem"></i> THE COLLECTION</span>
+                <h2 class="section-title">Bespoke Residences & Floor Plans</h2>
                 <p class="section-subtitle">
-                    Explore our curated collection of 20 ultra-luxury Manhattan residences, from gracious 2-bedroom park view suites to dramatic multi-level sky mansions.
+                    Each home is framed by floor-to-ceiling acoustic glass, chevron-laid European white oak flooring, custom Molteni&C kitchens, and Calacatta Gold marble baths.
                 </p>
             </div>
 
-            <!-- Filter Controls -->
-            <div class="residences-filters-wrapper">
-                <div class="filter-pills-group" id="residenceTierFilters">
-                    <button class="filter-btn active" data-filter="all">All Residences (20)</button>
-                    <button class="filter-btn" data-filter="penthouse">Sky Penthouses (Floors 51-60)</button>
-                    <button class="filter-btn" data-filter="4bed">4-Bedroom Homes</button>
-                    <button class="filter-btn" data-filter="3bed">3-Bedroom Homes</button>
-                    <button class="filter-btn" data-filter="2bed">2-Bedroom Suites</button>
-                </div>
-                <div class="residences-sort-box">
-                    <label for="priceSortSelect" class="sort-label"><i class="fa-solid fa-arrow-down-short-wide"></i> Sort:</label>
-                    <select id="priceSortSelect" class="custom-select">
-                        <option value="price-desc">Price: Highest to Lowest</option>
-                        <option value="price-asc">Price: Lowest to Highest</option>
-                        <option value="sqft-desc">Size: Largest Sq Ft</option>
-                        <option value="floor-desc">Floor: Highest Level</option>
-                    </select>
-                </div>
+            <!-- Tier Filter Tabs -->
+            <div class="residence-tier-filter-bar">
+                <button class="tier-tab-btn active" data-tier="all">All Residences (20)</button>
+                <button class="tier-tab-btn" data-tier="penthouse">Sky Penthouses</button>
+                <button class="tier-tab-btn" data-tier="tower">Tower Estates</button>
+                <button class="tier-tab-btn" data-tier="4bed">4 Bedrooms</button>
+                <button class="tier-tab-btn" data-tier="3bed">3 Bedrooms</button>
+                <button class="tier-tab-btn" data-tier="2bed">2 Bedrooms</button>
             </div>
 
-            <!-- Residences Grid (20 Units) -->
+            <!-- Residences Grid Container -->
             <div class="residences-matrix-grid" id="residencesMatrixGrid">
-                <!-- Dynamically injected by app.js -->
+                <!-- Dynamically Populated by JavaScript -->
             </div>
         </div>
     </section>
 
-    <!-- 8 Signature Amenities & Private Club -->
-    <section class="section-amenities" id="amenities">
+    <!-- 8 Signature Residents Amenities -->
+    <section class="section section-subtle" id="amenities">
         <div class="container">
-            <div class="section-header text-center">
-                <span class="badge-gold-pill"><i class="fa-solid fa-crown"></i> PRIVATE RESIDENTS' CLUB</span>
-                <h2 class="section-title heading-monument">45,000 SQ. FT. OF CURATED AMENITIES</h2>
+            <div class="text-center">
+                <span class="badge-gold-pill"><i class="fa-solid fa-spa"></i> PRIVATE CLUB LIVING</span>
+                <h2 class="section-title">50,000 Sq. Ft. of Curated Amenities</h2>
                 <p class="section-subtitle">
-                    Four dedicated levels of bespoke wellness, leisure, private dining, and white-glove hospitality managed by premier luxury concierges.
+                    Four dedicated levels of private lifestyle, wellness, and culinary services managed by our 24-hour white-glove concierge team.
                 </p>
             </div>
 
             <div class="amenities-showcase-grid">
                 <!-- Amenity 1 -->
-                <div class="amenity-card">
-                    <div class="amenity-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=700&q=80" alt="Cantilevered Lap Pool" loading="lazy">
-                        <span class="amenity-level-tag">Level 50 • Sky Club</span>
+                <div class="amenity-block">
+                    <div class="amenity-img-holder">
+                        <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80" alt="75-Foot Sky Pool" loading="lazy">
+                        <span class="amenity-floor-pill">Floor 30</span>
                     </div>
-                    <div class="amenity-body">
-                        <div class="amenity-icon-bubble"><i class="fa-solid fa-water-ladder"></i></div>
-                        <h3 class="amenity-title">75-Ft Cantilevered Sky Pool</h3>
-                        <p class="amenity-desc">Heated ozone-filtered lap pool extending over the tower facade with floor-to-ceiling glass and panoramic Central Park views.</p>
+                    <div class="amenity-block-body">
+                        <h4 class="amenity-block-title">75-Foot Cantilevered Sky Pool</h4>
+                        <p style="font-size:0.86rem; color:var(--text-muted); line-height:1.6;">
+                            Heated ozone lap pool with teak sundeck, glass floor viewing portal, and unobstructed direct views overlooking Central Park.
+                        </p>
                     </div>
                 </div>
 
                 <!-- Amenity 2 -->
-                <div class="amenity-card">
-                    <div class="amenity-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=700&q=80" alt="Biophilic Spa & Cryo" loading="lazy">
-                        <span class="amenity-level-tag">Level 49 • Wellness</span>
+                <div class="amenity-block">
+                    <div class="amenity-img-holder">
+                        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=800&q=80" alt="Turkish Hammam & Spa" loading="lazy">
+                        <span class="amenity-floor-pill">Floor 30</span>
                     </div>
-                    <div class="amenity-body">
-                        <div class="amenity-icon-bubble"><i class="fa-solid fa-spa"></i></div>
-                        <h3 class="amenity-title">Biophilic Spa & Cryotherapy</h3>
-                        <p class="amenity-desc">Nordic sauna, marble steam hammam, vitality cold plunge pools, and whole-body cryotherapy recovery chambers.</p>
+                    <div class="amenity-block-body">
+                        <h4 class="amenity-block-title">Thermal Spa & Hammam</h4>
+                        <p style="font-size:0.86rem; color:var(--text-muted); line-height:1.6;">
+                            Custom marble steam rooms, Finnish cedar saunas, vitality plunge pools, and private treatment suites for resident wellness.
+                        </p>
                     </div>
                 </div>
 
                 <!-- Amenity 3 -->
-                <div class="amenity-card">
-                    <div class="amenity-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=700&q=80" alt="Technogym Fitness Suite" loading="lazy">
-                        <span class="amenity-level-tag">Level 48 • Athletics</span>
+                <div class="amenity-block">
+                    <div class="amenity-img-holder">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Private Dining Club" loading="lazy">
+                        <span class="amenity-floor-pill">Floor 15</span>
                     </div>
-                    <div class="amenity-body">
-                        <div class="amenity-icon-bubble"><i class="fa-solid fa-dumbbell"></i></div>
-                        <h3 class="amenity-title">Technogym High-Altitude Fitness</h3>
-                        <p class="amenity-desc">State-of-the-art cardiovascular and strength systems, private Pilates reformer studios, and yoga meditation loggia.</p>
+                    <div class="amenity-block-body">
+                        <h4 class="amenity-block-title">The Skyline Dining Club</h4>
+                        <p style="font-size:0.86rem; color:var(--text-muted); line-height:1.6;">
+                            Michelin-partnered private resident restaurant, private chef catering pantry, and formal banquet salon seating 36 guests.
+                        </p>
                     </div>
                 </div>
 
                 <!-- Amenity 4 -->
-                <div class="amenity-card">
-                    <div class="amenity-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=700&q=80" alt="Private Dining & Wine Vault" loading="lazy">
-                        <span class="amenity-level-tag">Level 30 • Hospitality</span>
+                <div class="amenity-block">
+                    <div class="amenity-img-holder">
+                        <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=800&q=80" alt="Wine Tasting Room & Vault" loading="lazy">
+                        <span class="amenity-floor-pill">Floor 15</span>
                     </div>
-                    <div class="amenity-body">
-                        <div class="amenity-icon-bubble"><i class="fa-solid fa-wine-glass"></i></div>
-                        <h3 class="amenity-title">Private Dining & Sommelier Vault</h3>
-                        <p class="amenity-desc">24-seat formal dining salon with Michelin-grade commercial catering kitchen and temperature-controlled private wine lockers.</p>
+                    <div class="amenity-block-body">
+                        <h4 class="amenity-block-title">Sommelier Cellar & Vault</h4>
+                        <p style="font-size:0.86rem; color:var(--text-muted); line-height:1.6;">
+                            Temperature-regulated personal bottle vaults, curated private tasting room, and sommelier concierge storage.
+                        </p>
                     </div>
                 </div>
 
                 <!-- Amenity 5 -->
-                <div class="amenity-card">
-                    <div class="amenity-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80" alt="Skyline Observation Terrace" loading="lazy">
-                        <span class="amenity-level-tag">Level 60 • The Crown</span>
+                <div class="amenity-block">
+                    <div class="amenity-img-holder">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="High-Performance Fitness Center" loading="lazy">
+                        <span class="amenity-floor-pill">Floor 31</span>
                     </div>
-                    <div class="amenity-body">
-                        <div class="amenity-icon-bubble"><i class="fa-solid fa-martini-glass-citrus"></i></div>
-                        <h3 class="amenity-title">Crown Observation Lounge</h3>
-                        <p class="amenity-desc">Open-air landscaped sky terrace with bronze fire tables, cocktail bar, and 360-degree glass viewing parapets.</p>
+                    <div class="amenity-block-body">
+                        <h4 class="amenity-block-title">Equinox-Trained Fitness Center</h4>
+                        <p style="font-size:0.86rem; color:var(--text-muted); line-height:1.6;">
+                            State-of-the-art cardio suite, private Pilates reformer studio, boxing ring, and personal training consultation suites.
+                        </p>
                     </div>
                 </div>
 
                 <!-- Amenity 6 -->
-                <div class="amenity-card">
-                    <div class="amenity-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=700&q=80" alt="White Glove Concierge" loading="lazy">
-                        <span class="amenity-level-tag">Ground Floor • Porte-Cochère</span>
+                <div class="amenity-block">
+                    <div class="amenity-img-holder">
+                        <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=800&q=80" alt="Private Screening Theater" loading="lazy">
+                        <span class="amenity-floor-pill">Floor 14</span>
                     </div>
-                    <div class="amenity-body">
-                        <div class="amenity-icon-bubble"><i class="fa-solid fa-bell-concierge"></i></div>
-                        <h3 class="amenity-title">24/7 White-Glove Concierge</h3>
-                        <p class="amenity-desc">Dedicated doormen, private concierge, automated underground robotic parking, and secure private chauffeur staging.</p>
-                    </div>
-                </div>
-
-                <!-- Amenity 7 -->
-                <div class="amenity-card">
-                    <div class="amenity-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?auto=format&fit=crop&w=700&q=80" alt="Private Cinema Theater" loading="lazy">
-                        <span class="amenity-level-tag">Level 15 • Entertainment</span>
-                    </div>
-                    <div class="amenity-body">
-                        <div class="amenity-icon-bubble"><i class="fa-solid fa-film"></i></div>
-                        <h3 class="amenity-title">Dolby Atmos Cinema Screening</h3>
-                        <p class="amenity-desc">16-seat luxury velvet screening room with 4K laser projection, immersive audio acoustics, and private concession bar.</p>
-                    </div>
-                </div>
-
-                <!-- Amenity 8 -->
-                <div class="amenity-card">
-                    <div class="amenity-img-wrap">
-                        <img src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=700&q=80" alt="Executive Boardroom" loading="lazy">
-                        <span class="amenity-level-tag">Level 15 • Executive</span>
-                    </div>
-                    <div class="amenity-body">
-                        <div class="amenity-icon-bubble"><i class="fa-solid fa-briefcase"></i></div>
-                        <h3 class="amenity-title">Executive Boardroom & Study</h3>
-                        <p class="amenity-desc">Secure conference suite with encrypted teleconferencing, private phone booths, and curated architectural library.</p>
+                    <div class="amenity-block-body">
+                        <h4 class="amenity-block-title">Dolby Atmos Screening Salon</h4>
+                        <p style="font-size:0.86rem; color:var(--text-muted); line-height:1.6;">
+                            22-seat acoustic screening theater with motorized plush velvet recliners, 4K laser projection, and private bar service.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Architecture & Interior Design Editorial -->
-    <section class="section-architecture" id="architecture">
+    <!-- Architecture & Craftsmanship Section -->
+    <section class="section" id="architecture">
         <div class="container">
-            <div class="architecture-split-grid">
-                
-                <div class="arch-narrative-col">
-                    <span class="badge-gold-pill"><i class="fa-solid fa-compass-drafting"></i> ARCHITECTURAL MASTERPIECE</span>
-                    <h2 class="section-title heading-monument">SCULPTED BY LIGHT, STONE & BRONZE</h2>
-                    
-                    <p class="arch-lead">
-                        Conceived as a slender, stepped crystalline monument on Central Park South, the tower pays homage to Manhattan's classic Art Deco landmarks while introducing ultra-modern engineering.
+            <div class="architecture-editorial-grid">
+                <div>
+                    <span class="badge-gold-pill"><i class="fa-solid fa-monument"></i> TIMELESS CRAFTSMANSHIP</span>
+                    <h2 class="section-title" style="text-align:left;">Masterwork of Bronze & Crystal</h2>
+                    <p style="color:var(--text-muted); font-size:1.02rem; line-height:1.8; margin-bottom:1.5rem;">
+                        Conceived by world-renowned architects, Skyline Residences stands as an homage to Manhattan’s classical Art Deco era while delivering next-generation structural engineering and acoustic isolation.
+                    </p>
+                    <p style="color:var(--text-muted); font-size:0.92rem; line-height:1.7; margin-bottom:2rem;">
+                        Every residence features triple-glazed acoustic curtain walls engineered to reduce exterior city sounds to a whisper (&lt;28dB), alongside zoned circadian lighting systems and dedicated ERV filtered fresh-air delivery.
                     </p>
 
-                    <div class="arch-feature-list">
-                        <div class="arch-feature-item">
-                            <div class="arch-icon"><i class="fa-solid fa-cube"></i></div>
-                            <div>
-                                <h4 class="arch-item-title">Custom Molteni&C Dada Italian Kitchens</h4>
-                                <p class="arch-item-desc">Honed Calacatta Gold marble slab islands with waterfall edges, fluted bronze cabinetry, integrated Gaggenau 400-series appliances, and Dornbracht brushed brass tapware.</p>
-                            </div>
+                    <div class="craftsmanship-pillars">
+                        <div class="craft-item">
+                            <h4>Fluted Bronze Spandrels</h4>
+                            <p>Hand-cast architectural bronze mullions that catch golden light at sunset.</p>
                         </div>
-
-                        <div class="arch-feature-item">
-                            <div class="arch-icon"><i class="fa-solid fa-bath"></i></div>
-                            <div>
-                                <h4 class="arch-item-title">Primary Bathrooms Carved in Italian Stone</h4>
-                                <p class="arch-item-desc">Floor-to-ceiling bookmatched Statuario marble walls, freestanding carved soaking tubs with park views, radiant-heated floors, and custom bronze vanity mirrors.</p>
-                            </div>
+                        <div class="craft-item">
+                            <h4>Italian Calacatta Marble</h4>
+                            <p>Hand-selected single-slab bookmatched marble in master bathroom suites.</p>
                         </div>
-
-                        <div class="arch-feature-item">
-                            <div class="arch-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                            <div>
-                                <h4 class="arch-item-title">Triple-Pane Acoustic Thermal Glazing</h4>
-                                <p class="arch-item-desc">Acoustic glass envelope providing pin-drop library quietness inside while offering crystal-clear solar-shielded 360-degree daylight views.</p>
-                            </div>
+                        <div class="craft-item">
+                            <h4>Acoustic Crystal Glazing</h4>
+                            <p>Floor-to-ceiling thermal crystal glass with zero visible corner seams.</p>
+                        </div>
+                        <div class="craft-item">
+                            <h4>Direct Elevator Entrances</h4>
+                            <p>Biometric high-speed private elevator access directly into gallery foyers.</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="arch-visual-col">
-                    <div class="arch-main-img-card">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85" alt="Tower Architecture and Interior" class="arch-hero-img">
-                        <div class="arch-floating-quote">
-                            <i class="fa-solid fa-quote-left quote-mark"></i>
-                            <p class="quote-text">"Every angle of Skyline Residences was engineered to frame Central Park like an unrepeatable private oil painting."</p>
-                            <span class="quote-author">— Lead Design Principal</span>
-                        </div>
+                <div>
+                    <div style="position:relative; border-radius:var(--radius-lg); overflow:hidden; border:1px solid var(--border-gold); box-shadow:var(--shadow-lg);">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85" alt="Skyline Residences Interior Architecture" style="width:100%; height:100%; object-fit:cover;">
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- 360° Manhattan Horizon View Switcher -->
-    <section class="section-views" id="views">
+    <section class="section section-subtle" id="views">
         <div class="container">
-            <div class="section-header text-center">
+            <div class="text-center">
                 <span class="badge-gold-pill"><i class="fa-solid fa-compass"></i> PANORAMIC HORIZONS</span>
-                <h2 class="section-title heading-monument">360° MANHATTAN PANORAMAS</h2>
+                <h2 class="section-title">360° Manhattan Vistas</h2>
                 <p class="section-subtitle">
-                    Select a compass direction to experience the actual sightlines from the upper tower elevations.
+                    Experience the changing perspectives from over 850 feet above Billionaires' Row across all four cardinal directions.
                 </p>
             </div>
 
-            <!-- Horizon Compass Controls -->
-            <div class="view-compass-tabs">
-                <button class="view-tab-btn active" data-view="north">
-                    <i class="fa-solid fa-compass"></i> North: Central Park & Reservoir
-                </button>
-                <button class="view-tab-btn" data-view="south">
-                    <i class="fa-solid fa-city"></i> South: Midtown Skyline & Empire State
-                </button>
-                <button class="view-tab-btn" data-view="west">
-                    <i class="fa-solid fa-sun"></i> West: Hudson River Sunset
-                </button>
-                <button class="view-tab-btn" data-view="east">
-                    <i class="fa-solid fa-bridge"></i> East: East River & Morning Sunrise
-                </button>
-            </div>
-
-            <!-- View Display Frame -->
-            <div class="view-viewer-card">
-                <div class="view-display-window">
-                    <img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?auto=format&fit=crop&w=1600&q=85" alt="Central Park View" id="viewDisplayImg" class="view-main-img">
-                    <div class="view-reticle-overlay">
-                        <div class="reticle-center"></div>
-                        <span class="reticle-compass-tag">ELEVATION 1,050 FT</span>
-                    </div>
-                </div>
-                
-                <div class="view-viewer-footer">
-                    <div>
-                        <h3 class="view-footer-title" id="viewCaptionTitle">North Horizon: Central Park Direct</h3>
-                        <p class="view-footer-desc" id="viewCaptionDesc">Direct 180-degree unobstructed panorama across the full 843 acres of Central Park, extending to the Harlem Meer and George Washington Bridge.</p>
-                    </div>
-                    <div class="view-footer-meta">
-                        <span class="elevation-badge" id="viewCaptionElevation">Elevation: 950–1,050 FT</span>
-                        <button class="btn btn-gold btn-sm trigger-appointment-modal">Schedule On-Site View Tour</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Neighborhood & Billionaires' Row -->
-    <section class="section-neighborhood" id="neighborhood">
-        <div class="container">
-            <div class="section-header text-center">
-                <span class="badge-gold-pill"><i class="fa-solid fa-location-dot"></i> PRIME LOCATION</span>
-                <h2 class="section-title heading-monument">111 CENTRAL PARK SOUTH</h2>
-                <p class="section-subtitle">
-                    Surrounded by the world's most celebrated cultural institutions, haute couture shopping, and three-Michelin-starred gastronomy.
-                </p>
-            </div>
-
-            <div class="neighborhood-cards-grid">
-                <div class="nh-card">
-                    <div class="nh-card-header">
-                        <i class="fa-solid fa-masks-theater text-gold"></i>
-                        <h3 class="nh-title">Culture & Arts</h3>
-                    </div>
-                    <ul class="nh-list">
-                        <li><strong>Carnegie Hall</strong> — 2 blocks away</li>
-                        <li><strong>Lincoln Center for the Performing Arts</strong> — 4 mins</li>
-                        <li><strong>Museum of Modern Art (MoMA)</strong> — 3 blocks away</li>
-                        <li><strong>The Metropolitan Opera</strong> — 5 mins</li>
-                    </ul>
+            <div class="view-horizon-panel">
+                <div class="view-horizon-nav">
+                    <button class="view-tab-btn active"><i class="fa-solid fa-tree"></i> North (Central Park)</button>
+                    <button class="view-tab-btn"><i class="fa-solid fa-city"></i> South (Midtown & Empire)</button>
+                    <button class="view-tab-btn"><i class="fa-solid fa-sun"></i> West (Hudson Sunset)</button>
+                    <button class="view-tab-btn"><i class="fa-solid fa-water"></i> East (East River Bridges)</button>
                 </div>
 
-                <div class="nh-card">
-                    <div class="nh-card-header">
-                        <i class="fa-solid fa-utensils text-gold"></i>
-                        <h3 class="nh-title">Michelin Dining</h3>
-                    </div>
-                    <ul class="nh-list">
-                        <li><strong>Le Bernardin (3★)</strong> — 3 blocks away</li>
-                        <li><strong>Per Se (3★)</strong> — Columbus Circle</li>
-                        <li><strong>Masa (3★)</strong> — Columbus Circle</li>
-                        <li><strong>The Modern (2★)</strong> — MoMA Sculpture Garden</li>
-                    </ul>
-                </div>
-
-                <div class="nh-card">
-                    <div class="nh-card-header">
-                        <i class="fa-solid fa-bag-shopping text-gold"></i>
-                        <h3 class="nh-title">Haute Couture</h3>
-                    </div>
-                    <ul class="nh-list">
-                        <li><strong>Bergdorf Goodman</strong> — 5th Avenue (1 block)</li>
-                        <li><strong>Fifth Avenue Flagships</strong> — Tiffany & Co, Chanel, Cartier</li>
-                        <li><strong>Madison Avenue Boutiques</strong> — 3 mins</li>
-                        <li><strong>The Shops at Columbus Circle</strong> — 2 mins</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sales Gallery & Private Appointment Inquiry -->
-    <section class="section-contact" id="contact">
-        <div class="container">
-            <div class="contact-split-layout">
-                
-                <!-- Contact Info Col -->
-                <div class="contact-info-col">
-                    <span class="badge-gold-pill"><i class="fa-solid fa-id-card"></i> PRIVATE SALES GALLERY</span>
-                    <h2 class="contact-title heading-monument">ARRANGE A CONFIDENTIAL PREVIEW</h2>
-                    <p class="contact-lead">
-                        Appointments are held in the private Skyline Sales Gallery at 111 Central Park South, featuring complete architectural scale models, finish palettes, and physical mockups.
-                    </p>
-
-                    <div class="contact-info-blocks">
-                        <div class="c-info-item">
-                            <div class="c-icon"><i class="fa-solid fa-building-user"></i></div>
-                            <div>
-                                <h4 class="c-item-title">On-Site Sales Gallery</h4>
-                                <p class="c-item-text">111 Central Park South, 40th Floor<br>New York, NY 10019</p>
+                <div class="view-display-frame">
+                    <img id="viewDisplayImg" src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1400&q=80" alt="Central Park North Panorama">
+                    
+                    <div class="view-caption-overlay">
+                        <div>
+                            <div id="viewCaptionElevation" style="font-size:0.75rem; text-transform:uppercase; color:var(--gold-primary); font-weight:700; letter-spacing:0.1em; margin-bottom:0.3rem;">
+                                Floor 58 (850 ft Elevation)
                             </div>
+                            <h3 id="viewCaptionTitle" style="font-family:var(--font-heading); font-size:1.6rem; color:#ffffff; font-weight:700; margin-bottom:0.4rem;">
+                                Central Park North Panorama
+                            </h3>
+                            <p id="viewCaptionDesc" style="color:var(--text-muted); font-size:0.9rem; max-width:640px; line-height:1.5;">
+                                Unobstructed direct vista stretching across the entire 843-acre expanse of Central Park to the Harlem River and George Washington Bridge.
+                            </p>
                         </div>
-
-                        <div class="c-info-item">
-                            <div class="c-icon"><i class="fa-solid fa-phone"></i></div>
-                            <div>
-                                <h4 class="c-item-title">Direct Sales Inquiries</h4>
-                                <p class="c-item-text"><a href="tel:+919929875549">+91 99298 75549</a> / +1 (212) 555-0199</p>
-                            </div>
-                        </div>
-
-                        <div class="c-info-item">
-                            <div class="c-icon"><i class="fa-solid fa-envelope"></i></div>
-                            <div>
-                                <h4 class="c-item-title">Email Inquiries</h4>
-                                <p class="c-item-text">sales@skyline-residences-nyc.com</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Form Col -->
-                <div class="contact-form-col">
-                    <div class="contact-form-card">
-                        <h3 class="form-card-title"><i class="fa-solid fa-calendar-check text-gold"></i> Request Private Presentation</h3>
-                        <p class="form-card-sub">Please fill out the form below. A senior sales director will contact you promptly.</p>
-
-                        <form id="contactSectionForm" class="appointment-form">
-                            <div class="form-row-2">
-                                <div class="form-group">
-                                    <label class="form-label">First Name *</label>
-                                    <input type="text" class="form-control" placeholder="e.g. Jonathan" required>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Last Name *</label>
-                                    <input type="text" class="form-control" placeholder="e.g. Sterling" required>
-                                </div>
-                            </div>
-
-                            <div class="form-row-2">
-                                <div class="form-group">
-                                    <label class="form-label">Email Address *</label>
-                                    <input type="email" class="form-control" placeholder="sterling@private-capital.com" required>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Phone Number *</label>
-                                    <input type="tel" class="form-control" placeholder="+1 (212) 000-0000" required>
-                                </div>
-                            </div>
-
-                            <div class="form-row-2">
-                                <div class="form-group">
-                                    <label class="form-label">Residence Category of Interest</label>
-                                    <select class="form-control">
-                                        <option value="penthouse">The Sky Penthouses (.5M – )</option>
-                                        <option value="tower">Tower Residences (.5M – .5M)</option>
-                                        <option value="park">Central Park Suites (.95M – .85M)</option>
-                                        <option value="podium">Podium Collection (.85M – .45M)</option>
-                                    </select>
-                                </div>
-                                <div class="form-group">
-                                    <label class="form-label">Are You Working with a Broker?</label>
-                                    <select class="form-control">
-                                        <option value="no">No, Inquiring Directly</option>
-                                        <option value="yes">Yes, Represented by Licensed Broker</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="form-group">
-                                <label class="form-label">Special Inquiries or Preferred Dates</label>
-                                <textarea class="form-control" rows="3" placeholder="Please specify your timeline, preferred viewing dates, or specific unit requirements..."></textarea>
-                            </div>
-
-                            <button type="submit" class="btn btn-gold btn-lg w-100 mt-3">
-                                <i class="fa-solid fa-paper-plane"></i> Submit Confidential Inquiry
-                            </button>
-                        </form>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer & Credits -->
-    <footer class="main-footer">
-        <div class="container footer-top">
-            <div class="footer-col brand-col">
-                <div class="brand-logo footer-logo">
-                    <span class="logo-brand text-gold">SKYLINE</span>
-                    <span class="logo-sub">RESIDENCES • NEW YORK</span>
-                </div>
-                <p class="footer-desc">
-                    111 Central Park South, New York, NY 10019. 60 stories of architectural triumph, overlooking Central Park and the Manhattan skyline.
-                </p>
-                <div class="footer-social-links">
-                    <a href="https://www.instagram.com/gchoyal_websitedeveloper/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
-                        <i class="fa-brands fa-instagram"></i>
-                    </a>
-                    <a href="https://wa.me/919929875549" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
-                    <a href="tel:+919929875549" class="social-icon" aria-label="Call Direct">
-                        <i class="fa-solid fa-phone"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="footer-col">
-                <h4 class="footer-heading">The Tower</h4>
-                <ul class="footer-links">
-                    <li><a href="#overview">Overview & Height</a></li>
-                    <li><a href="#elevation">60-Floor Elevation Stack</a></li>
-                    <li><a href="#residences">Residences Matrix</a></li>
-                    <li><a href="#amenities">45,000 SF Amenities</a></li>
-                    <li><a href="#views">360° Views</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h4 class="footer-heading">Portfolio Hub</h4>
-                <ul class="footer-links">
-                    <li><a href="../index.html"><i class="fa-solid fa-arrow-left text-gold"></i> Master Portfolio Hub</a></li>
-                    <li><a href="../oak-and-ivy/index.html">Oak & Ivy Luxury Living</a></li>
-                    <li><a href="../northstar-commercial/index.html">Northstar Commercial</a></li>
-                    <li><a href="../verde-heights/index.html">Verde Heights Eco Living</a></li>
-                    <li><a href="../aurelia-estates/index.html">Aurelia Estates Beverly Hills</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-col">
-                <h4 class="footer-heading">Architectural Credits</h4>
-                <div class="developer-badge-box">
-                    <span class="dev-badge-title">Designed & Built By:</span>
-                    <a href="https://www.instagram.com/gchoyal_websitedeveloper/" target="_blank" rel="noopener noreferrer" class="dev-author-link">
-                        <i class="fa-solid fa-code"></i> Girdhari Choyal
-                    </a>
-                    <span class="dev-role">WordPress & Luxury Real Estate Web Architect</span>
-                    <div class="dev-contact-ctas">
-                        <a href="https://wa.me/919929875549" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-xs">
-                            <i class="fa-brands fa-whatsapp"></i> WhatsApp Me
-                        </a>
-                        <a href="tel:+919929875549" class="btn btn-outline btn-xs">
-                            <i class="fa-solid fa-phone"></i> +91 99298 75549
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <div class="container d-flex-between">
-                <p class="copyright-text">
-                    &copy; 2026 Skyline Residences NYC • 111 Central Park South. Concept demonstration site created by <a href="https://www.instagram.com/gchoyal_websitedeveloper/" target="_blank" rel="noopener noreferrer" class="text-gold">Girdhari Choyal</a>.
-                </p>
-                <div class="footer-legal-links">
-                    <a href="#contact">Fair Housing Statement</a>
-                    <span>•</span>
-                    <a href="#contact">Equal Housing Opportunity</a>
-                    <span>•</span>
-                    <a href="../index.html">Portfolio Hub</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Mobile Bottom Sticky CTA Bar -->
-    <div class="mobile-sticky-bar">
-        <a href="tel:+919929875549" class="mobile-cta-btn call-btn">
-            <i class="fa-solid fa-phone"></i>
-            <span>Call Now</span>
-        </a>
-        <a href="https://wa.me/919929875549" target="_blank" rel="noopener noreferrer" class="mobile-cta-btn whatsapp-btn">
-            <i class="fa-brands fa-whatsapp"></i>
-            <span>WhatsApp</span>
-        </a>
-        <button class="mobile-cta-btn appointment-btn trigger-appointment-modal">
-            <i class="fa-regular fa-calendar-check"></i>
-            <span>Private Preview</span>
-        </button>
-    </div>
-
-    <!-- Unit Detail & SVG Blueprint Modal -->
-    <div class="modal-overlay" id="unitDetailModal">
-        <div class="modal-container modal-lg">
-            <button class="modal-close-btn" aria-label="Close Modal"><i class="fa-solid fa-xmark"></i></button>
-            
-            <div class="modal-grid-layout">
-                <!-- SVG Floor Plan Column -->
-                <div class="modal-blueprint-col">
-                    <div class="blueprint-header-tag"><i class="fa-solid fa-drafting-compass"></i> ARCHITECTURAL BLUEPRINT & SPATIAL LAYOUT</div>
-                    <div class="blueprint-svg-wrapper" id="modalUnitSvg">
-                        <!-- Populated dynamically by app.js getFloorPlanSvg() -->
-                    </div>
-                </div>
-
-                <!-- Unit Specs & Inquire Column -->
-                <div class="modal-specs-col">
-                    <div class="modal-unit-heading-block">
-                        <span class="modal-tier-badge" id="modalUnitTier">THE SKY PENTHOUSES</span>
-                        <h3 class="modal-unit-title heading-monument" id="modalUnitTitle">The Triplex Crown Penthouse</h3>
-                        <div class="modal-price-tag" id="modalSpecPrice">,000,000</div>
-                    </div>
-
-                    <div class="modal-specs-grid">
-                        <div class="m-spec-box">
-                            <span class="m-label">Interior Area</span>
-                            <span class="m-val" id="modalSpecSqft">10,500 Sq. Ft.</span>
-                        </div>
-                        <div class="m-spec-box">
-                            <span class="m-label">Bedrooms</span>
-                            <span class="m-val" id="modalSpecBeds">6 Bedrooms</span>
-                        </div>
-                        <div class="m-spec-box">
-                            <span class="m-label">Bathrooms</span>
-                            <span class="m-val" id="modalSpecBaths">7.5 Baths</span>
-                        </div>
-                        <div class="m-spec-box">
-                            <span class="m-label">Ceiling Height</span>
-                            <span class="m-val" id="modalSpecCeiling">18 Ft Double-Height</span>
-                        </div>
-                        <div class="m-spec-box">
-                            <span class="m-label">Private Outdoor</span>
-                            <span class="m-val" id="modalSpecBalcony">1,450 Sq. Ft.</span>
-                        </div>
-                        <div class="m-spec-box">
-                            <span class="m-label">Availability</span>
-                            <div id="modalSpecAvailability"><span class="unit-status-pill available">Available</span></div>
-                        </div>
-                    </div>
-
-                    <div class="modal-view-banner">
-                        <i class="fa-solid fa-eye text-gold"></i>
-                        <span id="modalSpecView">Unobstructed 360° Panorama (Full Central Park & Both Rivers)</span>
-                    </div>
-
-                    <div class="modal-features-section">
-                        <h4 class="m-sec-title">Key Architectural Inclusions:</h4>
-                        <ul class="modal-features-list" id="modalFeaturesList">
-                            <!-- Populated dynamically -->
-                        </ul>
-                    </div>
-
-                    <div class="modal-actions mt-4">
-                        <button class="btn btn-gold btn-lg w-100" id="modalAppointmentBtn">
-                            <i class="fa-regular fa-calendar-check"></i> Schedule Private Viewing for This Residence
+                        <button class="btn btn-gold btn-sm trigger-appointment-modal">
+                            Experience in Person
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Private Sales Appointment Modal -->
-    <div class="modal-overlay" id="appointmentModal">
-        <div class="modal-container">
-            <button class="modal-close-btn" aria-label="Close Modal"><i class="fa-solid fa-xmark"></i></button>
-            
-            <div class="appointment-modal-header text-center">
-                <span class="badge-gold-pill"><i class="fa-solid fa-gem"></i> SKYLINE RESIDENCES NYC</span>
-                <h3 class="appointment-modal-title heading-monument">SCHEDULE PRIVATE PRESENTATION</h3>
-                <p class="appointment-modal-sub">Experience the 111 Central Park South Sales Gallery and residence views.</p>
+    <!-- Private Gallery & Consultation Form -->
+    <section class="section" id="contact">
+        <div class="container">
+            <div style="background:var(--bg-surface); border:1px solid var(--border-gold); border-radius:var(--radius-lg); padding: clamp(2rem, 5vw, 4rem); box-shadow:var(--shadow-lg);">
+                <div style="display:grid; grid-template-columns: 1fr 1.1fr; gap:3rem; align-items:center;">
+                    <div>
+                        <span class="badge-gold-pill"><i class="fa-solid fa-door-open"></i> SALES GALLERY</span>
+                        <h2 class="section-title" style="text-align:left; font-size:2.4rem;">Private Viewings & Inquiries</h2>
+                        <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.7; margin-bottom:1.5rem;">
+                            Private appointments are conducted in our bespoke Sales Gallery at 111 Central Park South, complete with full-scale architectural model displays, finish galleries, and virtual penthouse tours.
+                        </p>
+
+                        <div style="display:flex; flex-direction:column; gap:1.2rem; font-size:0.92rem; color:var(--text-main); margin-bottom:2rem;">
+                            <div style="display:flex; align-items:center; gap:12px;">
+                                <i class="fa-solid fa-location-dot text-gold" style="font-size:1.2rem; width:20px;"></i>
+                                <span>111 Central Park South, New York, NY 10019</span>
+                            </div>
+                            <div style="display:flex; align-items:center; gap:12px;">
+                                <i class="fa-solid fa-phone text-gold" style="font-size:1.2rem; width:20px;"></i>
+                                <a href="tel:+12125550199" style="color:var(--gold-primary); font-weight:700;">+1 (212) 555-0199</a>
+                            </div>
+                            <div style="display:flex; align-items:center; gap:12px;">
+                                <i class="fa-solid fa-envelope text-gold" style="font-size:1.2rem; width:20px;"></i>
+                                <span>sales@skyline-111cps.com</span>
+                            </div>
+                        </div>
+
+                        <div style="padding:1.2rem; background:var(--bg-subtle); border-radius:var(--radius-sm); border:1px solid var(--border);">
+                            <div style="font-size:0.75rem; text-transform:uppercase; color:var(--text-light); font-weight:700;">Exclusive Development Architect</div>
+                            <div style="font-family:var(--font-heading); font-size:1.1rem; color:#ffffff; font-weight:700; margin-top:2px;">
+                                Concept Developed by <a href="https://www.instagram.com/gchoyal_websitedeveloper/" target="_blank" class="author-link">Girdhari Choyal</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <form id="contactSectionForm" style="display:flex; flex-direction:column; gap:1.2rem;">
+                            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+                                <div>
+                                    <label style="display:block; font-size:0.8rem; font-weight:700; color:var(--text-main); margin-bottom:0.4rem;">First Name *</label>
+                                    <input type="text" placeholder="Alexander" required style="width:100%; padding:12px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); color:#ffffff; outline:none;">
+                                </div>
+                                <div>
+                                    <label style="display:block; font-size:0.8rem; font-weight:700; color:var(--text-main); margin-bottom:0.4rem;">Last Name *</label>
+                                    <input type="text" placeholder="Hamilton" required style="width:100%; padding:12px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); color:#ffffff; outline:none;">
+                                </div>
+                            </div>
+
+                            <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem;">
+                                <div>
+                                    <label style="display:block; font-size:0.8rem; font-weight:700; color:var(--text-main); margin-bottom:0.4rem;">Email Address *</label>
+                                    <input type="email" placeholder="alexander@familyoffice.com" required style="width:100%; padding:12px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); color:#ffffff; outline:none;">
+                                </div>
+                                <div>
+                                    <label style="display:block; font-size:0.8rem; font-weight:700; color:var(--text-main); margin-bottom:0.4rem;">Phone Number *</label>
+                                    <input type="tel" placeholder="+1 (212) 000-0000" required style="width:100%; padding:12px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); color:#ffffff; outline:none;">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label style="display:block; font-size:0.8rem; font-weight:700; color:var(--text-main); margin-bottom:0.4rem;">Interested Tier / Residence Type</label>
+                                <select style="width:100%; padding:12px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); color:#ffffff; outline:none;">
+                                    <option value="penthouse">The Sky Penthouses ($38M – $65M)</option>
+                                    <option value="tower">The Tower Residences ($14M – $22M)</option>
+                                    <option value="suites">Central Park Suites ($9.5M – $13.5M)</option>
+                                    <option value="podium">The Podium Maisonettes ($8.9M)</option>
+                                    <option value="general">General Private Preview Invitation</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label style="display:block; font-size:0.8rem; font-weight:700; color:var(--text-main); margin-bottom:0.4rem;">Private Message / Special Requests</label>
+                                <textarea rows="3" placeholder="Please indicate preferred viewing dates or private family office representation..." style="width:100%; padding:12px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); color:#ffffff; outline:none; font-family:inherit;"></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-gold w-100" style="padding:15px;">
+                                <i class="fa-solid fa-paper-plane"></i> Request Confidential Consultation
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>SKYLINE RESIDENCES</h3>
+                    <p style="margin-bottom:1.2rem; font-size:0.86rem; line-height:1.6; max-width:320px;">
+                        111 Central Park South, New York, NY 10019. 60 stories of sculpted luxury living on Billionaires' Row.
+                    </p>
+                    <div style="display:flex; gap:10px;">
+                        <a href="https://www.instagram.com/gchoyal_websitedeveloper/" target="_blank" class="btn btn-outline-gold btn-sm"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                        <a href="https://wa.me/919929875549" target="_blank" class="btn btn-gold btn-sm"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>The Tower</h4>
+                    <ul class="footer-links">
+                        <li><a href="#elevation">60-Floor Selector</a></li>
+                        <li><a href="#residences">Penthouse Collection</a></li>
+                        <li><a href="#residences">Tower Estates</a></li>
+                        <li><a href="#amenities">50,000 SF Club</a></li>
+                        <li><a href="#views">360° Skyline Views</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Portfolio Hub</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html"><i class="fa-solid fa-arrow-left text-gold"></i> Master Portfolio</a></li>
+                        <li><a href="../verde-heights/index.html">Verde Heights Austin</a></li>
+                        <li><a href="../northstar-commercial/index.html">Northstar Commercial</a></li>
+                        <li><a href="../oak-and-ivy/index.html">Oak & Ivy Properties</a></li>
+                        <li><a href="../homely-nest/index.html">Homely Nest Rentals</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Developer Credit</h4>
+                    <p style="font-size:0.82rem; color:var(--text-muted); margin-bottom:0.8rem; line-height:1.6;">
+                        High-End Real Estate & WordPress Demonstration Platform by:
+                    </p>
+                    <a href="https://www.instagram.com/gchoyal_websitedeveloper/" target="_blank" class="author-link" style="font-size:1.05rem; display:block; margin-bottom:0.4rem;">
+                        Girdhari Choyal
+                    </a>
+                    <span style="font-size:0.75rem; color:var(--text-light); display:block; margin-bottom:1rem;">
+                        [@gchoyal_websitedeveloper](https://www.instagram.com/gchoyal_websitedeveloper/)
+                    </span>
+                    <a href="tel:+919929875549" style="font-size:0.82rem; color:var(--gold-primary); font-weight:600;"><i class="fa-solid fa-phone"></i> +91 99298 75549</a>
+                </div>
             </div>
 
-            <form id="appointmentForm" class="appointment-form-inner">
-                <div class="form-group">
-                    <label class="form-label">Residence of Interest</label>
-                    <input type="text" id="appointmentTargetUnit" class="form-control" value="General Inquiry — All Residences" readonly>
+            <div class="footer-bottom">
+                <div>
+                    &copy; 2026 Skyline Residences LLC • 111 Central Park South, New York, NY. All Rights Reserved.
+                </div>
+                <div>
+                    Concept Designed & Engineered by <a href="https://www.instagram.com/gchoyal_websitedeveloper/" target="_blank" class="author-link">Girdhari Choyal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =========================================================================
+         UNIT DETAIL & BLUEPRINT MODAL
+         ========================================================================= -->
+    <div class="modal-overlay" id="unitDetailModal">
+        <div class="modal-dialog">
+            <button class="modal-close-btn" aria-label="Close Modal"><i class="fa-solid fa-xmark"></i></button>
+            
+            <div style="margin-bottom:1.5rem; padding-bottom:1rem; border-bottom:1px solid var(--border);">
+                <span id="modalUnitTier" class="badge-gold-pill" style="margin-bottom:0.4rem;">The Sky Penthouses</span>
+                <h2 id="modalUnitTitle" style="font-family:var(--font-heading); font-size:2rem; color:#ffffff; font-weight:700;">The Triplex Crown Penthouse</h2>
+            </div>
+
+            <!-- SVG Blueprint Canvas -->
+            <div style="background:var(--bg-subtle); border:1px solid var(--border-gold); border-radius:var(--radius-md); padding:1rem; margin-bottom:1.8rem; height:240px; display:flex; align-items:center; justify-content:center;" id="modalUnitSvg">
+                <!-- SVG injected dynamically -->
+            </div>
+
+            <!-- Specs Grid -->
+            <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:12px; margin-bottom:1.8rem; background:var(--bg-subtle); padding:1.2rem; border-radius:var(--radius-sm); border:1px solid var(--border);">
+                <div>
+                    <div style="font-size:0.68rem; text-transform:uppercase; color:var(--text-light); font-weight:700;">Price</div>
+                    <div id="modalSpecPrice" style="font-family:var(--font-heading); font-size:1.3rem; font-weight:700; color:var(--gold-primary);">$65,000,000</div>
+                </div>
+                <div>
+                    <div style="font-size:0.68rem; text-transform:uppercase; color:var(--text-light); font-weight:700;">Interior SqFt</div>
+                    <div id="modalSpecSqft" style="font-weight:700; color:#ffffff; font-size:1rem;">10,500 Sq. Ft.</div>
+                </div>
+                <div>
+                    <div style="font-size:0.68rem; text-transform:uppercase; color:var(--text-light); font-weight:700;">Bedrooms</div>
+                    <div id="modalSpecBeds" style="font-weight:700; color:#ffffff; font-size:1rem;">6 Bedrooms</div>
+                </div>
+                <div>
+                    <div style="font-size:0.68rem; text-transform:uppercase; color:var(--text-light); font-weight:700;">Bathrooms</div>
+                    <div id="modalSpecBaths" style="font-weight:700; color:#ffffff; font-size:1rem;">7.5 Bathrooms</div>
+                </div>
+            </div>
+
+            <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:12px; margin-bottom:1.8rem;">
+                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:1px solid var(--border);">
+                    <div style="font-size:0.68rem; text-transform:uppercase; color:var(--text-light); font-weight:700;">Ceiling Height</div>
+                    <div id="modalSpecCeiling" style="font-weight:700; color:#ffffff; font-size:0.92rem;">18.0 ft</div>
+                </div>
+                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:1px solid var(--border);">
+                    <div style="font-size:0.68rem; text-transform:uppercase; color:var(--text-light); font-weight:700;">Outdoor Loggia</div>
+                    <div id="modalSpecBalcony" style="font-weight:700; color:#ffffff; font-size:0.92rem;">1,450 Sq. Ft.</div>
+                </div>
+                <div style="background:var(--bg-card); padding:10px 14px; border-radius:var(--radius-sm); border:1px solid var(--border);">
+                    <div style="font-size:0.68rem; text-transform:uppercase; color:var(--text-light); font-weight:700;">Status</div>
+                    <div id="modalSpecAvailability"><span class="unit-status-pill available">Available</span></div>
+                </div>
+            </div>
+
+            <div style="margin-bottom:1.8rem;">
+                <div style="font-size:0.75rem; text-transform:uppercase; color:var(--gold-primary); font-weight:700; letter-spacing:0.08em; margin-bottom:0.6rem;">Orientations & Views</div>
+                <p id="modalSpecView" style="color:var(--text-main); font-size:0.92rem; line-height:1.6;">Unobstructed 360° Panorama (Full Central Park & Both Rivers)</p>
+            </div>
+
+            <div style="margin-bottom:2rem;">
+                <div style="font-size:0.75rem; text-transform:uppercase; color:var(--gold-primary); font-weight:700; letter-spacing:0.08em; margin-bottom:0.8rem;">Signature Architectural Features</div>
+                <ul id="modalFeaturesList" style="list-style:none; display:flex; flex-direction:column; gap:8px;">
+                    <!-- Populated dynamically -->
+                </ul>
+            </div>
+
+            <div style="display:flex; justify-content:flex-end; gap:12px; padding-top:1.5rem; border-top:1px solid var(--border);">
+                <button class="btn btn-outline-light modal-close-trigger">Close</button>
+                <button class="btn btn-gold" id="modalAppointmentBtn"><i class="fa-regular fa-calendar-check"></i> Schedule Private Viewing</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================================
+         APPOINTMENT / VIEWING SCHEDULE MODAL
+         ========================================================================= -->
+    <div class="modal-overlay" id="appointmentModal">
+        <div class="modal-dialog" style="max-width:560px;">
+            <button class="modal-close-btn" aria-label="Close Modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="text-center" style="margin-bottom:1.8rem;">
+                <span class="badge-gold-pill"><i class="fa-regular fa-calendar-check"></i> PRIVATE PREVIEWS</span>
+                <h3 style="font-family:var(--font-heading); font-size:1.8rem; color:#ffffff; font-weight:700;">Schedule Private Viewing</h3>
+                <p style="font-size:0.86rem; color:var(--text-muted); margin-top:0.4rem;">
+                    Our sales directors will arrange a confidential tour at 111 Central Park South.
+                </p>
+            </div>
+
+            <form id="appointmentForm" style="display:flex; flex-direction:column; gap:1rem;">
+                <div>
+                    <label style="display:block; font-size:0.8rem; font-weight:700; color:var(--text-main); margin-bottom:0.3rem;">Selected Residence / Level</label>
+                    <input type="text" id="appointmentTargetUnit" value="Penthouse 58 — Central Park Crown" readonly style="width:100%; padding:10px 14px; background:var(--bg-subtle); border:1px solid var(--border-gold); border-radius:var(--radius-sm); color:var(--gold-primary); font-weight:700;">
                 </div>
 
-                <div class="form-row-2">
-                    <div class="form-group">
-                        <label class="form-label">Full Name *</label>
-                        <input type="text" class="form-control" placeholder="e.g. William Vance" required>
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Phone Number *</label>
-                        <input type="tel" class="form-control" placeholder="+1 (212) 555-0199" required>
-                    </div>
+                <div>
+                    <label style="display:block; font-size:0.8rem; font-weight:700; color:var(--text-main); margin-bottom:0.3rem;">Full Name *</label>
+                    <input type="text" required placeholder="Lord / Lady / Mr. / Ms. Full Name" style="width:100%; padding:10px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); color:#ffffff; outline:none;">
                 </div>
 
-                <div class="form-group">
-                    <label class="form-label">Email Address *</label>
-                    <input type="email" class="form-control" placeholder="william@vance-holdings.com" required>
+                <div>
+                    <label style="display:block; font-size:0.8rem; font-weight:700; color:var(--text-main); margin-bottom:0.3rem;">Email Address *</label>
+                    <input type="email" required placeholder="client@privatewealth.com" style="width:100%; padding:10px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); color:#ffffff; outline:none;">
                 </div>
 
-                <div class="form-row-2">
-                    <div class="form-group">
-                        <label class="form-label">Preferred Date</label>
-                        <input type="date" class="form-control">
-                    </div>
-                    <div class="form-group">
-                        <label class="form-label">Preferred Time Window</label>
-                        <select class="form-control">
-                            <option value="morning">Morning (10:00 AM – 1:00 PM)</option>
-                            <option value="afternoon">Afternoon (1:00 PM – 4:00 PM)</option>
-                            <option value="sunset">Golden Hour / Sunset (4:00 PM – 7:00 PM)</option>
-                        </select>
-                    </div>
+                <div>
+                    <label style="display:block; font-size:0.8rem; font-weight:700; color:var(--text-main); margin-bottom:0.3rem;">Direct Telephone Number *</label>
+                    <input type="tel" required placeholder="+1 (212) 555-0100" style="width:100%; padding:10px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); color:#ffffff; outline:none;">
                 </div>
 
-                <button type="submit" class="btn btn-gold btn-lg w-100 mt-3">
-                    <i class="fa-solid fa-check"></i> Confirm Private Appointment Request
+                <div>
+                    <label style="display:block; font-size:0.8rem; font-weight:700; color:var(--text-main); margin-bottom:0.3rem;">Preferred Viewing Date & Time</label>
+                    <input type="datetime-local" style="width:100%; padding:10px 14px; background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-sm); color:#ffffff; outline:none;">
+                </div>
+
+                <button type="submit" class="btn btn-gold w-100 mt-2" style="padding:14px;">
+                    <i class="fa-solid fa-check"></i> Confirm Private Viewing Request
                 </button>
             </form>
         </div>
     </div>
 
-    <!-- Thank You Modal -->
+    <!-- =========================================================================
+         THANK YOU MODAL
+         ========================================================================= -->
     <div class="modal-overlay" id="skylineThankYouModal">
-        <div class="modal-container text-center modal-success">
-            <div class="success-icon-wrap">
-                <i class="fa-solid fa-check"></i>
+        <div class="modal-dialog text-center" style="max-width:480px; padding:3rem 2rem;">
+            <div style="width:64px; height:64px; border-radius:50%; background:var(--gold-soft); border:1px solid var(--border-gold); color:var(--gold-primary); font-size:1.8rem; display:flex; align-items:center; justify-content:center; margin:0 auto 1.5rem;">
+                <i class="fa-solid fa-gem"></i>
             </div>
-            <h3 class="heading-monument mt-3">CONFIDENTIAL INQUIRY RECEIVED</h3>
-            <p class="text-muted mt-2" style="max-width: 440px; margin: 0.75rem auto 1.5rem;">
-                Thank you for your interest in Skyline Residences — 111 Central Park South. A senior sales director will contact you directly within 2 business hours to coordinate your private preview.
+            <h3 style="font-family:var(--font-heading); font-size:1.8rem; color:#ffffff; font-weight:700; margin-bottom:0.6rem;">Inquiry Confirmed</h3>
+            <p style="color:var(--text-muted); font-size:0.92rem; line-height:1.6; margin-bottom:2rem;">
+                Thank you for your interest in Skyline Residences. Our Managing Director of Sales will contact you privately within 2 hours to confirm your preview itinerary.
             </p>
-            <div class="d-flex-center gap-3">
-                <button class="btn btn-gold modal-close-trigger">Close Window</button>
-                <a href="../index.html" class="btn btn-outline">Explore Other Portfolio Sites</a>
-            </div>
+            <button class="btn btn-gold modal-close-trigger w-100">Return to Presentation</button>
         </div>
     </div>
 
-    <!-- JavaScript Controller -->
+    <!-- Interactive Controller Script -->
     <script src="app.js"></script>
 </body>
 </html>

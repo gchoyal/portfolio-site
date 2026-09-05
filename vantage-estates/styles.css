@@ -1,4 +1,4 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    VANTAGE PRIVATE ESTATES — ULTRA-LUXURY INTERNATIONAL REAL ESTATE ADVISORY
    Dubai • Miami • London • New York • Monaco • Los Angeles
    Author: Girdhari Choyal (@gchoyal_websitedeveloper)
@@ -272,16 +272,17 @@ button, input, select, textarea {
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 1.8rem;
+    gap: clamp(0.75rem, 1.2vw, 1.4rem);
 }
 .nav-link {
-    font-size: 0.86rem;
+    font-size: 0.84rem;
     font-weight: 600;
     letter-spacing: 0.04em;
     color: var(--text-muted);
     text-transform: uppercase;
     padding: 0.5rem 0;
     position: relative;
+    white-space: nowrap;
 }
 .nav-link:hover, .nav-link.active {
     color: var(--gold-primary);
@@ -1035,6 +1036,23 @@ button, input, select, textarea {
 .mobile-cta-btn.active, .mobile-cta-btn:hover { color: var(--gold-primary); }
 
 /* Responsive Queries */
+@media (max-width: 1080px) {
+    .nav-menu {
+        position: fixed;
+        top: 68px;
+        left: 0;
+        right: 0;
+        background: var(--bg-surface);
+        flex-direction: column;
+        padding: 2rem;
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow-lg);
+        display: none;
+    }
+    .nav-menu.active { display: flex; }
+    .mobile-toggle { display: block; }
+}
+
 @media (max-width: 1024px) {
     .properties-grid, .destinations-grid, .journal-grid, .advisors-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -1051,8 +1069,6 @@ button, input, select, textarea {
 }
 
 @media (max-width: 768px) {
-    .nav-menu { display: none; }
-    .mobile-toggle { display: block; }
     .hero-title { font-size: 2.2rem; }
     .hero-search-matrix { grid-template-columns: 1fr; }
     .search-cell { border-right: none; border-bottom: 1px solid var(--border); }
