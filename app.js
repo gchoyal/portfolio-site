@@ -6,35 +6,35 @@ document.addEventListener('DOMContentLoaded', () => {
     calculateQuote();
 });
 
-// Instant Quote Calculator Logic
+// Cost Estimator Logic
 function calculateQuote() {
     const service = document.getElementById('quoteService').value;
     const size = parseInt(document.getElementById('homeSize').value, 10) || 1;
     const priceDisplay = document.getElementById('estimatedPrice');
 
-    let baseMin = 149;
-    let baseMax = 199;
+    let baseMin = 159;
+    let baseMax = 219;
 
     if (service === 'Window Cleaning') {
-        if (size === 1) { baseMin = 149; baseMax = 199; }
-        else if (size === 2) { baseMin = 219; baseMax = 289; }
-        else { baseMin = 319; baseMax = 449; }
+        if (size === 1) { baseMin = 159; baseMax = 219; }
+        else if (size === 2) { baseMin = 229; baseMax = 299; }
+        else { baseMin = 339; baseMax = 469; }
     } else if (service === 'Window Replacement') {
-        if (size === 1) { baseMin = 1200; baseMax = 2500; }
-        else if (size === 2) { baseMin = 2500; baseMax = 5800; }
-        else { baseMin = 5500; baseMax = 12000; }
+        if (size === 1) { baseMin = 1250; baseMax = 2600; }
+        else if (size === 2) { baseMin = 2600; baseMax = 5900; }
+        else { baseMin = 5900; baseMax = 12500; }
     } else if (service === 'Door Installation') {
-        if (size === 1) { baseMin = 850; baseMax = 1600; }
-        else if (size === 2) { baseMin = 1400; baseMax = 2800; }
-        else { baseMin = 2200; baseMax = 4500; }
+        if (size === 1) { baseMin = 890; baseMax = 1650; }
+        else if (size === 2) { baseMin = 1450; baseMax = 2900; }
+        else { baseMin = 2300; baseMax = 4700; }
     } else if (service === 'Gutter Cleaning') {
-        if (size === 1) { baseMin = 129; baseMax = 179; }
-        else if (size === 2) { baseMin = 189; baseMax = 249; }
-        else { baseMin = 269; baseMax = 369; }
+        if (size === 1) { baseMin = 139; baseMax = 189; }
+        else if (size === 2) { baseMin = 199; baseMax = 259; }
+        else { baseMin = 279; baseMax = 379; }
     } else if (service === 'Full Exterior Package') {
-        if (size === 1) { baseMin = 349; baseMax = 499; }
-        else if (size === 2) { baseMin = 499; baseMax = 749; }
-        else { baseMin = 749; baseMax = 1199; }
+        if (size === 1) { baseMin = 369; baseMax = 519; }
+        else if (size === 2) { baseMin = 519; baseMax = 769; }
+        else { baseMin = 769; baseMax = 1249; }
     }
 
     if (priceDisplay) {
