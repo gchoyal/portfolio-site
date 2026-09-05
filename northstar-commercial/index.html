@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Northstar Commercial | Institutional Real Estate Investment, Advisory & Capital Markets</title>
+    <meta name="description" content="Northstar Commercial represents institutional investors, landlords, and corporate tenants across office, industrial, retail, multifamily, and land assets nationwide.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div style="display:flex; align-items:center; gap:16px;">
+                <a href="../index.html" class="hub-link"><i class="fa-solid fa-arrow-left"></i> Developer Portfolio Hub</a>
+                <span><i class="fa-solid fa-shield-halved"></i> Institutional Commercial Brokerage • Capital Markets Desk</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:16px;">
+                <span><i class="fa-solid fa-earth-americas"></i> National Coverage Across 18 Tier-1 MSAs</span>
+                <span>|</span>
+                <a href="tel:18005550177" style="color:#38bdf8; font-weight:700;"><i class="fa-solid fa-phone"></i> +1 (800) 555-0177</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <!-- Brand Logo -->
+            <a href="#home" class="brand-logo">
+                <div class="brand-icon-box"><i class="fa-solid fa-compass"></i></div>
+                <div class="brand-meta">
+                    <h2>Northstar Commercial</h2>
+                    <span>Capital Markets & Advisory</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#propertiesSection" class="nav-link">Commercial Search</a>
+                <a href="#investmentSection" class="nav-link">Investment Strategies</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#marketResearch" class="nav-link">Market Research</a>
+                <a href="#brokers" class="nav-link">Advisory Team</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- Nav Actions -->
+            <div class="nav-actions">
+                <a href="#propertiesSection" class="btn btn-navy btn-sm">
+                    <i class="fa-solid fa-database"></i> 30 Listings
+                </a>
+                <a href="#contact" class="btn btn-primary btn-sm">
+                    <i class="fa-solid fa-file-shield"></i> Request OM Vault
+                </a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Institutional Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+            <div>
+                <div class="hero-tagline">
+                    <span class="badge-tag dark">Commercial Capital Markets</span>
+                    <span style="color:#94a3b8; font-size:0.8rem;">• Institutional Property Advisory</span>
+                </div>
+
+                <h1 class="hero-headline">
+                    Data-Driven Commercial Real Estate & <span>Capital Markets Advisory.</span>
+                </h1>
+
+                <p class="hero-description">
+                    Northstar Commercial advises institutional funds, private family offices, and corporate landlords on strategic acquisitions, discposition mandates, debt structuring, and asset optimization across industrial, office, multifamily, and retail assets.
+                </p>
+
+                <div class="hero-ctas">
+                    <a href="#propertiesSection" class="btn btn-primary">
+                        <i class="fa-solid fa-magnifying-glass-chart"></i> Search 30 Commercial Listings
+                    </a>
+                    <a href="#marketResearch" class="btn btn-outline-light">
+                        <i class="fa-solid fa-chart-simple"></i> National Market Intelligence
+                    </a>
+                    <a href="#contact" class="btn btn-outline-light">
+                        <i class="fa-solid fa-handshake"></i> Submit Acquisition Criteria
+                    </a>
+                </div>
+
+                <!-- Hero KPI Stats Bar -->
+                <div class="hero-stats-strip">
+                    <div class="hero-stat-cell">
+                        <h4>$3.8B+</h4>
+                        <p>Closed Volume</p>
+                    </div>
+                    <div class="hero-stat-cell">
+                        <h4>$650M+</h4>
+                        <p>Active Inventory</p>
+                    </div>
+                    <div class="hero-stat-cell">
+                        <h4>6.45%</h4>
+                        <p>Benchmark Cap Rate</p>
+                    </div>
+                    <div class="hero-stat-cell">
+                        <h4>18</h4>
+                        <p>Tier-1 MSAs</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Search Intake Card -->
+            <div class="hero-search-card">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+                    <h3 style="font-size:1.15rem; font-weight:800; color:#ffffff;">Quick Investment Filter</h3>
+                    <span class="badge-tag" style="background:rgba(16,185,129,0.2); color:#10b981; border-color:rgba(16,185,129,0.3);">30 Active Assets</span>
+                </div>
+
+                <form id="heroSearchForm" class="hero-search-form">
+                    <div class="form-field-group">
+                        <label for="heroPropType">Asset Class / Sector</label>
+                        <select id="heroPropType" class="hero-input">
+                            <option value="all">All Commercial Sectors</option>
+                            <option value="industrial">Industrial & Logistics</option>
+                            <option value="warehouse">Warehouse & Distribution</option>
+                            <option value="office">Class A & Life Sciences Office</option>
+                            <option value="multifamily">Multifamily Communities</option>
+                            <option value="retail">Retail & Single-Tenant NNN</option>
+                            <option value="development">Land & Development Sites</option>
+                        </select>
+                    </div>
+
+                    <div class="form-field-group">
+                        <label for="heroLocation">Target Market / MSA</label>
+                        <select id="heroLocation" class="hero-input">
+                            <option value="all">All National Markets</option>
+                            <option value="Dallas">Dallas-Fort Worth, TX</option>
+                            <option value="Austin">Austin, TX</option>
+                            <option value="Chicago">Chicago, IL</option>
+                            <option value="Atlanta">Atlanta, GA</option>
+                            <option value="Phoenix">Phoenix, AZ</option>
+                            <option value="Seattle">Seattle, WA</option>
+                            <option value="Los Angeles">Los Angeles, CA</option>
+                            <option value="Miami">Miami, FL</option>
+                            <option value="New York">New York, NY</option>
+                            <option value="Denver">Denver, CO</option>
+                            <option value="Charlotte">Charlotte, NC</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem; padding: 12px;">
+                        <i class="fa-solid fa-filter"></i> Apply Quick Filter & Search
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================================================
+         COMMERCIAL PROPERTY SEARCH & FILTER ENGINE
+         ======================================================================= -->
+    <section class="section" id="propertiesSection">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="badge-tag">Institutional Inventory</span>
+                <h2 class="section-title">Commercial Real Estate Search</h2>
+                <p class="section-subtitle">
+                    Explore 30 investment sales and corporate leasing opportunities with verified underwriting, in-place cap rates, net operating income (NOI), and physical occupancy data.
+                </p>
+            </div>
+
+            <!-- Multi-Parameter Filter Panel -->
+            <div class="cre-filter-panel">
+                <div class="cre-filter-top-row">
+                    <!-- 1. Buy / Lease -->
+                    <div>
+                        <label class="filter-label" for="filterListingType">Transaction Type</label>
+                        <select id="filterListingType" class="filter-select">
+                            <option value="all">Buy & Lease (All 30)</option>
+                            <option value="buy">Investment Sale (Buy)</option>
+                            <option value="lease">Direct Commercial Lease</option>
+                        </select>
+                    </div>
+
+                    <!-- 2. Sector -->
+                    <div>
+                        <label class="filter-label" for="filterPropertyType">Asset Class</label>
+                        <select id="filterPropertyType" class="filter-select">
+                            <option value="all">All Asset Classes</option>
+                            <option value="industrial">Industrial & Cross-Dock</option>
+                            <option value="warehouse">Warehouse & Cold Storage</option>
+                            <option value="office">Class A Office & Lab</option>
+                            <option value="multifamily">Multifamily Assets</option>
+                            <option value="retail">Retail & Triple-Net (NNN)</option>
+                            <option value="development">Land & Shovel-Ready</option>
+                        </select>
+                    </div>
+
+                    <!-- 3. Market -->
+                    <div>
+                        <label class="filter-label" for="filterLocation">Market / MSA</label>
+                        <select id="filterLocation" class="filter-select">
+                            <option value="all">All National Markets</option>
+                            <option value="Dallas">Dallas-Fort Worth, TX</option>
+                            <option value="Austin">Austin, TX</option>
+                            <option value="Chicago">Chicago, IL</option>
+                            <option value="Atlanta">Atlanta, GA</option>
+                            <option value="Phoenix">Phoenix, AZ</option>
+                            <option value="Seattle">Seattle, WA</option>
+                            <option value="Los Angeles">Los Angeles, CA</option>
+                            <option value="Miami">Miami, FL</option>
+                            <option value="New York">New York, NY</option>
+                            <option value="Denver">Denver, CO</option>
+                            <option value="Charlotte">Charlotte, NC</option>
+                        </select>
+                    </div>
+
+                    <!-- 4. Min Price -->
+                    <div>
+                        <label class="filter-label" for="filterPriceMin">Min. Acquisition Price</label>
+                        <select id="filterPriceMin" class="filter-select">
+                            <option value="0">Any Guidance Price</option>
+                            <option value="15000000">$15M+</option>
+                            <option value="30000000">$30M+</option>
+                            <option value="50000000">$50M+</option>
+                            <option value="75000000">$75M+</option>
+                        </select>
+                    </div>
+
+                    <!-- 5. Advanced Toggle & Reset -->
+                    <div style="display:flex; gap:8px;">
+                        <button type="button" class="btn btn-outline btn-sm" id="toggleAdvancedFilterBtn" style="flex:1;">
+                            <i class="fa-solid fa-sliders"></i> Advanced Filters
+                        </button>
+                        <button type="button" class="btn btn-navy btn-sm" id="clearFiltersBtn" title="Reset All Filters">
+                            <i class="fa-solid fa-rotate-left"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Advanced Filter Drawer -->
+                <div class="cre-filter-advanced-box" id="creFilterAdvancedBox">
+                    <div>
+                        <label class="filter-label" for="filterCapRateMin">Min. Cap Rate %</label>
+                        <select id="filterCapRateMin" class="filter-select">
+                            <option value="0">Any Cap Rate</option>
+                            <option value="5.5">5.50%+ Cap Rate</option>
+                            <option value="6.0">6.00%+ Cap Rate</option>
+                            <option value="6.5">6.50%+ Cap Rate</option>
+                            <option value="7.0">7.00%+ Cap Rate</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="filter-label" for="filterMinSqft">Min. Building Size</label>
+                        <select id="filterMinSqft" class="filter-select">
+                            <option value="0">Any Building Size</option>
+                            <option value="50000">50,000+ Sq. Ft.</option>
+                            <option value="100000">100,000+ Sq. Ft.</option>
+                            <option value="200000">200,000+ Sq. Ft.</option>
+                            <option value="300000">300,000+ Sq. Ft.</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="filter-label" for="filterOccupancyMin">Min. Occupancy %</label>
+                        <select id="filterOccupancyMin" class="filter-select">
+                            <option value="0">Any Occupancy</option>
+                            <option value="90">90%+ Stabilized</option>
+                            <option value="95">95%+ Stabilized</option>
+                            <option value="100">100% Fully Leased</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Meta Bar & Sorting -->
+            <div class="results-meta-bar">
+                <div class="results-count-text" id="resultsCountText">Showing 30 Commercial Investment Properties</div>
+                <div class="results-sort-wrap">
+                    <label style="font-size:0.82rem; font-weight:700; color:var(--text-muted);" for="filterSortBy">Sort By:</label>
+                    <select id="filterSortBy" class="filter-select" style="width: auto; padding: 6px 12px;">
+                        <option value="featured">Featured Institutional Assets</option>
+                        <option value="price-desc">Price: High to Low</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="cap-desc">Cap Rate: High to Low</option>
+                        <option value="sqft-desc">Building Size: Large to Small</option>
+                        <option value="noi-desc">Net Operating Income (NOI)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Commercial Properties Grid (30 Properties) -->
+            <div class="cre-properties-grid" id="crePropertiesGrid">
+                <!-- Dynamically populated by app.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================================================
+         INVESTMENT STRATEGIES SECTION
+         ======================================================================= -->
+    <section class="section section-subtle" id="investmentSection">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="badge-tag">Capital Allocation</span>
+                <h2 class="section-title">Institutional Investment Profiles</h2>
+                <p class="section-subtitle">
+                    We tailor capital deployment across three primary risk-adjusted investment profiles to meet strict internal rate of return (IRR) hurdles.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-box">
+                    <div class="service-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Core & Single-Tenant Net Lease (NNN)</h3>
+                    <p>
+                        High-credit investment-grade tenants (Fortune 500, S&P 500) on 10 to 20-year unencumbered NNN leases with zero landlord capital obligations and predictable cash flows.
+                    </p>
+                    <div style="margin-top:1.2rem; font-size:0.82rem; font-weight:700; color:var(--primary-blue);">
+                        Target Cap Rates: 5.25% – 6.25% • Target IRR: 8% – 10%
+                    </div>
+                </div>
+
+                <div class="service-box">
+                    <div class="service-icon-box"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                    <h3>Core-Plus & Light Value-Add</h3>
+                    <p>
+                        Well-located Class A assets with below-market in-place leases, mark-to-market rollover upside, or minor technology and amenity modernization opportunities.
+                    </p>
+                    <div style="margin-top:1.2rem; font-size:0.82rem; font-weight:700; color:var(--primary-blue);">
+                        Target Cap Rates: 6.25% – 7.10% • Target IRR: 12% – 15%
+                    </div>
+                </div>
+
+                <div class="service-box">
+                    <div class="service-icon-box"><i class="fa-solid fa-cubes-stacked"></i></div>
+                    <h3>Heavy Value-Add & Adaptive Reuse</h3>
+                    <p>
+                        Distressed office-to-residential conversions, underutilized industrial infill sites, and shovel-ready land assemblages in high-absorption Sunbelt corridors.
+                    </p>
+                    <div style="margin-top:1.2rem; font-size:0.82rem; font-weight:700; color:var(--primary-blue);">
+                        Target Cap Rates: 7.25%+ • Target IRR: 18% – 22%+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================================================
+         MARKET RESEARCH & INTELLIGENCE
+         ======================================================================= -->
+    <section class="section" id="marketResearch">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="badge-tag">Capital Markets Intelligence</span>
+                <h2 class="section-title">National Market Research Reports</h2>
+                <p class="section-subtitle">
+                    Proprietary quarterly research analyzing rental rates, benchmark cap rates, vacancy fluctuations, and institutional capital flows across major U.S. commercial metros.
+                </p>
+            </div>
+
+            <div class="market-reports-grid" id="marketReportsGrid">
+                <!-- Populated dynamically by app.js with 6 Market Reports -->
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================================================
+         COMMERCIAL SERVICES
+         ======================================================================= -->
+    <section class="section section-subtle" id="services">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="badge-tag">Advisory Capabilities</span>
+                <h2 class="section-title">Full-Lifecycle Commercial Services</h2>
+                <p class="section-subtitle">
+                    Delivering institutional underwriting, fiduciary transaction management, and execution speed for major commercial property transactions.
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-box">
+                    <div class="service-icon-box"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <h3>Capital Markets & Investment Sales</h3>
+                    <p>Confidential disposition and acquisition advisory for single-assets, industrial portfolios, and 1031 exchange replacement properties.</p>
+                </div>
+
+                <div class="service-box">
+                    <div class="service-icon-box"><i class="fa-solid fa-building-user"></i></div>
+                    <h3>Landlord & Tenant Representation</h3>
+                    <p>Strategic leasing advisory optimizing lease covenants, tenant creditworthiness, expense recovery structures, and corporate expansions.</p>
+                </div>
+
+                <div class="service-box">
+                    <div class="service-icon-box"><i class="fa-solid fa-coins"></i></div>
+                    <h3>Debt & Structured Finance</h3>
+                    <p>Direct placement of senior mortgage debt, mezzanine financing, construction loans, and preferred equity through institutional lenders.</p>
+                </div>
+
+                <div class="service-box">
+                    <div class="service-icon-box"><i class="fa-solid fa-chart-pie"></i></div>
+                    <h3>Valuation & Financial Underwriting</h3>
+                    <p>Argus Enterprise modeling, discounted cash flow (DCF) valuations, lease audit analysis, and property tax optimization studies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================================================
+         COMMERCIAL BROKER ADVISORY ROSTER
+         ======================================================================= -->
+    <section class="section" id="brokers">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="badge-tag">Leadership Team</span>
+                <h2 class="section-title">Senior Brokerage Advisory Roster</h2>
+                <p class="section-subtitle">
+                    Our team of seasoned SIOR and CCIM designated advisors specialize across dedicated asset classes to provide unmatched market execution.
+                </p>
+            </div>
+
+            <div class="brokers-grid" id="brokersGrid">
+                <!-- Populated dynamically by app.js with 5 Brokers -->
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================================================
+         ABOUT NORTHSTAR SECTION
+         ======================================================================= -->
+    <section class="section section-dark" id="about">
+        <div class="container">
+            <div class="hero-grid" style="align-items:center;">
+                <div>
+                    <span class="badge-tag dark" style="margin-bottom:1rem;">The Northstar Standard</span>
+                    <h2 class="section-title light">Built on Institutional Rigor & Fiduciary Transparency</h2>
+                    <p class="section-subtitle light" style="margin: 0 0 1.5rem;">
+                        Founded as an independent capital markets advisory firm, Northstar Commercial combines institutional quantitative analysis with deep on-the-ground market intelligence.
+                    </p>
+                    <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">
+                        Unlike legacy brokerage houses that prioritize transaction volume over client outcomes, our compensation and fiduciary models are structured to ensure complete alignment with our institutional partners' investment mandates.
+                    </p>
+
+                    <div style="display:flex; gap:12px; flex-wrap:wrap;">
+                        <a href="#propertiesSection" class="btn btn-primary">
+                            <i class="fa-solid fa-database"></i> Browse Active Assets
+                        </a>
+                        <a href="#contact" class="btn btn-outline-light">
+                            <i class="fa-solid fa-user-plus"></i> Retain Advisory Desk
+                        </a>
+                    </div>
+                </div>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.2rem;">
+                    <div style="background:var(--bg-dark-card); padding:1.8rem; border-radius:var(--radius-md); border:1px solid var(--border-dark);">
+                        <div style="font-family:var(--font-heading); font-size:2.2rem; font-weight:800; color:#38bdf8; margin-bottom:0.3rem;">99.4%</div>
+                        <div style="font-size:0.9rem; font-weight:700; color:#ffffff; margin-bottom:0.4rem;">Closing Certainty</div>
+                        <p style="font-size:0.8rem; color:#94a3b8; line-height:1.5;">Track record on contracted purchase and disposition agreements.</p>
+                    </div>
+
+                    <div style="background:var(--bg-dark-card); padding:1.8rem; border-radius:var(--radius-md); border:1px solid var(--border-dark);">
+                        <div style="font-family:var(--font-heading); font-size:2.2rem; font-weight:800; color:var(--accent-emerald); margin-bottom:0.3rem;">$3.8B+</div>
+                        <div style="font-size:0.9rem; font-weight:700; color:#ffffff; margin-bottom:0.4rem;">Transaction Volume</div>
+                        <p style="font-size:0.8rem; color:#94a3b8; line-height:1.5;">Across single-asset and multi-state portfolio mandates.</p>
+                    </div>
+
+                    <div style="background:var(--bg-dark-card); padding:1.8rem; border-radius:var(--radius-md); border:1px solid var(--border-dark);">
+                        <div style="font-family:var(--font-heading); font-size:2.2rem; font-weight:800; color:#ffffff; margin-bottom:0.3rem;">18 MSAs</div>
+                        <div style="font-size:0.9rem; font-weight:700; color:#ffffff; margin-bottom:0.4rem;">National Coverage</div>
+                        <p style="font-size:0.8rem; color:#94a3b8; line-height:1.5;">Dedicated research desks in key Sunbelt and Gateway hubs.</p>
+                    </div>
+
+                    <div style="background:var(--bg-dark-card); padding:1.8rem; border-radius:var(--radius-md); border:1px solid var(--border-dark);">
+                        <div style="font-family:var(--font-heading); font-size:2.2rem; font-weight:800; color:var(--accent-gold); margin-bottom:0.3rem;">100%</div>
+                        <div style="font-size:0.9rem; font-weight:700; color:#ffffff; margin-bottom:0.4rem;">Proprietary Data</div>
+                        <p style="font-size:0.8rem; color:#94a3b8; line-height:1.5;">In-house lease comps, tenant credit audits, and DCF models.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================================================
+         ACQUISITION CRITERIA & CONTACT SECTION
+         ======================================================================= -->
+    <section class="section section-subtle" id="contact">
+        <div class="container">
+            <div style="display:grid; grid-template-columns:0.9fr 1.1fr; gap:3rem; background:var(--bg-surface); border:1px solid var(--border); border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-md);">
+                <!-- Left: Desk Details -->
+                <div style="background:linear-gradient(135deg, #070d14 0%, #111d2e 100%); color:#ffffff; padding:clamp(2rem, 4vw, 3.5rem); display:flex; flex-direction:column; justify-content:space-between;">
+                    <div>
+                        <span class="badge-tag dark" style="margin-bottom:1rem;">Confidential Submissions</span>
+                        <h3 style="font-family:var(--font-heading); font-size:2rem; font-weight:800; margin-bottom:1rem;">Submit Acquisition Criteria or Inquire on Asset</h3>
+                        <p style="color:#94a3b8; font-size:0.95rem; line-height:1.65; margin-bottom:2rem;">
+                            Direct communication with our Capital Markets and Investment Sales desk for confidential due diligence vaults, offering memorandums, and 1031 exchange replacement mandates.
+                        </p>
+
+                        <div style="display:flex; flex-direction:column; gap:1.2rem;">
+                            <div style="display:flex; gap:14px; align-items:flex-start;">
+                                <div style="width:36px; height:36px; border-radius:var(--radius-sm); background:rgba(2,132,199,0.2); color:#38bdf8; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                                    <i class="fa-solid fa-building"></i>
+                                </div>
+                                <div>
+                                    <h5 style="font-size:0.95rem; font-weight:700;">National Headquarters</h5>
+                                    <p style="font-size:0.85rem; color:#94a3b8;">500 N Akard St, Suite 3400, Dallas, TX 75201</p>
+                                </div>
+                            </div>
+
+                            <div style="display:flex; gap:14px; align-items:flex-start;">
+                                <div style="width:36px; height:36px; border-radius:var(--radius-sm); background:rgba(2,132,199,0.2); color:#38bdf8; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <h5 style="font-size:0.95rem; font-weight:700;">Direct Capital Markets Line</h5>
+                                    <p style="font-size:0.85rem; color:#94a3b8;">+1 (800) 555-0177 (Mon – Fri 8am – 7pm CT)</p>
+                                </div>
+                            </div>
+
+                            <div style="display:flex; gap:14px; align-items:flex-start;">
+                                <div style="width:36px; height:36px; border-radius:var(--radius-sm); background:rgba(2,132,199,0.2); color:#38bdf8; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                                    <i class="fa-solid fa-lock"></i>
+                                </div>
+                                <div>
+                                    <h5 style="font-size:0.95rem; font-weight:700;">Confidential Secure Vault</h5>
+                                    <p style="font-size:0.85rem; color:#94a3b8;">dealroom@northstarcommercial.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="padding-top:2rem; border-top:1px solid rgba(255,255,255,0.12); font-size:0.78rem; color:#64748b;">
+                        SIOR & CCIM Corporate Member • Licensed Commercial Brokerage
+                    </div>
+                </div>
+
+                <!-- Right: Criteria Intake Form -->
+                <div style="padding:clamp(2rem, 4vw, 3.5rem);">
+                    <h3 style="font-family:var(--font-heading); font-size:1.6rem; font-weight:800; color:var(--text-main); margin-bottom:0.5rem;">Institutional Criteria Intake</h3>
+                    <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:1.5rem;">
+                        Provide your target capital allocation parameters or specify property of interest.
+                    </p>
+
+                    <form id="acquisitionCriteriaForm">
+                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
+                            <div>
+                                <label class="filter-label" for="acqName">Principal / Fund Name *</label>
+                                <input type="text" id="acqName" class="filter-input" placeholder="e.g. Sterling Capital Group" required>
+                            </div>
+                            <div>
+                                <label class="filter-label" for="acqContact">Contact Person *</label>
+                                <input type="text" id="acqContact" class="filter-input" placeholder="e.g. Jonathan Mercer" required>
+                            </div>
+                        </div>
+
+                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
+                            <div>
+                                <label class="filter-label" for="acqEmail">Corporate Email *</label>
+                                <input type="email" id="acqEmail" class="filter-input" placeholder="j.mercer@sterlingcap.com" required>
+                            </div>
+                            <div>
+                                <label class="filter-label" for="acqPhone">Direct Phone *</label>
+                                <input type="tel" id="acqPhone" class="filter-input" placeholder="+1 (214) 000-0000" required>
+                            </div>
+                        </div>
+
+                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
+                            <div>
+                                <label class="filter-label" for="acqSector">Target Asset Class</label>
+                                <select id="acqSector" class="filter-select">
+                                    <option value="industrial">Industrial & Logistics</option>
+                                    <option value="office">Class A Office & Lab</option>
+                                    <option value="multifamily">Multifamily Community</option>
+                                    <option value="retail">Triple-Net (NNN) Retail</option>
+                                    <option value="development">Land & Assemblages</option>
+                                    <option value="diversified">Diversified Portfolio</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="filter-label" for="acqCapital">Target Equity / Ticket Size</label>
+                                <select id="acqCapital" class="filter-select">
+                                    <option value="10m-25m">$10M – $25M</option>
+                                    <option value="25m-50m">$25M – $50M</option>
+                                    <option value="50m-100m">$50M – $100M</option>
+                                    <option value="100m+">$100M+ Portfolio</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom:1.5rem;">
+                            <label class="filter-label" for="acqNotes">Specific 1031 Exchange or Underwriting Criteria</label>
+                            <textarea id="acqNotes" class="filter-input" style="resize:vertical; min-height:80px;" placeholder="Describe target IRR, hold period, geographic preference, or credit tenant minimums..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width:100%; padding:13px;">
+                            <i class="fa-solid fa-paper-plane"></i> Submit Confidential Mandate
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================================================
+         MODAL 1: PROPERTY DETAIL & INVESTMENT METRICS DASHBOARD
+         ======================================================================= -->
+    <div class="modal-overlay" id="propertyDetailModal">
+        <div class="modal-dialog">
+            <button class="modal-close-btn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            <span class="badge-tag" style="margin-bottom:0.8rem;">Institutional Property Underwriting</span>
+            <h2 id="modalPropTitle" style="font-family:var(--font-heading); font-size:1.8rem; font-weight:800; color:var(--text-main); margin-bottom:0.3rem;">Property Name</h2>
+            <div id="modalPropAddress" style="font-size:0.9rem; color:var(--text-muted); margin-bottom:1.5rem;">Address, City, State</div>
+
+            <!-- 4-Card Investment Metrics Dashboard -->
+            <div class="investment-metrics-dashboard">
+                <div class="metric-card-kpi">
+                    <div class="kpi-label">In-Place Cap Rate</div>
+                    <div class="kpi-value" id="kpiCapRate">6.45%</div>
+                </div>
+                <div class="metric-card-kpi">
+                    <div class="kpi-label">Net Operating Income (NOI)</div>
+                    <div class="kpi-value text-emerald" id="kpiNoi">$2,225,250</div>
+                </div>
+                <div class="metric-card-kpi">
+                    <div class="kpi-label">Physical Occupancy</div>
+                    <div class="kpi-value" id="kpiOccupancy">100%</div>
+                </div>
+                <div class="metric-card-kpi">
+                    <div class="kpi-label">Price / Sq. Ft.</div>
+                    <div class="kpi-value" id="kpiPsf">$121 / SF</div>
+                </div>
+            </div>
+
+            <!-- Modal Content Grid -->
+            <div class="modal-content-grid">
+                <div>
+                    <div style="height:220px; border-radius:var(--radius-sm); overflow:hidden; margin-bottom:1.2rem; border:1px solid var(--border);">
+                        <img id="modalPropImage" src="" alt="Property Preview" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <h4 style="font-size:1rem; font-weight:800; margin-bottom:0.5rem; color:var(--text-main);">Executive Summary</h4>
+                    <p id="modalPropDesc" style="font-size:0.88rem; color:var(--text-muted); line-height:1.6; margin-bottom:1.5rem;">Description</p>
+
+                    <h4 style="font-size:1rem; font-weight:800; margin-bottom:0.5rem; color:var(--text-main);">Key Investment Highlights</h4>
+                    <ul class="highlights-checklist" id="modalHighlightsList">
+                        <!-- Populated by JS -->
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 style="font-size:1rem; font-weight:800; margin-bottom:0.8rem; color:var(--text-main);">Property Specifications</h4>
+                    <table class="modal-specs-table">
+                        <tr><td>Guidance Price / Rate</td><td id="modalSpecPrice" style="color:var(--primary); font-weight:800;">$34,500,000</td></tr>
+                        <tr><td>Building Gross Area</td><td id="modalSpecBuildingSqft">285,000 Sq. Ft.</td></tr>
+                        <tr><td>Site / Lot Size</td><td id="modalSpecLotSize">18.4 Acres</td></tr>
+                        <tr><td>Year Built / Renovated</td><td id="modalSpecYearBuilt">2021</td></tr>
+                        <tr><td>Municipal Zoning</td><td id="modalSpecZoning">Heavy Industrial</td></tr>
+                        <tr><td>Tenancy Profile</td><td id="modalSpecTenantType">100% Leased NNN</td></tr>
+                    </table>
+
+                    <!-- Broker Assigned Box -->
+                    <div style="background:var(--bg-subtle); padding:1.2rem; border-radius:var(--radius-sm); border:1px solid var(--border); margin-bottom:1.2rem;">
+                        <div style="font-size:0.72rem; text-transform:uppercase; font-weight:700; color:var(--text-light); margin-bottom:4px;">Assigned Capital Markets Broker</div>
+                        <div id="modalBrokerName" style="font-weight:800; color:var(--text-main); font-size:1rem;">Jonathan Mercer, CCIM</div>
+                        <div id="modalBrokerTitle" style="font-size:0.78rem; color:var(--primary-blue); font-weight:700; margin-bottom:8px;">Managing Director</div>
+                        <div style="display:flex; gap:8px;">
+                            <a id="modalBrokerPhone" href="" class="btn btn-outline btn-sm" style="font-size:0.75rem; flex:1;"><i class="fa-solid fa-phone"></i> Call Direct</a>
+                            <a id="modalBrokerEmail" href="" class="btn btn-navy btn-sm" style="font-size:0.75rem; flex:1;"><i class="fa-solid fa-envelope"></i> Email</a>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary" id="modalOmDirectBtn" style="width:100%; padding:12px;">
+                        <i class="fa-solid fa-file-shield"></i> Request Offering Memorandum & Virtual Vault
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =======================================================================
+         MODAL 2: OFFERING MEMORANDUM (OM) REQUEST
+         ======================================================================= -->
+    <div class="modal-overlay" id="omRequestModal">
+        <div class="modal-dialog" style="max-width: 580px;">
+            <button class="modal-close-btn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            <span class="badge-tag">Confidential Due Diligence</span>
+            <h2 style="font-family:var(--font-heading); font-size:1.7rem; font-weight:800; margin-bottom:0.4rem;">Request Offering Memorandum</h2>
+            <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:1.5rem;">
+                Complete the NDA acknowledgment to receive instant access to the virtual deal room, lease abstracts, rent rolls, and financial pro-formas.
+            </p>
+
+            <form id="omForm">
+                <div style="margin-bottom:1rem;">
+                    <label class="filter-label" for="omTargetProperty">Target Asset / Offering</label>
+                    <input type="text" id="omTargetProperty" class="filter-input" readonly style="font-weight:700; background:var(--bg-subtle);">
+                </div>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
+                    <div>
+                        <label class="filter-label" for="omName">Full Name *</label>
+                        <input type="text" id="omName" class="filter-input" placeholder="Eleanor Vance" required>
+                    </div>
+                    <div>
+                        <label class="filter-label" for="omCompany">Company / Fund *</label>
+                        <input type="text" id="omCompany" class="filter-input" placeholder="Vance Real Estate Holdings" required>
+                    </div>
+                </div>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
+                    <div>
+                        <label class="filter-label" for="omEmail">Corporate Email *</label>
+                        <input type="email" id="omEmail" class="filter-input" placeholder="eleanor@vanceholdings.com" required>
+                    </div>
+                    <div>
+                        <label class="filter-label" for="omPhone">Direct Phone *</label>
+                        <input type="tel" id="omPhone" class="filter-input" placeholder="+1 (214) 000-0000" required>
+                    </div>
+                </div>
+
+                <div style="margin-bottom:1.2rem; font-size:0.8rem; color:var(--text-muted); display:flex; gap:8px; align-items:flex-start;">
+                    <input type="checkbox" id="omNdaAgree" required style="margin-top:3px;">
+                    <label for="omNdaAgree">I agree to keep all offering materials, financial data, and tenant identities strictly confidential under customary NDA terms.</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width:100%; padding:13px;">
+                    <i class="fa-solid fa-lock-open"></i> Unlock Offering Memorandum & Virtual Vault
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- =======================================================================
+         MODAL 3: THANK YOU CONFIRMATION
+         ======================================================================= -->
+    <div class="modal-overlay" id="creThankYouModal">
+        <div class="modal-dialog" style="max-width: 480px; text-align:center; padding:3rem 2rem;">
+            <div style="width:64px; height:64px; background:var(--accent-emerald-soft); color:var(--accent-emerald); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.8rem; margin:0 auto 1.2rem;">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <h2 style="font-family:var(--font-heading); font-size:1.8rem; font-weight:800; margin-bottom:0.6rem;">Request Received</h2>
+            <p style="color:var(--text-muted); font-size:0.92rem; line-height:1.6; margin-bottom:1.8rem;">
+                Thank you for submitting your mandate. Our Capital Markets desk has processed your request and will provide virtual deal room access credentials shortly.
+            </p>
+            <button class="btn btn-primary modal-close-trigger" style="min-width:160px;">
+                Return to Search
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div style="display:flex; align-items:center; gap:10px; margin-bottom:1rem;">
+                        <div class="brand-icon-box"><i class="fa-solid fa-compass"></i></div>
+                        <h3 style="margin:0; font-size:1.35rem;">Northstar Commercial</h3>
+                    </div>
+                    <p>
+                        Institutional commercial real estate brokerage, capital markets advisory, and valuation services representing institutional funds, REITs, private capital, and corporate landlords nationwide.
+                    </p>
+                    <div style="font-size:0.78rem; color:#64748b;">
+                        500 N Akard St, Suite 3400, Dallas, TX 75201<br>
+                        Capital Markets: +1 (800) 555-0177
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Asset Classes</h4>
+                    <ul class="footer-links">
+                        <li><a href="#propertiesSection">Industrial & Logistics</a></li>
+                        <li><a href="#propertiesSection">Class A & Lab Office</a></li>
+                        <li><a href="#propertiesSection">Multifamily Communities</a></li>
+                        <li><a href="#propertiesSection">Single-Tenant NNN Retail</a></li>
+                        <li><a href="#propertiesSection">Shovel-Ready Land</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Advisory Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Investment Sales (Dispositions)</a></li>
+                        <li><a href="#services">Buyer Representation & 1031</a></li>
+                        <li><a href="#services">Debt & Equity Structured Finance</a></li>
+                        <li><a href="#services">Argus DCF Valuations</a></li>
+                        <li><a href="#marketResearch">Quarterly Market Reports</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Institutional Access</h4>
+                    <ul class="footer-links">
+                        <li><a href="#contact">Request Offering Memorandum</a></li>
+                        <li><a href="#contact">Submit Acquisition Criteria</a></li>
+                        <li><a href="#brokers">Senior Brokerage Roster</a></li>
+                        <li><a href="../index.html">Developer Portfolio Hub</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Northstar Commercial Real Estate & Capital Markets LLC. All Rights Reserved. Equal Housing & Commercial Opportunity.</p>
+                <p>Designed & Developed by <a href="https://www.instagram.com/gchoyal_websitedeveloper/" target="_blank" class="author-link">Girdhari Choyal (@gchoyal_websitedeveloper)</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>

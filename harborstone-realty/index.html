@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harborstone Realty | Modern California Real Estate Platform</title>
+    <meta name="description" content="Harborstone Realty offers advanced property search, real-time MLS data, mortgage calculations, and luxury residential listings across California.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div style="display:flex;align-items:center;gap:14px;">
+                <a href="../index.html" class="hub-link"><i class="fa-solid fa-arrow-left"></i> Portfolio Hub</a>
+                <span><i class="fa-solid fa-shield-halved"></i> California Statewide Residential Brokerage • DRE #02194882</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:14px;">
+                <span><i class="fa-solid fa-map-pin"></i> San Francisco · Los Angeles · San Diego · Orange County</span>
+                <span>|</span>
+                <a href="tel:18005550199" style="color:#38bdf8;font-weight:700;"><i class="fa-solid fa-phone"></i> +1 (800) 555-0199</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <!-- Brand Logo -->
+            <a href="#home" class="brand-logo">
+                <div class="brand-icon-box"><i class="fa-solid fa-compass"></i></div>
+                <div style="display: flex; flex-direction: column;">
+                    <span class="brand-name">Harborstone</span>
+                    <span class="brand-tag">California Realty</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#propertiesSection" class="nav-link">Property Search</a>
+                <a href="#mortgageSection" class="nav-link">Mortgage Calc</a>
+                <a href="#citiesSection" class="nav-link">Cities</a>
+                <a href="#whySection" class="nav-link">Why Us</a>
+                <a href="#agentsSection" class="nav-link">Agents</a>
+                <a href="#contactSection" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- Nav Actions -->
+            <div class="nav-actions">
+                <button class="fav-btn" id="favBtnNav" title="Saved Favorites" onclick="document.getElementById('propertiesSection').scrollIntoView({behavior:'smooth'});">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="fav-counter" id="favCountBadge">0</span>
+                </button>
+                <a href="#contactSection" class="btn btn-primary btn-sm"><i class="fa-solid fa-calculator"></i> Free Valuation</a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Search-First Hero -->
+    <section class="hero text-center" id="home">
+        <div class="container hero-content">
+            <span class="badge-tag"><i class="fa-solid fa-bolt"></i> Real-Time California MLS & Off-Market Platform</span>
+            <h1 class="hero-headline">Find Your Next California Home.</h1>
+            <p class="hero-sub">
+                Explore premier single-family homes, coastal architectural villas, and luxury skyline penthouses across the Golden State with advanced property filtering.
+            </p>
+
+            <!-- Advanced Search Box Component -->
+            <div class="search-card-main">
+                <div class="search-header-tabs">
+                    <button class="tab-btn active" data-status="buy">Buy (For Sale)</button>
+                    <button class="tab-btn" data-status="rent">Rent (For Lease)</button>
+                    <button class="tab-btn" data-status="all">All Listings</button>
+                </div>
+
+                <form id="mainSearchForm">
+                    <div class="search-grid-primary">
+                        <div class="form-group-item">
+                            <label for="filterCity"><i class="fa-solid fa-city"></i> California City</label>
+                            <select id="filterCity" class="form-control-select">
+                                <option value="">All California Cities</option>
+                                <option value="San Francisco">San Francisco</option>
+                                <option value="Los Angeles">Los Angeles</option>
+                                <option value="San Diego">San Diego</option>
+                                <option value="Newport Beach">Newport Beach</option>
+                                <option value="Palo Alto">Palo Alto</option>
+                                <option value="Santa Barbara">Santa Barbara</option>
+                                <option value="Beverly Hills">Beverly Hills</option>
+                                <option value="Irvine">Irvine</option>
+                                <option value="Laguna Beach">Laguna Beach</option>
+                                <option value="Malibu">Malibu</option>
+                                <option value="Pasadena">Pasadena</option>
+                                <option value="Carmel-by-the-Sea">Carmel-by-the-Sea</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group-item">
+                            <label for="filterZip"><i class="fa-solid fa-map-pin"></i> ZIP Code</label>
+                            <input type="text" id="filterZip" class="form-control-input" placeholder="e.g. 94115, 90210, 92657">
+                        </div>
+
+                        <div class="form-group-item">
+                            <label for="filterType"><i class="fa-solid fa-house"></i> Property Type</label>
+                            <select id="filterType" class="form-control-select">
+                                <option value="">All Types</option>
+                                <option value="Single Family Home">Single Family Home</option>
+                                <option value="Modern Condo">Modern Condo</option>
+                                <option value="Luxury Penthouse">Luxury Penthouse</option>
+                                <option value="Coastal Villa">Coastal Villa</option>
+                                <option value="Townhome">Townhome</option>
+                                <option value="Architectural Estate">Architectural Estate</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group-item">
+                            <label for="filterMaxPrice"><i class="fa-solid fa-dollar-sign"></i> Max Price</label>
+                            <select id="filterMaxPrice" class="form-control-select">
+                                <option value="">No Max</option>
+                                <option value="3000000">$3,000,000</option>
+                                <option value="5000000">$5,000,000</option>
+                                <option value="10000000">$10,000,000</option>
+                                <option value="20000000">$20,000,000</option>
+                                <option value="35000000">$35,000,000+</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%; height: 44px;">
+                                <i class="fa-solid fa-magnifying-glass"></i> Search
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Secondary Advanced Filters -->
+                    <div class="advanced-filters-panel" id="advancedFiltersPanel">
+                        <div class="form-group-item">
+                            <label for="filterBeds"><i class="fa-solid fa-bed"></i> Min Bedrooms</label>
+                            <select id="filterBeds" class="form-control-select">
+                                <option value="0">Any Beds</option>
+                                <option value="2">2+ Beds</option>
+                                <option value="3">3+ Beds</option>
+                                <option value="4">4+ Beds</option>
+                                <option value="5">5+ Beds</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group-item">
+                            <label for="filterBaths"><i class="fa-solid fa-bath"></i> Min Bathrooms</label>
+                            <select id="filterBaths" class="form-control-select">
+                                <option value="0">Any Baths</option>
+                                <option value="2">2+ Baths</option>
+                                <option value="3">3+ Baths</option>
+                                <option value="4">4+ Baths</option>
+                                <option value="5">5+ Baths</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group-item">
+                            <label for="filterMinSqft"><i class="fa-solid fa-vector-square"></i> Min Square Feet</label>
+                            <select id="filterMinSqft" class="form-control-select">
+                                <option value="0">Any Size</option>
+                                <option value="2500">2,500+ Sq Ft</option>
+                                <option value="4500">4,500+ Sq Ft</option>
+                                <option value="7000">7,000+ Sq Ft</option>
+                            </select>
+                        </div>
+
+                        <div style="display: flex; align-items: flex-end;">
+                            <button type="button" class="btn btn-outline btn-sm" id="clearFiltersBtn" style="width: 100%; height: 44px;">
+                                <i class="fa-solid fa-rotate-left"></i> Clear Filters
+                            </button>
+                        </div>
+
+                        <!-- Checkbox Feature Toggles -->
+                        <div class="checkbox-features-group">
+                            <label class="feature-check-label">
+                                <input type="checkbox" id="checkGarage"> <span>2+ Car Garage</span>
+                            </label>
+                            <label class="feature-check-label">
+                                <input type="checkbox" id="checkPool"> <span>Swimming Pool</span>
+                            </label>
+                            <label class="feature-check-label">
+                                <input type="checkbox" id="checkNew"> <span>New Construction</span>
+                            </label>
+                            <label class="feature-check-label">
+                                <input type="checkbox" id="checkWaterfront"> <span>Waterfront / Ocean View</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div style="text-align: right;">
+                        <button type="button" class="btn-toggle-advanced" id="btnToggleAdvanced">
+                            <span>More Search Filters</span> <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Search & Listing Results Section -->
+    <section class="section section-white" id="propertiesSection">
+        <div class="container">
+            <!-- Results Control Strip -->
+            <div class="results-control-strip">
+                <div class="results-count-title" id="resultsCountEl">
+                    Showing <strong>30</strong> California Properties
+                </div>
+
+                <div class="controls-right-side">
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <label for="sortSelect" style="font-size: 0.8rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase;">Sort:</label>
+                        <select id="sortSelect" class="form-control-select" style="width: auto; padding: 0.4rem 0.8rem; font-size: 0.85rem;">
+                            <option value="newest">Newest Listings</option>
+                            <option value="price-desc">Price: High to Low</option>
+                            <option value="price-asc">Price: Low to High</option>
+                            <option value="beds-desc">Bedrooms</option>
+                            <option value="sqft-desc">Square Feet</option>
+                        </select>
+                    </div>
+
+                    <div class="view-mode-buttons">
+                        <button class="btn-view-mode active" id="btnModeGrid" title="Grid View"><i class="fa-solid fa-table-cells-large"></i></button>
+                        <button class="btn-view-mode" id="btnModeList" title="List View"><i class="fa-solid fa-list"></i></button>
+                        <button class="btn-view-mode" id="btnModeMap" title="Map Radar View"><i class="fa-solid fa-map-location-dot"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic Property Cards Grid -->
+            <div class="properties-layout-grid" id="propertiesGrid">
+                <!-- Injected via JavaScript -->
+            </div>
+
+            <!-- Map View Mode Container -->
+            <div class="map-view-container" id="mapViewContainer">
+                <div class="map-radar-bg"></div>
+                <div id="mapPinsLayer"></div>
+                <div class="map-preview-popup" id="mapPreviewPopup"></div>
+                <div style="position: absolute; top: 1rem; left: 1rem; background: rgba(15, 23, 42, 0.9); color: #fff; padding: 6px 14px; border-radius: 4px; font-size: 0.78rem; font-weight: 600;">
+                    <i class="fa-solid fa-satellite-dish" style="color: var(--primary);"></i> California Interactive Property Radar
+                </div>
+            </div>
+
+            <!-- Pagination Controls -->
+            <div class="pagination-controls-box" id="paginationContainer">
+                <!-- Injected via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Working Mortgage Calculator Section -->
+    <section class="section section-surface" id="mortgageSection">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="badge-tag"><i class="fa-solid fa-calculator"></i> Financial Intelligence</span>
+                <h2 class="section-title">California Mortgage Calculator</h2>
+                <p class="section-subtitle">
+                    Calculate your estimated monthly payment, including principal, interest, California property taxes, and insurance.
+                </p>
+            </div>
+
+            <div class="mortgage-calculator-card" id="mortgageCalcSection">
+                <div class="calc-grid">
+                    <!-- Inputs -->
+                    <div class="calc-inputs">
+                        <div class="form-group-item">
+                            <label for="calcPriceInput"><i class="fa-solid fa-house"></i> Home Price ($)</label>
+                            <input type="number" id="calcPriceInput" class="form-control-input" value="12850000" step="50000">
+                        </div>
+
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="form-group-item">
+                                <label for="calcDownPayment"><i class="fa-solid fa-percent"></i> Down Payment (%)</label>
+                                <input type="number" id="calcDownPayment" class="form-control-input" value="20" min="5" max="90">
+                            </div>
+                            <div class="form-group-item">
+                                <label for="calcInterestRate"><i class="fa-solid fa-chart-line"></i> Interest Rate (%)</label>
+                                <input type="number" id="calcInterestRate" class="form-control-input" value="6.5" step="0.1">
+                            </div>
+                        </div>
+
+                        <div class="form-group-item">
+                            <label for="calcLoanTerm"><i class="fa-solid fa-clock"></i> Loan Term</label>
+                            <select id="calcLoanTerm" class="form-control-select">
+                                <option value="30">30-Year Fixed</option>
+                                <option value="15">15-Year Fixed</option>
+                                <option value="20">20-Year Fixed</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Output & Breakdown -->
+                    <div class="calc-result-display">
+                        <span style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted);">Estimated Monthly Payment</span>
+                        <div class="monthly-payment-val" id="monthlyPaymentDisplay">$71,420 / mo</div>
+                        <p style="font-size: 0.82rem; color: var(--text-muted);">Based on 20% down payment and 6.5% interest rate</p>
+
+                        <!-- Breakdown Bar -->
+                        <div class="payment-breakdown-bar">
+                            <div class="breakdown-pi" id="breakdownPiBar" style="width: 78%;" title="Principal & Interest"></div>
+                            <div class="breakdown-tax" id="breakdownTaxBar" style="width: 17%;" title="Property Taxes (1.15%)"></div>
+                            <div class="breakdown-ins" id="breakdownInsBar" style="width: 5%;" title="Home Insurance"></div>
+                        </div>
+
+                        <!-- Legend -->
+                        <div class="breakdown-legend">
+                            <span><span class="legend-dot" style="background: var(--primary);"></span> P&I: <strong id="legendPiVal">$64,980</strong></span>
+                            <span><span class="legend-dot" style="background: var(--accent-emerald);"></span> Taxes: <strong id="legendTaxVal">$12,310</strong></span>
+                            <span><span class="legend-dot" style="background: var(--accent-amber);"></span> Ins: <strong id="legendInsVal">$3,210</strong></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular California Cities -->
+    <section class="section section-white" id="citiesSection">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="badge-tag">Regional Markets</span>
+                <h2 class="section-title">Popular California Cities</h2>
+                <p class="section-subtitle">
+                    Select a core metropolitan market to instantly view active inventory and luxury enclaves.
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.8rem; background: var(--bg-surface); cursor: pointer;" onclick="document.getElementById('filterCity').value='San Francisco'; document.getElementById('mainSearchForm').dispatchEvent(new Event('change')); document.getElementById('propertiesSection').scrollIntoView({behavior:'smooth'});">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.3rem;"><i class="fa-solid fa-bridge" style="color: var(--primary);"></i> San Francisco Bay Area</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.8rem;">Pacific Heights, Marina, SOMA, Belvedere</p>
+                    <span style="font-size: 0.78rem; font-weight: 700; color: var(--primary);">Explore Listings →</span>
+                </div>
+
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.8rem; background: var(--bg-surface); cursor: pointer;" onclick="document.getElementById('filterCity').value='Los Angeles'; document.getElementById('mainSearchForm').dispatchEvent(new Event('change')); document.getElementById('propertiesSection').scrollIntoView({behavior:'smooth'});">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.3rem;"><i class="fa-solid fa-film" style="color: var(--primary);"></i> Los Angeles Metro</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.8rem;">Bel Air, Beverly Hills, Hollywood Hills, Santa Monica</p>
+                    <span style="font-size: 0.78rem; font-weight: 700; color: var(--primary);">Explore Listings →</span>
+                </div>
+
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.8rem; background: var(--bg-surface); cursor: pointer;" onclick="document.getElementById('filterCity').value='Newport Beach'; document.getElementById('mainSearchForm').dispatchEvent(new Event('change')); document.getElementById('propertiesSection').scrollIntoView({behavior:'smooth'});">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.3rem;"><i class="fa-solid fa-ship" style="color: var(--primary);"></i> Orange County Coast</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.8rem;">Newport Coast, Laguna Beach, Corona Del Mar, Irvine</p>
+                    <span style="font-size: 0.78rem; font-weight: 700; color: var(--primary);">Explore Listings →</span>
+                </div>
+
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.8rem; background: var(--bg-surface); cursor: pointer;" onclick="document.getElementById('filterCity').value='San Diego'; document.getElementById('mainSearchForm').dispatchEvent(new Event('change')); document.getElementById('propertiesSection').scrollIntoView({behavior:'smooth'});">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.3rem;"><i class="fa-solid fa-sun" style="color: var(--primary);"></i> San Diego Coastal</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.8rem;">La Jolla, Rancho Santa Fe, Coronado, Downtown</p>
+                    <span style="font-size: 0.78rem; font-weight: 700; color: var(--primary);">Explore Listings →</span>
+                </div>
+
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.8rem; background: var(--bg-surface); cursor: pointer;" onclick="document.getElementById('filterCity').value='Santa Barbara'; document.getElementById('mainSearchForm').dispatchEvent(new Event('change')); document.getElementById('propertiesSection').scrollIntoView({behavior:'smooth'});">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.3rem;"><i class="fa-solid fa-mountain-sun" style="color: var(--primary);"></i> Santa Barbara & Montecito</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.8rem;">Montecito, Hope Ranch, Riviera, Mesa</p>
+                    <span style="font-size: 0.78rem; font-weight: 700; color: var(--primary);">Explore Listings →</span>
+                </div>
+
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 1.8rem; background: var(--bg-surface); cursor: pointer;" onclick="document.getElementById('filterCity').value='Palo Alto'; document.getElementById('mainSearchForm').dispatchEvent(new Event('change')); document.getElementById('propertiesSection').scrollIntoView({behavior:'smooth'});">
+                    <h3 style="font-size: 1.3rem; margin-bottom: 0.3rem;"><i class="fa-solid fa-microchip" style="color: var(--primary);"></i> Silicon Valley Tech Hubs</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 0.8rem;">Palo Alto, Menlo Park, Atherton, Los Altos</p>
+                    <span style="font-size: 0.78rem; font-weight: 700; color: var(--primary);">Explore Listings →</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Harborstone Section -->
+    <section class="section section-dark" id="whySection">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="badge-tag">The Technology Advantage</span>
+                <h2 class="section-title">Why Buyers & Sellers Choose Harborstone</h2>
+                <p class="section-subtitle">
+                    Combining statewide real estate access with high-speed data analytics and fiduciary advisory.
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem;">
+                <div style="background: var(--bg-dark-surface); border: 1px solid rgba(255,255,255,0.08); padding: 2rem; border-radius: var(--radius-md);">
+                    <i class="fa-solid fa-bolt" style="font-size: 2rem; color: var(--primary-light); margin-bottom: 1rem;"></i>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Instant MLS Sync</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-light); line-height: 1.6;">Direct connection with California MLS networks updating new inventory every 15 minutes.</p>
+                </div>
+
+                <div style="background: var(--bg-dark-surface); border: 1px solid rgba(255,255,255,0.08); padding: 2rem; border-radius: var(--radius-md);">
+                    <i class="fa-solid fa-shield-halved" style="font-size: 2rem; color: var(--primary-light); margin-bottom: 1rem;"></i>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Off-Market Access</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-light); line-height: 1.6;">Exclusive pocket listings and private sales not found on public real estate portals.</p>
+                </div>
+
+                <div style="background: var(--bg-dark-surface); border: 1px solid rgba(255,255,255,0.08); padding: 2rem; border-radius: var(--radius-md);">
+                    <i class="fa-solid fa-chart-pie" style="font-size: 2rem; color: var(--primary-light); margin-bottom: 1rem;"></i>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Accurate Valuations</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-light); line-height: 1.6;">Granular neighborhood price-per-square-foot metrics and real-time comparative market data.</p>
+                </div>
+
+                <div style="background: var(--bg-dark-surface); border: 1px solid rgba(255,255,255,0.08); padding: 2rem; border-radius: var(--radius-md);">
+                    <i class="fa-solid fa-user-tie" style="font-size: 2rem; color: var(--primary-light); margin-bottom: 1rem;"></i>
+                    <h3 style="font-size: 1.25rem; margin-bottom: 0.5rem;">Vetted Local Brokers</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-light); line-height: 1.6;">Seasoned fiduciary agents with over 10+ years of local market leadership in every California county.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Agents Section -->
+    <section class="section section-white" id="agentsSection">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="badge-tag">Our Team</span>
+                <h2 class="section-title">Top California Real Estate Specialists</h2>
+                <p class="section-subtitle">
+                    Dedicated advisors providing personalized representation across California's prime zip codes.
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;">
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden; background: #fff;">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" style="width: 100%; height: 260px; object-fit: cover;">
+                    <div style="padding: 1.4rem;">
+                        <span style="font-size: 0.72rem; color: var(--primary); font-weight: 700; text-transform: uppercase;">Los Angeles & Malibu</span>
+                        <h4 style="font-size: 1.2rem; margin: 0.2rem 0;">Elena Rostova</h4>
+                        <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.8rem;">Senior Managing Partner • DRE #01948821</p>
+                        <a href="tel:3105550188" style="font-size: 0.82rem; color: var(--text-main); font-weight: 600;"><i class="fa-solid fa-phone"></i> (310) 555-0188</a>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden; background: #fff;">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=600&q=80" style="width: 100%; height: 260px; object-fit: cover;">
+                    <div style="padding: 1.4rem;">
+                        <span style="font-size: 0.72rem; color: var(--primary); font-weight: 700; text-transform: uppercase;">San Francisco & Silicon Valley</span>
+                        <h4 style="font-size: 1.2rem; margin: 0.2rem 0;">David Chen</h4>
+                        <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.8rem;">Bay Area Director • DRE #02014490</p>
+                        <a href="tel:4155550142" style="font-size: 0.82rem; color: var(--text-main); font-weight: 600;"><i class="fa-solid fa-phone"></i> (415) 555-0142</a>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden; background: #fff;">
+                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=600&q=80" style="width: 100%; height: 260px; object-fit: cover;">
+                    <div style="padding: 1.4rem;">
+                        <span style="font-size: 0.72rem; color: var(--primary); font-weight: 700; text-transform: uppercase;">Orange County & San Diego</span>
+                        <h4 style="font-size: 1.2rem; margin: 0.2rem 0;">Marcus Sterling</h4>
+                        <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.8rem;">Coastal Estates Lead • DRE #01889920</p>
+                        <a href="tel:9495550195" style="font-size: 0.82rem; color: var(--text-main); font-weight: 600;"><i class="fa-solid fa-phone"></i> (949) 555-0195</a>
+                    </div>
+                </div>
+
+                <div style="border: 1px solid var(--border-color); border-radius: var(--radius-md); overflow: hidden; background: #fff;">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=600&q=80" style="width: 100%; height: 260px; object-fit: cover;">
+                    <div style="padding: 1.4rem;">
+                        <span style="font-size: 0.72rem; color: var(--primary); font-weight: 700; text-transform: uppercase;">Santa Barbara & Montecito</span>
+                        <h4 style="font-size: 1.2rem; margin: 0.2rem 0;">Sophia De Luca</h4>
+                        <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 0.8rem;">Advisory Principal • DRE #01920031</p>
+                        <a href="tel:8055550144" style="font-size: 0.82rem; color: var(--text-main); font-weight: 600;"><i class="fa-solid fa-phone"></i> (805) 555-0144</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Home Valuation & Contact Section -->
+    <section class="section section-surface" id="contactSection">
+        <div class="container">
+            <div style="display: grid; grid-template-columns: 1fr 1.3fr; gap: 3.5rem; background: #ffffff; border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 3.5rem; box-shadow: var(--shadow-md);">
+                <!-- Left Info -->
+                <div style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <span class="badge-tag">Advisory Desk</span>
+                        <h2 class="section-title" style="font-size: 2.2rem;">California Property Valuation & Advisory</h2>
+                        <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.7; margin-top: 1rem;">
+                            Discover the true market equity of your California home or request private buyer representation with our senior brokers.
+                        </p>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; gap: 1.4rem; margin: 2rem 0;">
+                        <div>
+                            <h5 style="font-size: 0.75rem; text-transform: uppercase; color: var(--primary); margin-bottom: 0.2rem;">Statewide Hotline</h5>
+                            <a href="tel:18005550199" style="font-size: 1.1rem; color: var(--text-main); font-weight: 800;">+1 (800) 555-0199</a>
+                        </div>
+                        <div>
+                            <h5 style="font-size: 0.75rem; text-transform: uppercase; color: var(--primary); margin-bottom: 0.2rem;">Encrypted Desk</h5>
+                            <p style="font-size: 0.95rem; color: var(--text-main);">advisory@harborstone.com</p>
+                        </div>
+                        <div>
+                            <h5 style="font-size: 0.75rem; text-transform: uppercase; color: var(--primary); margin-bottom: 0.2rem;">Regional Offices</h5>
+                            <p style="font-size: 0.88rem; color: var(--text-muted);">San Francisco • Century City LA • Newport Center OC • La Jolla SD</p>
+                        </div>
+                    </div>
+
+                    <p style="font-size: 0.78rem; color: var(--text-muted);">
+                        Licensed under California Department of Real Estate #02194882.
+                    </p>
+                </div>
+
+                <!-- Right Form -->
+                <form id="homeValuationForm" style="display: flex; flex-direction: column; gap: 1.2rem;">
+                    <h3 style="font-size: 1.4rem;">Request Comparative Market Valuation</h3>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="form-group-item">
+                            <label>Full Name *</label>
+                            <input type="text" class="form-control-input" placeholder="John Smith" required>
+                        </div>
+                        <div class="form-group-item">
+                            <label>Email Address *</label>
+                            <input type="email" class="form-control-input" placeholder="john@domain.com" required>
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="form-group-item">
+                            <label>Phone Number *</label>
+                            <input type="tel" class="form-control-input" placeholder="(000) 000-0000" required>
+                        </div>
+                        <div class="form-group-item">
+                            <label>Property Address / ZIP</label>
+                            <input type="text" class="form-control-input" placeholder="e.g. 1000 Broadway, SF" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group-item">
+                        <label>Inquiry Goal</label>
+                        <select class="form-control-select">
+                            <option value="valuation">Home Value CMA Report (Selling)</option>
+                            <option value="buying">Buyer Private Showing & Representation</option>
+                            <option value="offmarket">Off-Market Inventory Vault Access</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group-item">
+                        <label>Property Details or Questions</label>
+                        <textarea class="form-control-input" rows="3" placeholder="Tell us about renovations, square footage, views..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <i class="fa-solid fa-paper-plane"></i> Submit Valuation Request
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Detail Modal Component -->
+    <div class="modal-overlay" id="propertyDetailModal">
+        <div class="modal-box-large">
+            <button class="btn-close-modal" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body-pad">
+                <div style="height: 380px; border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1.5rem; background: #e2e8f0;">
+                    <img src="" id="modalPropImg" alt="Property Image" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; flex-wrap: wrap; gap: 1rem;">
+                    <div>
+                        <h2 id="modalPropTitle" style="font-size: 1.8rem; margin-bottom: 0.3rem;"></h2>
+                        <p id="modalPropAddress" style="color: var(--text-muted); font-size: 0.95rem;"></p>
+                    </div>
+                    <div id="modalPropPrice" style="font-size: 2rem; font-weight: 800; color: var(--primary);"></div>
+                </div>
+
+                <!-- Specs Strip -->
+                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; padding: 1rem 0; margin: 1rem 0; border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); text-align: center;">
+                    <div>
+                        <span style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;">Bedrooms</span>
+                        <h4 id="modalPropBeds" style="font-size: 1.15rem;"></h4>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;">Bathrooms</span>
+                        <h4 id="modalPropBaths" style="font-size: 1.15rem;"></h4>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;">Living Area</span>
+                        <h4 id="modalPropSqft" style="font-size: 1.15rem;"></h4>
+                    </div>
+                    <div>
+                        <span style="font-size: 0.72rem; color: var(--text-muted); text-transform: uppercase;">Property Type</span>
+                        <h4 id="modalPropType" style="font-size: 1.15rem;"></h4>
+                    </div>
+                </div>
+
+                <!-- Secondary Metadata -->
+                <div style="display: flex; gap: 1.5rem; font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                    <span id="modalPropMls"></span>
+                    <span>•</span>
+                    <span id="modalPropYear"></span>
+                    <span>•</span>
+                    <span id="modalPropDays"></span>
+                </div>
+
+                <h4 style="font-size: 1.15rem; margin-bottom: 0.5rem;">Property Description</h4>
+                <p id="modalPropDesc" style="color: var(--text-body); line-height: 1.7; font-size: 0.95rem; margin-bottom: 2rem;"></p>
+
+                <!-- Assigned Agent & Showing Form -->
+                <div style="background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-sm); padding: 2rem;">
+                    <div style="display: flex; gap: 1.2rem; align-items: center; margin-bottom: 1.5rem;">
+                        <img src="" id="modalAgentPhoto" style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary);">
+                        <div>
+                            <span style="font-size: 0.72rem; color: var(--primary); font-weight: 700; text-transform: uppercase;">Listing Specialist</span>
+                            <h4 id="modalAgentName" style="font-size: 1.2rem;"></h4>
+                            <div style="display: flex; gap: 1rem; font-size: 0.82rem; margin-top: 0.2rem;">
+                                <a href="" id="modalAgentPhone" style="color: var(--text-main); font-weight: 700;"><i class="fa-solid fa-phone"></i> Call Agent</a>
+                                <a href="" id="modalAgentEmail" style="color: var(--primary); font-weight: 700;"><i class="fa-solid fa-envelope"></i> Email Agent</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form id="scheduleTourForm" style="display: flex; flex-direction: column; gap: 0.9rem;">
+                        <input type="hidden" id="tourPropTitleHidden" value="">
+                        <h4 style="font-size: 1.1rem;">Schedule an In-Person or Video Showing</h4>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <input type="text" class="form-control-input" placeholder="Your Name" required>
+                            <input type="tel" class="form-control-input" placeholder="Phone Number" required>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <input type="date" class="form-control-input" required>
+                            <select class="form-control-select" required>
+                                <option value="morning">Morning (9:00 AM – 12:00 PM)</option>
+                                <option value="afternoon">Afternoon (12:00 PM – 4:00 PM)</option>
+                                <option value="sunset">Evening (4:00 PM – 7:00 PM)</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            <i class="fa-solid fa-calendar-check"></i> Request Tour Confirmation
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Generic Confirmation Modal -->
+    <div class="modal-overlay" id="genericConfirmModal">
+        <div class="modal-box-large text-center" style="max-width: 500px; padding: 2.8rem;">
+            <button class="btn-close-modal" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            <div style="width: 60px; height: 60px; border-radius: 50%; background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 1.2rem;">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 id="confirmTitle" style="font-size: 1.6rem; margin-bottom: 0.5rem;"></h3>
+            <p id="confirmMessage" style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;"></p>
+            <button class="btn btn-primary btn-sm btn-close-modal" style="position: static; width: auto; padding: 0.5rem 1.8rem;">Back to Listings</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="#home" class="brand-logo" style="margin-bottom: 1.2rem;">
+                        <div class="brand-icon-box" style="background: var(--primary);"><i class="fa-solid fa-compass"></i></div>
+                        <div style="display: flex; flex-direction: column;">
+                            <span class="brand-name" style="color: #ffffff;">Harborstone</span>
+                            <span class="brand-tag" style="color: var(--primary-light);">California Realty</span>
+                        </div>
+                    </a>
+                    <p style="font-size: 0.88rem; line-height: 1.7; margin-bottom: 1rem;">
+                        Harborstone Realty is California’s modern residential real estate platform connecting home buyers and sellers with real-time MLS data, property analytics, and fiduciary agents.
+                    </p>
+                    <div style="font-size: 0.75rem; color: var(--text-light);">
+                        California Department of Real Estate License #02194882<br>
+                        Equal Housing Opportunity • California Association of Realtors Member
+                    </div>
+                </div>
+
+                <div>
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home Search</a></li>
+                        <li><a href="#propertiesSection">All Properties</a></li>
+                        <li><a href="#mortgageSection">Mortgage Calculator</a></li>
+                        <li><a href="#citiesSection">Popular Cities</a></li>
+                        <li><a href="#whySection">Why Harborstone</a></li>
+                        <li><a href="#agentsSection">Our Agents</a></li>
+                        <li><a href="#contactSection">Home Valuation</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>Top Regions</h4>
+                    <ul class="footer-links">
+                        <li><a href="#propertiesSection">San Francisco Homes</a></li>
+                        <li><a href="#propertiesSection">Los Angeles Luxury</a></li>
+                        <li><a href="#propertiesSection">Newport Beach Waterfront</a></li>
+                        <li><a href="#propertiesSection">Silicon Valley Estates</a></li>
+                        <li><a href="#propertiesSection">Santa Barbara Montecito</a></li>
+                        <li><a href="#propertiesSection">San Diego Coast</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4>California Headquarters</h4>
+                    <ul class="footer-links" style="font-size: 0.85rem;">
+                        <li style="margin-bottom: 0.6rem;"><strong style="color:#ffffff;">Bay Area Office:</strong><br>555 California St, Suite 4200, San Francisco</li>
+                        <li style="margin-bottom: 0.6rem;"><strong style="color:#ffffff;">Los Angeles Office:</strong><br>10250 Constellation Blvd, Century City</li>
+                        <li style="margin-bottom: 0.6rem;"><strong style="color:#ffffff;">Orange County Office:</strong><br>620 Newport Center Dr, Newport Beach</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Harborstone Realty Inc. All Rights Reserved. Statewide California Real Estate Brokerage.</p>
+                <p>Designed & Developed by <a href="https://www.instagram.com/gchoyal_websitedeveloper/" target="_blank" class="author-link">Girdhari Choyal (@gchoyal_websitedeveloper)</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>

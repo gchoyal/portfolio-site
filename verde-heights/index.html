@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verde Heights Residences | Modern Architectural Luxury Living in Austin, TX</title>
+    <meta name="description" content="Verde Heights is a premier 20-story luxury residential development on Lady Bird Lake in Austin, Texas. Explore floor plans, interactive 20-floor elevation selector, and world-class amenities.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div style="display:flex; align-items:center; gap:16px;">
+                <a href="../index.html" class="hub-link"><i class="fa-solid fa-arrow-left"></i> Developer Portfolio Hub</a>
+                <span><i class="fa-solid fa-building"></i> 20-Story Luxury Residential Development • Austin, TX</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:16px;">
+                <span><i class="fa-solid fa-location-dot"></i> 400 S Congress Ave, Austin, TX 78704</span>
+                <span>|</span>
+                <a href="tel:15125550188" style="color:var(--accent-gold); font-weight:700;"><i class="fa-solid fa-phone"></i> +1 (512) 555-0188</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <!-- Brand Logo -->
+            <a href="#home" class="brand-logo">
+                <div class="brand-mark">V</div>
+                <div class="brand-meta">
+                    <h2>Verde Heights</h2>
+                    <span>Austin Luxury Residences</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#building" class="nav-link">The Architecture</a>
+                <a href="#elevation" class="nav-link">Floor Selector</a>
+                <a href="#residences" class="nav-link">Floor Plans</a>
+                <a href="#amenities" class="nav-link">Amenities</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#neighborhood" class="nav-link">Neighborhood</a>
+                <a href="#contact" class="nav-link">Inquire</a>
+            </nav>
+
+            <!-- Nav Actions -->
+            <div class="nav-actions">
+                <a href="#elevation" class="btn btn-outline btn-sm">
+                    <i class="fa-solid fa-layer-group"></i> 20 Floors
+                </a>
+                <a href="#contact" class="btn btn-primary btn-sm trigger-tour-modal">
+                    <i class="fa-solid fa-calendar-check"></i> Book Private Tour
+                </a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+            <div class="hero-text-col">
+                <div class="hero-tagline">
+                    <span>A New Architectural Landmark in Austin</span>
+                </div>
+
+                <h1 class="hero-headline">
+                    Where Architectural Elegance Meets the <em>Austin Skyline.</em>
+                </h1>
+
+                <p class="hero-description">
+                    Rising 20 stories above Lady Bird Lake and South Congress, Verde Heights offers a curated collection of modern luxury residences, expansive private loggias, and biophilic architectural design crafted for refined living.
+                </p>
+
+                <div class="hero-ctas">
+                    <a href="#elevation" class="btn btn-primary">
+                        <i class="fa-solid fa-building-user"></i> Interactive Floor Selector
+                    </a>
+                    <a href="#residences" class="btn btn-outline">
+                        <i class="fa-solid fa-compass-drafting"></i> Explore Floor Plans
+                    </a>
+                    <a href="#contact" class="btn btn-gold trigger-tour-modal">
+                        <i class="fa-solid fa-key"></i> Schedule Private Tour
+                    </a>
+                </div>
+
+                <!-- Hero Stats -->
+                <div class="hero-stats-row">
+                    <div class="hero-stat">
+                        <h4>20</h4>
+                        <p>Tower Floors</p>
+                    </div>
+                    <div class="hero-stat">
+                        <h4>148</h4>
+                        <p>Luxury Residences</p>
+                    </div>
+                    <div class="hero-stat">
+                        <h4>360°</h4>
+                        <p>Skyline & Lake Views</p>
+                    </div>
+                    <div class="hero-stat">
+                        <h4>LEED</h4>
+                        <p>Platinum Certified</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Visual Card -->
+            <div class="hero-visual-card">
+                <div class="hero-img-frame">
+                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1000&q=80" alt="Verde Heights Austin Architectural High-Rise Tower">
+                    <div class="hero-floating-badge">
+                        <div class="badge-info">
+                            <h5>Now Welcoming Residents</h5>
+                            <p><i class="fa-solid fa-location-dot text-verde"></i> South Congress & Lady Bird Lake, Austin</p>
+                        </div>
+                        <a href="#elevation" class="btn btn-primary btn-sm">
+                            Explore <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Architecture & Building Narrative -->
+    <section class="section" id="building">
+        <div class="container">
+            <div class="building-intro-grid">
+                <div>
+                    <span class="badge-pill">The Architectural Vision</span>
+                    <h2 class="section-title">Designed in Harmony with Texas Limestone & Green Terraces</h2>
+                    <p class="section-subtitle" style="margin: 0 0 1.5rem;">
+                        Verde Heights reflects Austin’s organic energy through sculpted Texas limestone, bronze metallic fins, floor-to-ceiling acoustic glass, and cascading landscaped sky gardens.
+                    </p>
+                    <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">
+                        Engineered by world-renowned structural architects, every residence is configured to maximize natural circadian daylight, capture panoramic views of downtown Austin and Lady Bird Lake, and deliver peaceful acoustic isolation.
+                    </p>
+
+                    <div style="display:flex; gap:14px; flex-wrap:wrap;">
+                        <a href="#residences" class="btn btn-primary">
+                            <i class="fa-solid fa-layer-group"></i> View Available Residences
+                        </a>
+                        <a href="#amenities" class="btn btn-outline">
+                            <i class="fa-solid fa-water-ladder"></i> Building Amenities
+                        </a>
+                    </div>
+                </div>
+
+                <div class="building-feature-list">
+                    <div class="building-feature-item">
+                        <div class="feature-icon-box"><i class="fa-solid fa-leaf"></i></div>
+                        <h4>Biophilic Architecture</h4>
+                        <p>Cascading green terraces, native Texas plantings, and integrated vertical gardens.</p>
+                    </div>
+                    <div class="building-feature-item">
+                        <div class="feature-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h4>Acoustic Isolation</h4>
+                        <p>Double-laminated acoustic low-E glass envelope ensuring quiet residential sanctuaries.</p>
+                    </div>
+                    <div class="building-feature-item">
+                        <div class="feature-icon-box"><i class="fa-solid fa-sun"></i></div>
+                        <h4>Expansive Outdoor Loggias</h4>
+                        <p>Deep private covered terraces extending up to 620 sqft for effortless indoor/outdoor living.</p>
+                    </div>
+                    <div class="building-feature-item">
+                        <div class="feature-icon-box"><i class="fa-solid fa-bolt"></i></div>
+                        <h4>100% Green Energy</h4>
+                        <p>Solar arrays, EV supercharging hubs, and LEED Platinum sustainability standards.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================================================
+         INTERACTIVE BUILDING ELEVATION & FLOOR SELECTOR (Floors 01 - 20)
+         ======================================================================= -->
+    <section class="section elevation-section" id="elevation">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="badge-pill">Interactive Elevation Stack</span>
+                <h2 class="section-title">Explore the 20-Story Building Elevation</h2>
+                <p class="section-subtitle">
+                    Select any floor from Level 01 to 20 to view that floor's architectural layout, ceiling heights, outdoor terrace depth, and available residential units.
+                </p>
+            </div>
+
+            <div class="elevation-wrapper">
+                <!-- Left: Floor Stack Selector (Floors 20 down to 01) -->
+                <div class="floor-stack-panel">
+                    <div class="floor-stack-header">
+                        <h4>Building Levels</h4>
+                        <span>Floors 01 – 20</span>
+                    </div>
+
+                    <div class="floor-tiers-guide">
+                        <div class="tier-legend-item"><span class="tier-dot ph"></span> <strong>Floors 19–20:</strong> Grand Penthouses</div>
+                        <div class="tier-legend-item"><span class="tier-dot sky"></span> <strong>Floors 13–18:</strong> Sky Residences</div>
+                        <div class="tier-legend-item"><span class="tier-dot city"></span> <strong>Floors 07–12:</strong> City View Collection</div>
+                        <div class="tier-legend-item"><span class="tier-dot garden"></span> <strong>Floors 01–06:</strong> Garden Flats & Townhomes</div>
+                    </div>
+
+                    <div class="floor-stack-scroll" id="floorStackScroll">
+                        <!-- Populated by JavaScript with Floors 20 to 01 -->
+                    </div>
+                </div>
+
+                <!-- Right: Active Floor Content & Available Units -->
+                <div class="floor-content-panel">
+                    <div class="active-floor-header">
+                        <div class="active-floor-title">
+                            <h3 id="activeFloorTitle">Penthouse Level 20</h3>
+                            <p id="activeFloorHighlights">Wraparound terraces, 360° Austin Skyline views, private elevator vestibules</p>
+                        </div>
+                        <div class="active-floor-specs">
+                            <div class="floor-spec-item">
+                                <div class="spec-label">Collection Tier</div>
+                                <div class="spec-val" id="activeFloorTier">Penthouses</div>
+                            </div>
+                            <div class="floor-spec-item">
+                                <div class="spec-label">Ceiling Height</div>
+                                <div class="spec-val" id="activeFloorCeiling">12.0 ft</div>
+                            </div>
+                            <div class="floor-spec-item">
+                                <div class="spec-label">Floor Units</div>
+                                <div class="spec-val" id="activeFloorUnitsCount">2 Residences</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grid of Available Units on This Floor -->
+                    <div class="floor-units-grid" id="floorUnitsGrid">
+                        <!-- Dynamically populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================================================
+         RESIDENCES & FLOOR PLANS MATRIX
+         ======================================================================= -->
+    <section class="section section-subtle" id="residences">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="badge-pill">Curated Floor Plans</span>
+                <h2 class="section-title">Residences & Spatial Layouts</h2>
+                <p class="section-subtitle">
+                    Filter across our Studio, 1 Bedroom, 2 Bedroom, 3 Bedroom, and Penthouse floor plans to find your ideal residence.
+                </p>
+            </div>
+
+            <!-- Floor Plan Category Filter Tabs -->
+            <div class="residences-filter-bar">
+                <button class="residence-tab-btn active" data-type="all">All Residences</button>
+                <button class="residence-tab-btn" data-type="studio">Studio Flats (580 - 640 sqft)</button>
+                <button class="residence-tab-btn" data-type="1bed">1 Bedroom (780 - 920 sqft)</button>
+                <button class="residence-tab-btn" data-type="2bed">2 Bedroom (1,240 - 1,480 sqft)</button>
+                <button class="residence-tab-btn" data-type="3bed">3 Bedroom (1,850 - 2,450 sqft)</button>
+                <button class="residence-tab-btn" data-type="penthouse">Grand Penthouses (2,850 - 3,850 sqft)</button>
+            </div>
+
+            <!-- Residences Grid Matrix -->
+            <div class="residences-matrix-grid" id="residencesMatrixGrid">
+                <!-- Dynamically rendered by app.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================================================
+         AMENITIES SHOWCASE
+         ======================================================================= -->
+    <section class="section" id="amenities">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="badge-pill">Curated Hospitality</span>
+                <h2 class="section-title">Unrivaled Resort-Level Amenities</h2>
+                <p class="section-subtitle">
+                    Designed as a sanctuary of wellness, productivity, and connection spanning over 25,000 square feet of private indoor and outdoor amenity spaces.
+                </p>
+            </div>
+
+            <div class="amenities-grid">
+                <!-- 1. Rooftop Pool -->
+                <div class="amenity-card">
+                    <div class="amenity-img-holder">
+                        <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80" alt="Rooftop Infinity Pool" loading="lazy">
+                        <span class="amenity-level-tag">Level 20 • Rooftop</span>
+                    </div>
+                    <div class="amenity-body">
+                        <div class="amenity-icon-title">
+                            <div class="icon"><i class="fa-solid fa-water-ladder"></i></div>
+                            <h3>Rooftop Sky Pool & Cabanas</h3>
+                        </div>
+                        <p class="amenity-desc">
+                            75-foot heated infinity-edge sky pool hovering 20 stories above Austin with private shaded cabanas, fire lounges, and sunset bar service.
+                        </p>
+                        <ul class="amenity-bullets">
+                            <li><i class="fa-solid fa-check"></i> Unobstructed Austin Skyline Panorama</li>
+                            <li><i class="fa-solid fa-check"></i> Private Loungers & Daybeds</li>
+                            <li><i class="fa-solid fa-check"></i> Sunset Cocktail & Towel Service</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2. Fitness Center -->
+                <div class="amenity-card">
+                    <div class="amenity-img-holder">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=800&q=80" alt="Verde Athletic Club" loading="lazy">
+                        <span class="amenity-level-tag">Level 02 • Wellness</span>
+                    </div>
+                    <div class="amenity-body">
+                        <div class="amenity-icon-title">
+                            <div class="icon"><i class="fa-solid fa-dumbbell"></i></div>
+                            <h3>Athletic Club & Recovery Spa</h3>
+                        </div>
+                        <p class="amenity-desc">
+                            4,500 sqft performance fitness center outfitted with Technogym Artis equipment, Peloton bikes, cedar dry sauna, and cold plunge recovery suites.
+                        </p>
+                        <ul class="amenity-bullets">
+                            <li><i class="fa-solid fa-check"></i> Technogym & Free Weight Zone</li>
+                            <li><i class="fa-solid fa-check"></i> Infrared Cedar Sauna & Cold Plunge</li>
+                            <li><i class="fa-solid fa-check"></i> Private Yoga & Pilates Studio</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 3. Sky Lounge & Dining -->
+                <div class="amenity-card">
+                    <div class="amenity-img-holder">
+                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=80" alt="Resident Sky Lounge" loading="lazy">
+                        <span class="amenity-level-tag">Level 19 • Penthouse Club</span>
+                    </div>
+                    <div class="amenity-body">
+                        <div class="amenity-icon-title">
+                            <div class="icon"><i class="fa-solid fa-champagne-glasses"></i></div>
+                            <h3>Verde Sky Lounge & Dining</h3>
+                        </div>
+                        <p class="amenity-desc">
+                            Sophisticated penthouse club with fireplace salon, sommelier wine tasting vault, and private dining room with catering demonstration kitchen.
+                        </p>
+                        <ul class="amenity-bullets">
+                            <li><i class="fa-solid fa-check"></i> Private Chef Dining Room</li>
+                            <li><i class="fa-solid fa-check"></i> Sommelier Wine Storage Vault</li>
+                            <li><i class="fa-solid fa-check"></i> Fireplace Salon & Library</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 4. Executive Coworking -->
+                <div class="amenity-card">
+                    <div class="amenity-img-holder">
+                        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80" alt="Executive Coworking Suites" loading="lazy">
+                        <span class="amenity-level-tag">Level 02 • Business</span>
+                    </div>
+                    <div class="amenity-body">
+                        <div class="amenity-icon-title">
+                            <div class="icon"><i class="fa-solid fa-laptop-code"></i></div>
+                            <h3>Executive Coworking & Boardrooms</h3>
+                        </div>
+                        <p class="amenity-desc">
+                            Dedicated quiet workspaces, soundproof Zoom focus pods, high-speed Wi-Fi 6E, and full AV-equipped conference boardrooms.
+                        </p>
+                        <ul class="amenity-bullets">
+                            <li><i class="fa-solid fa-check"></i> Private Boardrooms with 4K Video AV</li>
+                            <li><i class="fa-solid fa-check"></i> Acoustic Privacy Phone Booths</li>
+                            <li><i class="fa-solid fa-check"></i> Espresso Bar & Printing Station</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 5. Concierge -->
+                <div class="amenity-card">
+                    <div class="amenity-img-holder">
+                        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80" alt="24/7 White Glove Concierge" loading="lazy">
+                        <span class="amenity-level-tag">Level 01 • Lobby</span>
+                    </div>
+                    <div class="amenity-body">
+                        <div class="amenity-icon-title">
+                            <div class="icon"><i class="fa-solid fa-bell-concierge"></i></div>
+                            <h3>24/7 White-Glove Concierge</h3>
+                        </div>
+                        <p class="amenity-desc">
+                            Full-service round-the-clock reception, dry cleaning management, valet parking, secure cold storage for grocery deliveries, and package vaults.
+                        </p>
+                        <ul class="amenity-bullets">
+                            <li><i class="fa-solid fa-check"></i> 24-Hour Attended Front Desk</li>
+                            <li><i class="fa-solid fa-check"></i> Refrigerated Grocery Delivery Lockers</li>
+                            <li><i class="fa-solid fa-check"></i> Keyless Mobile Access Security</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 6. Parking & EV -->
+                <div class="amenity-card">
+                    <div class="amenity-img-holder">
+                        <img src="https://images.unsplash.com/photo-1506521781263-d8422e82f27a?auto=format&fit=crop&w=800&q=80" alt="Underground EV Parking" loading="lazy">
+                        <span class="amenity-level-tag">Underground Levels P1-P3</span>
+                    </div>
+                    <div class="amenity-body">
+                        <div class="amenity-icon-title">
+                            <div class="icon"><i class="fa-solid fa-charging-station"></i></div>
+                            <h3>Climate-Controlled EV Garage</h3>
+                        </div>
+                        <p class="amenity-desc">
+                            Subterranean secure parking structure with dedicated Level 2 EV charging stations, resident bike maintenance lounge, and private storage suites.
+                        </p>
+                        <ul class="amenity-bullets">
+                            <li><i class="fa-solid fa-check"></i> Reserved EV Charging Spaces</li>
+                            <li><i class="fa-solid fa-check"></i> Secure Bike Storage & Repair Hub</li>
+                            <li><i class="fa-solid fa-check"></i> License Plate Automated Access</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 7. Pet Spa & Dog Park -->
+                <div class="amenity-card">
+                    <div class="amenity-img-holder">
+                        <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=800&q=80" alt="Pet Spa and Dog Park" loading="lazy">
+                        <span class="amenity-level-tag">Level 01 • Courtyard</span>
+                    </div>
+                    <div class="amenity-body">
+                        <div class="amenity-icon-title">
+                            <div class="icon"><i class="fa-solid fa-paw"></i></div>
+                            <h3>Pet Spa & Private Dog Run</h3>
+                        </div>
+                        <p class="amenity-desc">
+                            Dedicated dog wash grooming salon with stainless wash stations, blow dryers, and private turf agility park for furry companions.
+                        </p>
+                        <ul class="amenity-bullets">
+                            <li><i class="fa-solid fa-check"></i> Professional Washing & Grooming Stations</li>
+                            <li><i class="fa-solid fa-check"></i> Secure Enclosed Turf Dog Run</li>
+                            <li><i class="fa-solid fa-check"></i> Direct Access to Lady Bird Lake Trail</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================================================
+         ARCHITECTURAL GALLERY
+         ======================================================================= -->
+    <section class="section section-dark" id="gallery">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="badge-pill dark">Visual Curation</span>
+                <h2 class="section-title light">Architectural Gallery</h2>
+                <p class="section-subtitle light">
+                    Explore the materiality, craftsmanship, and sweeping horizons of Verde Heights.
+                </p>
+            </div>
+
+            <!-- Gallery Filter Tabs -->
+            <div class="gallery-filter-bar">
+                <button class="gallery-tab-btn active" data-gallery-filter="all">All Photography</button>
+                <button class="gallery-tab-btn" data-gallery-filter="architecture">Architecture & Facade</button>
+                <button class="gallery-tab-btn" data-gallery-filter="interiors">Residence Interiors</button>
+                <button class="gallery-tab-btn" data-gallery-filter="amenities">Building Amenities</button>
+                <button class="gallery-tab-btn" data-gallery-filter="views">Austin Skyline Views</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <!-- 1 -->
+                <div class="gallery-item span-2" data-category="architecture views">
+                    <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80" alt="Verde Heights Exterior Tower" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <h4>Tower Facade at Twilight</h4>
+                            <p>Architecture & Sky</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="gallery-item" data-category="interiors">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Penthouse Living Great Room" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <h4>Great Room with Double-Height Glass</h4>
+                            <p>Penthouse Interiors</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="gallery-item" data-category="interiors">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=800&q=80" alt="Poliform Kitchen" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <h4>Poliform Kitchen & Quartz Island</h4>
+                            <p>Gourmet Finishes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="gallery-item" data-category="amenities views">
+                    <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80" alt="Level 20 Infinity Pool" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <h4>Level 20 Infinity Sky Pool</h4>
+                            <p>Amenities</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="gallery-item" data-category="interiors">
+                    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Spa Bathroom" loading="lazy">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">
+                            <h4>Calacatta Gold Primary Spa Bath</h4>
+                            <p>Residence Interiors</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================================================
+         NEIGHBORHOOD & AUSTIN GUIDE
+         ======================================================================= -->
+    <section class="section" id="neighborhood">
+        <div class="container">
+            <div class="neighborhood-grid">
+                <div>
+                    <span class="badge-pill">Austin, Texas</span>
+                    <h2 class="section-title">An Unbeatable South Congress & Lakefront Address</h2>
+                    <p class="section-subtitle" style="margin: 0 0 1.5rem;">
+                        Verde Heights sits at the epicenter of Austin’s most vibrant cultural, dining, and outdoor districts.
+                    </p>
+
+                    <div class="neighborhood-highlights-list">
+                        <div class="neighborhood-point-card">
+                            <div class="point-number">01</div>
+                            <div class="point-info">
+                                <h4>Lady Bird Lake Hike & Bike Trail</h4>
+                                <p>Direct immediate trail access to 10 miles of serene shoreline walking paths, paddleboarding, and kayaking.</p>
+                            </div>
+                        </div>
+
+                        <div class="neighborhood-point-card">
+                            <div class="point-number">02</div>
+                            <div class="point-info">
+                                <h4>South Congress (SoCo) District</h4>
+                                <p>3-minute stroll to Austin’s premier boutique shopping, music venues, and award-winning dining (Aba, Perla's, South Congress Hotel).</p>
+                            </div>
+                        </div>
+
+                        <div class="neighborhood-point-card">
+                            <div class="point-number">03</div>
+                            <div class="point-info">
+                                <h4>Downtown 2nd Street District</h4>
+                                <p>Cross the scenic Congress Avenue bridge into Austin’s central arts, financial, and tech corridor in under 5 minutes.</p>
+                            </div>
+                        </div>
+
+                        <div class="neighborhood-point-card">
+                            <div class="point-number">04</div>
+                            <div class="point-info">
+                                <h4>Zilker Metropolitan Park & Barton Springs</h4>
+                                <p>Minutes from Austin’s 350-acre iconic urban parkland, botanical gardens, and historic natural spring pool.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Neighborhood Map & Transit Scores -->
+                <div>
+                    <div class="neighborhood-map-card">
+                        <div style="height: 260px; background: var(--bg-subtle); border-radius: var(--radius-md); overflow: hidden; border: 1px solid var(--border); position: relative;">
+                            <img src="https://images.unsplash.com/photo-1531218150217-54595bc2b934?auto=format&fit=crop&w=800&q=80" alt="Austin Skyline Map View" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(35,72,54,0.95); color: #fff; padding: 10px 18px; border-radius: var(--radius-full); font-weight: 700; font-size: 0.85rem; box-shadow: var(--shadow-md); display: flex; align-items: center; gap: 8px;">
+                                <i class="fa-solid fa-location-dot" style="color: var(--accent-gold);"></i> Verde Heights Austin
+                            </div>
+                        </div>
+
+                        <div class="transit-scores-row">
+                            <div class="transit-score-box">
+                                <div class="score">96</div>
+                                <div class="label">Walk Score®</div>
+                            </div>
+                            <div class="transit-score-box">
+                                <div class="score">94</div>
+                                <div class="label">Bike Score®</div>
+                            </div>
+                            <div class="transit-score-box">
+                                <div class="score">88</div>
+                                <div class="label">Transit Score®</div>
+                            </div>
+                        </div>
+
+                        <div style="margin-top: 1.5rem; text-align: center;">
+                            <a href="#contact" class="btn btn-outline" style="width: 100%;">
+                                <i class="fa-solid fa-map-location-dot"></i> Request Neighborhood Relocation Guide
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================================================
+         AVAILABILITY & CONTACT / INQUIRY
+         ======================================================================= -->
+    <section class="section section-subtle" id="contact">
+        <div class="container">
+            <div class="contact-container-grid">
+                <!-- Left: Leasing Office Info -->
+                <div class="contact-info-panel">
+                    <div>
+                        <span class="badge-pill dark" style="margin-bottom: 1rem;">Private Inquiries</span>
+                        <h3>Reserve Your Residence at Verde Heights</h3>
+                        <p>
+                            Our dedicated on-site leasing and resident advisory team is available for private walkthroughs, model residence tours, and custom leasing consultations.
+                        </p>
+
+                        <div class="contact-direct-list">
+                            <div class="contact-direct-item">
+                                <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div>
+                                    <h5>Verde Heights Leasing Gallery</h5>
+                                    <p>400 S Congress Ave, Suite 100, Austin, TX 78704</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-direct-item">
+                                <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                                <div>
+                                    <h5>Direct Leasing Line</h5>
+                                    <p>+1 (512) 555-0188 (Daily 9am – 6pm CT)</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-direct-item">
+                                <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div>
+                                    <h5>Email Advisory</h5>
+                                    <p>residences@verdeheightsaustin.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div style="padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.15); font-size: 0.8rem; color: #8fa0ab;">
+                        Texas Real Estate Commission (TREC) Consumer Protection Notice • Equal Housing Opportunity
+                    </div>
+                </div>
+
+                <!-- Right: Inquiry Form -->
+                <div class="contact-form-panel">
+                    <h3>Request Information & Private Tour</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.8rem;">
+                        Complete the form below to receive digital floor plan brochures, pricing sheets, or to reserve your private appointment.
+                    </p>
+
+                    <form id="contactSectionForm">
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label for="cFirstName">First Name *</label>
+                                <input type="text" id="cFirstName" class="form-control" placeholder="e.g. Eleanor" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cLastName">Last Name *</label>
+                                <input type="text" id="cLastName" class="form-control" placeholder="e.g. Vance" required>
+                            </div>
+                        </div>
+
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label for="cEmail">Email Address *</label>
+                                <input type="email" id="cEmail" class="form-control" placeholder="eleanor@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="cPhone">Phone Number *</label>
+                                <input type="tel" id="cPhone" class="form-control" placeholder="+1 (512) 000-0000" required>
+                            </div>
+                        </div>
+
+                        <div class="form-grid-2">
+                            <div class="form-group">
+                                <label for="cResidenceType">Desired Residence Tier</label>
+                                <select id="cResidenceType" class="form-control">
+                                    <option value="any">Any Available Residence</option>
+                                    <option value="studio">Studio Flat (Floors 03–11)</option>
+                                    <option value="1bed">1 Bedroom Residence (Floors 02–14)</option>
+                                    <option value="2bed">2 Bedroom Residence (Floors 03–18)</option>
+                                    <option value="3bed">3 Bedroom Sky Residence (Floors 15–19)</option>
+                                    <option value="penthouse">Grand Penthouse Suite (Floors 19–20)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="cMoveIn">Estimated Move-In</label>
+                                <select id="cMoveIn" class="form-control">
+                                    <option value="immediate">Immediate / Next 30 Days</option>
+                                    <option value="60days">60 Days</option>
+                                    <option value="90days">90+ Days</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cNotes">Special Requests or Questions</label>
+                            <textarea id="cNotes" class="form-control" placeholder="Tell us about your preferred views, floor preferences, or pet accommodations..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 14px;">
+                            <i class="fa-solid fa-paper-plane"></i> Submit Inquiry & Request Information
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================================================
+         MODAL 1: UNIT DETAIL & ARCHITECTURAL SPECIFICATIONS
+         ======================================================================= -->
+    <div class="modal-overlay" id="unitDetailModal">
+        <div class="modal-dialog">
+            <button class="modal-close-btn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            <span class="badge-pill" id="modalUnitType">Penthouses • Grand Sky Penthouse</span>
+            <h2 class="heading-serif" id="modalUnitTitle" style="font-size: 1.8rem; margin-bottom: 0.5rem;">Unit Specifications</h2>
+
+            <div class="modal-unit-grid">
+                <!-- SVG Floorplan Preview -->
+                <div>
+                    <div class="modal-floorplan-preview" id="modalUnitFloorplanSvg">
+                        <!-- Populated by JS -->
+                    </div>
+                    <div style="font-size: 0.78rem; color: var(--text-light); text-align: center; margin-top: 8px;">
+                        * Architectural dimensions and square footage are approximate.
+                    </div>
+                </div>
+
+                <!-- Unit Specs Sheet -->
+                <div>
+                    <table class="modal-spec-table">
+                        <tr><td>Building Floor</td><td id="modalSpecFloor">Floor 20 (Penthouse)</td></tr>
+                        <tr><td>Interior Area</td><td id="modalSpecSqft">3,850 Sq. Ft.</td></tr>
+                        <tr><td>Bedrooms</td><td id="modalSpecBeds">4 Bedroom(s)</td></tr>
+                        <tr><td>Bathrooms</td><td id="modalSpecBaths">4.5 Bathroom(s)</td></tr>
+                        <tr><td>Ceiling Height</td><td id="modalSpecCeiling">12.0 ft</td></tr>
+                        <tr><td>Outdoor Living</td><td id="modalSpecTerrace">620 Sq. Ft. Wraparound Terrace</td></tr>
+                        <tr><td>Solar Exposure</td><td id="modalSpecExposure">Panoramic 360°</td></tr>
+                        <tr><td>Monthly Lease</td><td id="modalSpecPrice" style="color: var(--primary); font-size: 1.1rem;">$18,500 / month</td></tr>
+                        <tr><td>Current Status</td><td id="modalSpecAvailability"><span class="unit-status-pill available">Available</span></td></tr>
+                    </table>
+
+                    <h4 style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-main);">Included Residence Features:</h4>
+                    <ul class="amenity-bullets" id="modalFeaturesList" style="margin-bottom: 1.5rem;">
+                        <!-- Populated by JS -->
+                    </ul>
+
+                    <button class="btn btn-primary" id="modalReserveBtn" style="width: 100%;">
+                        <i class="fa-solid fa-calendar-check"></i> Book Private Tour for This Unit
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =======================================================================
+         MODAL 2: SCHEDULE PRIVATE TOUR
+         ======================================================================= -->
+    <div class="modal-overlay" id="tourModal">
+        <div class="modal-dialog" style="max-width: 600px;">
+            <button class="modal-close-btn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            <span class="badge-pill">Private Showing</span>
+            <h2 class="heading-serif" style="font-size: 1.8rem; margin-bottom: 0.5rem;">Schedule a VIP Tour</h2>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">
+                Experience Verde Heights in person with a guided walkthrough of our luxury model residences, amenities, and penthouse terraces.
+            </p>
+
+            <form id="tourForm">
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="tName">Your Full Name *</label>
+                        <input type="text" id="tName" class="form-control" placeholder="Eleanor Vance" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tPhone">Phone Number *</label>
+                        <input type="tel" id="tPhone" class="form-control" placeholder="+1 (512) 000-0000" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="tEmail">Email Address *</label>
+                    <input type="email" id="tEmail" class="form-control" placeholder="eleanor@example.com" required>
+                </div>
+
+                <div class="form-grid-2">
+                    <div class="form-group">
+                        <label for="tDate">Preferred Tour Date *</label>
+                        <input type="date" id="tDate" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tTime">Preferred Time Window *</label>
+                        <select id="tTime" class="form-control" required>
+                            <option value="morning">Morning (10:00 AM – 12:00 PM)</option>
+                            <option value="afternoon" selected>Afternoon (1:00 PM – 4:00 PM)</option>
+                            <option value="sunset">Sunset Preview (5:00 PM – 6:30 PM)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="tourResidenceSelect">Target Residence / Unit</label>
+                    <input type="text" id="tourResidenceSelect" class="form-control" placeholder="e.g. Unit 1802 or Penthouse PH-2001">
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 13px; margin-top: 0.5rem;">
+                    <i class="fa-solid fa-calendar-check"></i> Confirm Private Tour Request
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- =======================================================================
+         MODAL 3: THANK YOU CONFIRMATION
+         ======================================================================= -->
+    <div class="modal-overlay" id="thankYouModal">
+        <div class="modal-dialog" style="max-width: 480px; text-align: center; padding: 3rem 2rem;">
+            <div style="width: 64px; height: 64px; background: var(--primary-soft); color: var(--primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 1.2rem;">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h2 class="heading-serif" style="font-size: 1.8rem; margin-bottom: 0.6rem;">Inquiry Confirmed</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.8rem;">
+                Thank you for your interest in Verde Heights. Our on-site leasing director has received your request and will contact you promptly with your confirmation and brochure.
+            </p>
+            <button class="btn btn-primary modal-close-trigger" style="min-width: 160px;">
+                Return to Site
+            </button>
+        </div>
+    </div>
+
+    <!-- Sticky Mobile Action Bar -->
+    <div class="mobile-quick-bar">
+        <div class="mobile-quick-bar-content">
+            <a href="#elevation" class="btn btn-outline btn-sm" style="flex: 1;">
+                <i class="fa-solid fa-layer-group"></i> 20 Floors
+            </a>
+            <a href="#contact" class="btn btn-primary btn-sm trigger-tour-modal" style="flex: 1.4;">
+                <i class="fa-solid fa-calendar-check"></i> Book Tour
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div style="display:flex; align-items:center; gap:10px; margin-bottom:1rem;">
+                        <div class="brand-mark" style="background:var(--accent-gold);">V</div>
+                        <h3 style="margin:0; font-size:1.4rem;">Verde Heights</h3>
+                    </div>
+                    <p>
+                        A signature 20-story luxury residential tower developed in Austin, Texas. Designed for discerning residents seeking architectural distinction, sustainability, and lakefront living.
+                    </p>
+                    <div style="font-size: 0.78rem; color: #78828a;">
+                        400 S Congress Ave, Austin, TX 78704<br>
+                        Leasing Gallery: +1 (512) 555-0188
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>The Building</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#building">The Architecture</a></li>
+                        <li><a href="#elevation">20-Floor Elevation</a></li>
+                        <li><a href="#residences">Residences & Plans</a></li>
+                        <li><a href="#amenities">Building Amenities</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Residences</h4>
+                    <ul class="footer-links">
+                        <li><a href="#residences">Studio Flats</a></li>
+                        <li><a href="#residences">1 Bedroom Homes</a></li>
+                        <li><a href="#residences">2 Bedroom Residences</a></li>
+                        <li><a href="#residences">3 Bedroom Estates</a></li>
+                        <li><a href="#residences">Grand Penthouses</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Leasing & Location</h4>
+                    <ul class="footer-links">
+                        <li><a href="#gallery">Photo Gallery</a></li>
+                        <li><a href="#neighborhood">Austin Neighborhood</a></li>
+                        <li><a href="#contact">Schedule VIP Showing</a></li>
+                        <li><a href="#contact">Digital Brochure</a></li>
+                        <li><a href="../index.html">Developer Portfolio Hub</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Verde Heights Residential Development LLC. All Rights Reserved. Equal Housing Opportunity.</p>
+                <p>Designed & Developed by <a href="https://www.instagram.com/gchoyal_websitedeveloper/" target="_blank" class="author-link">Girdhari Choyal (@gchoyal_websitedeveloper)</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+</body>
+</html>

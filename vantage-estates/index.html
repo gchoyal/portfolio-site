@@ -1,0 +1,680 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VANTAGE PRIVATE ESTATES — Global Luxury Real Estate Advisory</title>
+    <meta name="description" content="Vantage Private Estates represents exceptional residential properties, private islands, and trophy penthouses across Dubai, Miami, London, New York, Monaco, and Los Angeles.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Ultra-Luxury Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- =========================================================================
+         1. TOP GLOBAL STATUS & MULTI-CURRENCY BAR
+         ========================================================================= -->
+    <div class="top-status-bar">
+        <div class="container d-flex-between" style="display:flex; justify-content:space-between; align-items:center;">
+            <div style="display:flex; align-items:center; gap:12px;">
+                <span class="badge-gold" style="padding:2px 8px; font-size:0.68rem;"><i class="fa-solid fa-earth-americas"></i> GLOBAL PRIME ADVISORY</span>
+                <span>Offices in Dubai • Miami • London • New York • Monaco • Los Angeles</span>
+            </div>
+            
+            <div style="display:flex; align-items:center; gap:16px;">
+                <!-- Multi-Currency Selector -->
+                <div class="currency-toggle-wrapper">
+                    <span style="font-size:0.72rem; color:var(--gold-primary); font-weight:700; margin-right:4px;">CURRENCY:</span>
+                    <button class="curr-btn active" data-curr="USD">USD ($)</button>
+                    <button class="curr-btn" data-curr="EUR">EUR (€)</button>
+                    <button class="curr-btn" data-curr="GBP">GBP (£)</button>
+                    <button class="curr-btn" data-curr="AED">AED (د.إ)</button>
+                </div>
+                
+                <span style="opacity:0.2;">|</span>
+                <a href="../index.html" class="status-link text-gold"><i class="fa-solid fa-arrow-left"></i> Master Portfolio</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================================
+         2. MAIN REGAL NAVIGATION
+         ========================================================================= -->
+    <header class="main-header">
+        <div class="container nav-container">
+            <a href="index.html" class="brand-logo">
+                <div class="brand-mark">V</div>
+                <div class="brand-name-group">
+                    <div class="brand-title">VANTAGE</div>
+                    <span class="brand-subtitle">PRIVATE ESTATES • GLOBAL</span>
+                </div>
+            </a>
+
+            <nav class="nav-menu" id="navMenu">
+                <a href="#propertiesSection" class="nav-link">Estates (30)</a>
+                <a href="#destinationsSection" class="nav-link">Destinations</a>
+                <a href="#investmentSection" class="nav-link">Investment</a>
+                <a href="#offMarketSection" class="nav-link"><i class="fa-solid fa-lock text-gold"></i> Off-Market</a>
+                <a href="#journalSection" class="nav-link">Journal</a>
+                <a href="#advisorsSection" class="nav-link">Advisors</a>
+                <a href="#contactSection" class="nav-link">Contact</a>
+            </nav>
+
+            <div style="display:flex; align-items:center; gap:1rem;">
+                <button class="btn btn-gold btn-sm trigger-consultation-modal">
+                    <i class="fa-regular fa-envelope"></i> Private Consultation
+                </button>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- =========================================================================
+         3. HERO SECTION — MONUMENTAL EDITORIAL
+         ========================================================================= -->
+    <section class="hero-section" id="home">
+        <div class="hero-bg-lines"></div>
+        <div class="container hero-content">
+            <span class="badge-gold"><i class="fa-solid fa-gem"></i> INTERNATIONAL LUXURY REAL ESTATE ADVISORY</span>
+            
+            <h1 class="hero-title heading-monument">
+                EXCEPTIONAL PROPERTIES. <br>
+                <span class="text-gold">EXCEPTIONAL ACCESS.</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                Representing the world's most distinguished prime residences, private islands, and trophy penthouses across Dubai, Miami, London, New York, Monaco, and Los Angeles.
+            </p>
+
+            <!-- Global Hubs Quick Filter Bar -->
+            <div class="hero-hubs-bar">
+                <button class="hub-pill-btn active" data-hub="all">All Global Hubs (30)</button>
+                <button class="hub-pill-btn" data-hub="Dubai">Dubai, UAE</button>
+                <button class="hub-pill-btn" data-hub="Miami">Miami, FL</button>
+                <button class="hub-pill-btn" data-hub="London">London, UK</button>
+                <button class="hub-pill-btn" data-hub="New York">New York, NY</button>
+                <button class="hub-pill-btn" data-hub="Monaco">Monaco</button>
+                <button class="hub-pill-btn" data-hub="Los Angeles">Los Angeles, CA</button>
+            </div>
+
+            <!-- Global Search Matrix -->
+            <div class="hero-search-matrix">
+                <div class="search-cell">
+                    <span class="search-cell-label"><i class="fa-solid fa-globe"></i> Destination</span>
+                    <select id="searchCitySelect" class="search-cell-select">
+                        <option value="all">All Global Hubs</option>
+                        <option value="Dubai">Dubai, UAE</option>
+                        <option value="Miami">Miami, Florida</option>
+                        <option value="London">London, United Kingdom</option>
+                        <option value="New York">New York City</option>
+                        <option value="Monaco">Monaco, Monte Carlo</option>
+                        <option value="Los Angeles">Los Angeles, California</option>
+                    </select>
+                </div>
+
+                <div class="search-cell">
+                    <span class="search-cell-label"><i class="fa-solid fa-building-columns"></i> Property Category</span>
+                    <select id="searchCategorySelect" class="search-cell-select">
+                        <option value="all">All Categories</option>
+                        <option value="waterfront">Waterfront & Islands</option>
+                        <option value="penthouses">Trophy Penthouses</option>
+                        <option value="villas">Architectural Villas</option>
+                        <option value="mansions">Historic Mansions</option>
+                        <option value="off-market">Off-Market Vault</option>
+                    </select>
+                </div>
+
+                <div class="search-cell">
+                    <span class="search-cell-label"><i class="fa-solid fa-bed"></i> Bedrooms</span>
+                    <select id="searchBedsSelect" class="search-cell-select">
+                        <option value="all">Any Bedrooms</option>
+                        <option value="4">4+ Bedrooms</option>
+                        <option value="5">5+ Bedrooms</option>
+                        <option value="6">6+ Bedrooms</option>
+                        <option value="7">7+ Bedrooms</option>
+                    </select>
+                </div>
+
+                <div class="search-cell">
+                    <span class="search-cell-label"><i class="fa-solid fa-shield-halved"></i> Access Level</span>
+                    <span style="font-size:0.86rem; color:#ffffff; font-weight:700;">Global Prime</span>
+                </div>
+
+                <button class="btn btn-gold" id="heroSearchSubmitBtn">
+                    <i class="fa-solid fa-magnifying-glass"></i> Search Estates
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         4. PROPERTIES MARKETPLACE & COLLECTION MATRIX
+         ========================================================================= -->
+    <section class="section-properties" id="propertiesSection">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="badge-gold"><i class="fa-solid fa-gem"></i> THE CURATED REGISTER</span>
+                <h2 class="section-title heading-monument">INTERNATIONAL PRIME PROPERTIES</h2>
+                <p class="section-subtitle">
+                    Explore 30 bespoke estates, trophy penthouses, and private islands across the world's most coveted destinations with live currency conversion.
+                </p>
+            </div>
+
+            <!-- Filter Toolbar -->
+            <div class="properties-filter-toolbar">
+                <div class="filter-pills-row">
+                    <button class="cat-filter-btn active" data-cat="all">All Portfolios (30)</button>
+                    <button class="cat-filter-btn" data-cat="waterfront"><i class="fa-solid fa-water"></i> Waterfront & Islands</button>
+                    <button class="cat-filter-btn" data-cat="penthouses"><i class="fa-solid fa-city"></i> Trophy Penthouses</button>
+                    <button class="cat-filter-btn" data-cat="villas"><i class="fa-solid fa-house-chimney"></i> Prime Villas</button>
+                    <button class="cat-filter-btn" data-cat="mansions"><i class="fa-solid fa-building-columns"></i> Historic Mansions</button>
+                    <button class="cat-filter-btn" data-cat="off-market"><i class="fa-solid fa-lock"></i> Off-Market Register</button>
+                </div>
+
+                <div style="font-size:0.84rem; color:var(--gold-primary); font-weight:700;" id="resultsCountEl">
+                    Displaying 30 Exclusive International Properties
+                </div>
+            </div>
+
+            <!-- Properties Grid Container -->
+            <div class="properties-grid" id="propertiesGrid">
+                <!-- Populated dynamically by app.js renderProperties() -->
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         5. GLOBAL DESTINATIONS HUB (6 CITIES)
+         ========================================================================= -->
+    <section class="section-destinations" id="destinationsSection">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="badge-gold"><i class="fa-solid fa-compass"></i> GLOBAL FOOTPRINT</span>
+                <h2 class="section-title heading-monument">EXPLORE KEY PRIME HUBS</h2>
+                <p class="section-subtitle">
+                    Click any global enclave to view all available private residences, investment yields, and local market reports.
+                </p>
+            </div>
+
+            <div class="destinations-grid" id="destinationsGrid">
+                <!-- Populated dynamically by app.js renderDestinations() -->
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         6. GLOBAL INVESTMENT & CAPITAL ADVISORY
+         ========================================================================= -->
+    <section class="section-investment" id="investmentSection">
+        <div class="container">
+            <div class="investment-matrix-box">
+                <div class="section-header text-center">
+                    <span class="badge-gold"><i class="fa-solid fa-chart-line"></i> CAPITAL ALLOCATION</span>
+                    <h2 class="section-title heading-monument">LUXURY REAL ESTATE INVESTMENT ADVISORY</h2>
+                    <p class="section-subtitle">
+                        Cross-border structuring, sovereign asset protection, and high-yield prime residential strategies for international family offices.
+                    </p>
+                </div>
+
+                <!-- Yield Metrics Cards -->
+                <div class="yield-metrics-grid">
+                    <div class="yield-metric-card">
+                        <div class="ym-val">6.8% – 8.2%</div>
+                        <div class="ym-label">Dubai Prime Net Rental Yield</div>
+                    </div>
+                    <div class="yield-metric-card">
+                        <div class="ym-val">+36% Avg</div>
+                        <div class="ym-label">5-Year Capital Appreciation (Miami)</div>
+                    </div>
+                    <div class="yield-metric-card">
+                        <div class="ym-val">0% Personal Tax</div>
+                        <div class="ym-label">Monaco & UAE Sovereign Havens</div>
+                    </div>
+                    <div class="yield-metric-card">
+                        <div class="ym-val">10-Year Golden Visa</div>
+                        <div class="ym-label">Automatic Residency by Investment</div>
+                    </div>
+                </div>
+
+                <!-- Market Overview & Table Summary -->
+                <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-md); padding:1.75rem; margin-top:2rem;">
+                    <h4 style="font-family:var(--font-heading); color:#ffffff; font-size:1.1rem; margin-bottom:1rem;">
+                        <i class="fa-solid fa-scale-balanced text-gold"></i> Global Prime Market Intelligence Matrix (2026 / 2027 Forecast)
+                    </h4>
+                    <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:1.25rem; font-size:0.86rem; color:var(--text-muted);">
+                        <div style="background:var(--bg-surface); padding:1rem; border-radius:var(--radius-sm); border:1px solid var(--border);">
+                            <strong style="color:#ffffff; display:block; margin-bottom:4px;">🇦🇪 Dubai (Palm & Jumeirah Bay)</strong>
+                            High rental yields (7.5%), 0% capital gains tax, and Golden Visa eligibility for purchases over AED 2M.
+                        </div>
+                        <div style="background:var(--bg-surface); padding:1rem; border-radius:var(--radius-sm); border:1px solid var(--border);">
+                            <strong style="color:#ffffff; display:block; margin-bottom:4px;">🇺🇸 Miami (Star Island & Indian Creek)</strong>
+                            Exceptional US domestic wealth migration, 0% Florida state income tax, and deep-water superyacht frontage.
+                        </div>
+                        <div style="background:var(--bg-surface); padding:1rem; border-radius:var(--radius-sm); border:1px solid var(--border);">
+                            <strong style="color:#ffffff; display:block; margin-bottom:4px;">🇬🇧 London (Belgravia & Mayfair)</strong>
+                            Multi-generational safe-haven wealth preservation with enduring freehold trophy asset dominance.
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <button class="btn btn-gold trigger-consultation-modal">
+                            <i class="fa-solid fa-file-shield"></i> Request Confidential Investment Mandate
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         7. OFF-MARKET TROPHY VAULT
+         ========================================================================= -->
+    <section class="container" id="offMarketSection">
+        <div class="offmarket-vault-banner">
+            <div class="vault-icon-circle"><i class="fa-solid fa-lock"></i></div>
+            <span class="badge-gold mb-2"><i class="fa-solid fa-user-shield"></i> CONFIDENTIAL REGISTER</span>
+            <h2 class="heading-monument" style="font-size:2.2rem; color:#ffffff; margin:0.75rem 0 0.5rem;">THE OFF-MARKET TROPHY VAULT</h2>
+            <p class="text-muted" style="max-width:620px; margin:0 auto 1.75rem; font-size:0.95rem;">
+                Over $1.2B in sovereign palaces, private islands, and unlisted penthouses represented strictly under NDA for principal buyers and family offices.
+            </p>
+            <div class="d-flex justify-content-center gap-3">
+                <button class="btn btn-gold" id="unlockVaultBtn">
+                    <i class="fa-solid fa-key"></i> Request Off-Market Vault Access
+                </button>
+                <button class="btn btn-glass trigger-consultation-modal">
+                    <i class="fa-regular fa-handshake"></i> Sign Principal NDA
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         8. EDITORIAL JOURNAL (6 GLOBAL MARKET BRIEFS)
+         ========================================================================= -->
+    <section class="section-journal" id="journalSection">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="badge-gold"><i class="fa-solid fa-newspaper"></i> MARKET INTELLIGENCE</span>
+                <h2 class="section-title heading-monument">THE VANTAGE JOURNAL</h2>
+                <p class="section-subtitle">
+                    In-depth quarterly analysis of prime residential trends, regulatory updates, and global capital flows.
+                </p>
+            </div>
+
+            <div class="journal-grid" id="journalGrid">
+                <!-- Populated dynamically by app.js renderJournal() -->
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         9. GLOBAL SENIOR ADVISORS (6 ADVISORS)
+         ========================================================================= -->
+    <section class="section-agents" id="advisorsSection">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="badge-gold"><i class="fa-solid fa-id-badge"></i> PRIVATE CLIENT TEAM</span>
+                <h2 class="section-title heading-monument">GLOBAL SENIOR ADVISORS</h2>
+                <p class="section-subtitle">
+                    Senior partners based across our six global hubs, providing discreet, personalized acquisition and advisory services.
+                </p>
+            </div>
+
+            <div class="advisors-grid" id="advisorsGrid">
+                <!-- Populated dynamically by app.js renderAdvisors() -->
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         10. PRIVATE CONSULTATION FORM
+         ========================================================================= -->
+    <section class="section-contact" id="contactSection">
+        <div class="container">
+            <div class="consultation-box">
+                <div class="section-header text-center">
+                    <span class="badge-gold"><i class="fa-solid fa-paper-plane"></i> DISCREET INQUIRY</span>
+                    <h2 class="section-title heading-monument">ARRANGE A PRIVATE CONSULTATION</h2>
+                    <p class="section-subtitle">
+                        Please complete the confidential inquiry form below. A Managing Partner will contact you directly within 2 business hours.
+                    </p>
+                </div>
+
+                <form id="onpageConsultationForm">
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label class="form-label">Full Name *</label>
+                            <input type="text" class="form-control" placeholder="Lord Jonathan Sterling" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Email Address *</label>
+                            <input type="email" class="form-control" placeholder="sterling@privatecapital.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label class="form-label">Phone Number *</label>
+                            <input type="tel" class="form-control" placeholder="+44 20 7000 0000 / +1 (212) 000-0000" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Preferred Location / Destination</label>
+                            <select class="form-control">
+                                <option value="Dubai">Dubai, UAE</option>
+                                <option value="Miami">Miami, Florida</option>
+                                <option value="London">London, United Kingdom</option>
+                                <option value="New York">New York City</option>
+                                <option value="Monaco">Monaco, Monte Carlo</option>
+                                <option value="Los Angeles">Los Angeles, California</option>
+                                <option value="Multiple">Multiple International Hubs</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label class="form-label">Property Category of Interest</label>
+                            <select class="form-control">
+                                <option value="Waterfront">Waterfront & Island Residences</option>
+                                <option value="Penthouses">Trophy Penthouses & Sky Mansions</option>
+                                <option value="Villas">Prime Architectural Villas</option>
+                                <option value="Mansions">Historic & Royal Mansions</option>
+                                <option value="OffMarket">Confidential Off-Market Vault</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Target Investment Budget</label>
+                            <select class="form-control">
+                                <option value="10-25M">$10M – $25M USD</option>
+                                <option value="25-50M">$25M – $50M USD</option>
+                                <option value="50-100M">$50M – $100M USD</option>
+                                <option value="100M+">$100M+ Sovereign / Trophy Asset</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Confidential Mandate Details or Timeline</label>
+                        <textarea class="form-control" rows="3" placeholder="Please specify your acquisition timeline, privacy preferences, or specific architectural parameters..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-gold btn-lg w-100 mt-2" style="width:100%;">
+                        <i class="fa-solid fa-lock"></i> Submit Confidential Private Mandate
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================================
+         11. FOOTER & DEVELOPER ATTRIBUTION
+         ========================================================================= -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="brand-logo" style="margin-bottom:1.25rem;">
+                        <div class="brand-mark">V</div>
+                        <div class="brand-name-group">
+                            <div class="brand-title">VANTAGE</div>
+                            <span class="brand-subtitle">PRIVATE ESTATES • GLOBAL</span>
+                        </div>
+                    </div>
+                    <p style="font-size:0.86rem; line-height:1.7; margin-bottom:1.5rem; max-width:320px;">
+                        International luxury real estate advisory representing sovereign wealth funds, family offices, and distinguished private clients worldwide.
+                    </p>
+                    <div style="display:flex; gap:10px;">
+                        <a href="https://www.instagram.com/gchoyal_websitedeveloper/" target="_blank" class="btn btn-outline btn-xs"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                        <a href="https://wa.me/919929875549" target="_blank" class="btn btn-gold btn-xs"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Prime Destinations</h4>
+                    <ul class="footer-links">
+                        <li><a href="#propertiesSection">Dubai, UAE (5)</a></li>
+                        <li><a href="#propertiesSection">Miami, Florida (5)</a></li>
+                        <li><a href="#propertiesSection">London, UK (5)</a></li>
+                        <li><a href="#propertiesSection">New York City (5)</a></li>
+                        <li><a href="#propertiesSection">Monaco (5)</a></li>
+                        <li><a href="#propertiesSection">Los Angeles, CA (5)</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Master Portfolio</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html"><i class="fa-solid fa-arrow-left text-gold"></i> Master Portfolio Hub</a></li>
+                        <li><a href="../homely-nest/index.html">Homely Nest Rental Marketplace</a></li>
+                        <li><a href="../skyline-residences/index.html">Skyline Residences NYC</a></li>
+                        <li><a href="../oak-and-ivy/index.html">Oak & Ivy Suburban Homes</a></li>
+                        <li><a href="../northstar-commercial/index.html">Northstar Commercial CRE</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="footer-heading">Architectural Credits</h4>
+                    <div class="dev-credit-box">
+                        <span style="font-size:0.72rem; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.08em; display:block; margin-bottom:2px;">Designed & Handcrafted By:</span>
+                        <a href="https://www.instagram.com/gchoyal_websitedeveloper/" target="_blank" class="dev-author-link">Girdhari Choyal</a>
+                        <p style="font-size:0.8rem; color:var(--text-muted); margin-bottom:1rem;">Senior WordPress & Luxury Real Estate Web Architect (11+ Years Experience)</p>
+                        <div style="display:flex; gap:8px;">
+                            <a href="https://wa.me/919929875549" target="_blank" class="btn btn-gold btn-xs"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                            <a href="tel:+919929875549" class="btn btn-outline btn-xs"><i class="fa-solid fa-phone"></i> Direct Call</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Vantage Private Estates. Demonstration concept by <a href="https://www.instagram.com/gchoyal_websitedeveloper/" target="_blank" class="text-gold">Girdhari Choyal</a>.</p>
+                <div style="display:flex; gap:16px;">
+                    <a href="#home">Confidentiality Statement</a>
+                    <span>•</span>
+                    <a href="#home">Equal Housing Opportunity</a>
+                    <span>•</span>
+                    <a href="../index.html">Portfolio Hub</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =========================================================================
+         12. MOBILE BOTTOM STICKY CTA BAR
+         ========================================================================= -->
+    <div class="mobile-sticky-bar">
+        <a href="#propertiesSection" class="mobile-cta-btn active">
+            <i class="fa-solid fa-building-columns"></i>
+            <span>Estates (30)</span>
+        </a>
+        <a href="https://wa.me/919929875549" target="_blank" class="mobile-cta-btn" style="color:#25d366;">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+        </a>
+        <button class="mobile-cta-btn trigger-consultation-modal" style="background:none; border:none; color:var(--gold-primary);">
+            <i class="fa-regular fa-envelope"></i>
+            <span>Consult</span>
+        </button>
+    </div>
+
+    <!-- =========================================================================
+         13. PROPERTY DETAIL MODAL
+         ========================================================================= -->
+    <div class="modal-overlay" id="propertyDetailModal">
+        <div class="modal-container">
+            <button class="modal-close-btn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            
+            <div style="height:350px; overflow:hidden; position:relative; background:#070a0e;">
+                <img src="" id="modalPropertyMainImg" style="width:100%; height:100%; object-fit:cover;" alt="Estate Photo">
+                <span class="badge-gold" id="modalPropertyCategory" style="position:absolute; top:16px; left:16px;">Royal Beachfront Villa</span>
+            </div>
+
+            <div style="padding:2rem;">
+                <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1rem; flex-wrap:wrap; gap:1rem;">
+                    <div>
+                        <h2 style="font-family:var(--font-heading); font-size:1.6rem; color:#ffffff; margin-bottom:4px;" id="modalPropertyTitle">The Palm Crown Royal Palace</h2>
+                        <p class="text-muted" id="modalPropertyLocation"><i class="fa-solid fa-location-dot text-gold"></i> Palm Jumeirah, Dubai, United Arab Emirates</p>
+                    </div>
+                    <div style="text-align:right;">
+                        <div class="estate-price-line" style="font-size:1.9rem;" id="modalPropertyPrice">$75,000,000</div>
+                        <span style="font-size:0.78rem; color:var(--text-muted); text-transform:uppercase;">Guide Price in Selected Currency</span>
+                    </div>
+                </div>
+
+                <!-- Specs Matrix -->
+                <div class="detail-specs-matrix">
+                    <div>
+                        <span class="d-spec-title">Bedrooms</span>
+                        <div class="d-spec-number" id="modalPropertyBeds">8 Beds</div>
+                    </div>
+                    <div>
+                        <span class="d-spec-title">Bathrooms</span>
+                        <div class="d-spec-number" id="modalPropertyBaths">11 Baths</div>
+                    </div>
+                    <div>
+                        <span class="d-spec-title">Interior Living</span>
+                        <div class="d-spec-number" id="modalPropertySqft">24,500 SF</div>
+                    </div>
+                    <div>
+                        <span class="d-spec-title">Prime Yield</span>
+                        <div class="d-spec-number text-gold" id="modalPropertyYield">6.8%</div>
+                    </div>
+                </div>
+
+                <!-- Description -->
+                <div style="margin-bottom:1.5rem;">
+                    <h4 style="font-family:var(--font-heading); color:#ffffff; font-size:1.1rem; margin-bottom:0.5rem;">Architectural Overview</h4>
+                    <p class="text-muted" style="font-size:0.9rem; line-height:1.7;" id="modalPropertyDesc">
+                        Monumental custom-built contemporary palace on the most exclusive frond of Palm Jumeirah with direct Arabian Gulf sunsets and full Burj Al Arab skyline panoramas.
+                    </p>
+                </div>
+
+                <!-- Features -->
+                <div style="margin-bottom:1.5rem;">
+                    <h4 style="font-family:var(--font-heading); color:#ffffff; font-size:1.1rem; margin-bottom:0.75rem;">Bespoke Inclusions & Amenities</h4>
+                    <ul style="list-style:none; display:grid; grid-template-columns:1fr 1fr; gap:0.5rem;" id="modalPropertyFeatures">
+                        <!-- Populated dynamically -->
+                    </ul>
+                </div>
+
+                <!-- Assigned Advisor -->
+                <div style="background:var(--bg-card); border:1px solid var(--border); border-radius:var(--radius-md); padding:1.25rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; margin-bottom:1.5rem;">
+                    <div style="display:flex; align-items:center; gap:12px;">
+                        <div style="width:48px; height:48px; border-radius:var(--radius-full); background:var(--gold-soft); border:1px solid var(--border-gold); color:var(--gold-primary); display:flex; align-items:center; justify-content:center; font-family:var(--font-heading); font-size:1.2rem; font-weight:700;"><i class="fa-solid fa-user-tie"></i></div>
+                        <div>
+                            <h5 style="color:#ffffff; font-size:0.95rem; font-weight:700; margin-bottom:2px;" id="modalAdvisorName">Layla Al-Maktoum</h5>
+                            <span style="font-size:0.78rem; color:var(--gold-primary);" id="modalAdvisorTitle">Senior Director, Middle East</span>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="tel:+97145550199" class="btn btn-outline btn-sm" id="modalAdvisorPhoneLink"><i class="fa-solid fa-phone"></i> <span id="modalAdvisorPhone">+971 4 555 0199</span></a>
+                    </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="d-flex gap-3">
+                    <button class="btn btn-gold btn-lg w-100" id="modalInquireBtn" style="width:100%;">
+                        <i class="fa-regular fa-calendar-check"></i> Request Confidential Private Viewing
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================================
+         14. PRIVATE CONSULTATION MODAL
+         ========================================================================= -->
+    <div class="modal-overlay" id="consultationModal">
+        <div class="modal-container" style="max-width:640px;">
+            <button class="modal-close-btn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            
+            <div style="padding:2.5rem;">
+                <div class="text-center mb-4">
+                    <span class="badge-gold mb-2"><i class="fa-solid fa-gem"></i> VANTAGE PRIVATE ESTATES</span>
+                    <h3 class="heading-monument" style="color:#ffffff; font-size:1.4rem; margin:0.5rem 0 0.25rem;">CONFIDENTIAL PRIVATE MANDATE</h3>
+                    <p class="text-muted" style="font-size:0.85rem;">Direct private access to senior international partners.</p>
+                </div>
+
+                <form id="consultationFormModal">
+                    <div class="form-group">
+                        <label class="form-label">Property or Inquiry Reference</label>
+                        <input type="text" id="consultationInterestInput" class="form-control" value="General Ultra-Prime Advisory" readonly>
+                    </div>
+
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label class="form-label">Full Name *</label>
+                            <input type="text" class="form-control" placeholder="Lord Alexander Sterling" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Phone Number *</label>
+                            <input type="tel" class="form-control" placeholder="+44 20 7946 0000" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Confidential Email *</label>
+                        <input type="email" class="form-control" placeholder="principal@sterling-capital.com" required>
+                    </div>
+
+                    <div class="form-row-2">
+                        <div class="form-group">
+                            <label class="form-label">Preferred Location</label>
+                            <select class="form-control">
+                                <option value="Dubai">Dubai, UAE</option>
+                                <option value="Miami">Miami, Florida</option>
+                                <option value="London">London, UK</option>
+                                <option value="New York">New York City</option>
+                                <option value="Monaco">Monaco</option>
+                                <option value="Los Angeles">Los Angeles, CA</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Target Budget</label>
+                            <select class="form-control">
+                                <option value="25M+">$25M – $50M</option>
+                                <option value="50M+">$50M – $100M</option>
+                                <option value="100M+">$100M+ Trophy Asset</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-gold btn-lg w-100 mt-3" style="width:100%;">
+                        <i class="fa-solid fa-lock"></i> Submit Confidential Inquiry
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================================================
+         15. THANK YOU CONFIRMATION MODAL
+         ========================================================================= -->
+    <div class="modal-overlay" id="vantageThankYouModal">
+        <div class="modal-container text-center" style="max-width:480px; padding:3rem 2rem;">
+            <div style="width:60px; height:60px; border-radius:var(--radius-full); background:var(--gold-soft); border:1px solid var(--border-gold); color:var(--gold-primary); font-size:1.8rem; display:flex; align-items:center; justify-content:center; margin:0 auto 1.25rem;">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <h3 class="heading-monument" style="color:#ffffff; font-size:1.35rem; margin-bottom:0.5rem;">MANDATE RECEIVED</h3>
+            <p class="text-muted" style="font-size:0.88rem; line-height:1.6; margin-bottom:1.5rem;">
+                Thank you. Your confidential advisory request has been routed directly to the Managing Partner of your designated region. We will reach out within 2 business hours.
+            </p>
+            <button class="btn btn-gold modal-close-trigger">Return to Global Register</button>
+        </div>
+    </div>
+
+    <!-- JavaScript Application Engine -->
+    <script src="app.js"></script>
+</body>
+</html>

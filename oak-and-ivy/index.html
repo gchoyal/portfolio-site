@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oak & Ivy Property Group | Boutique Real Estate Brokerage for Premium Suburban Homes</title>
+    <meta name="description" content="Oak & Ivy Property Group is a boutique real estate brokerage dedicated to helping families buy and sell premium suburban homes in top-rated school districts. Explore 25 listings, 6 neighborhood guides, and mortgage calculators.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome 6 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-content">
+            <div style="display:flex; align-items:center; gap:14px;">
+                <a href="../index.html" class="hub-link"><i class="fa-solid fa-arrow-left"></i> Developer Portfolio Hub</a>
+                <span><i class="fa-solid fa-seedling"></i> Boutique Suburban Family Brokerage • Top School District Specialists</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:16px;">
+                <span><i class="fa-solid fa-phone"></i> Direct Brokerage Line: <a href="tel:15552345678" style="color:var(--accent-gold); font-weight:700;">+1 (555) 234-5678</a></span>
+                <span>|</span>
+                <span><i class="fa-solid fa-clock"></i> Mon–Sat 8am–7pm</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Header -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <!-- Brand Logo -->
+            <a href="#home" class="brand-logo">
+                <div class="brand-mark"><i class="fa-solid fa-leaf"></i></div>
+                <div class="brand-meta">
+                    <h2>Oak & Ivy</h2>
+                    <span>Property Group</span>
+                </div>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="navMenu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#homesSection" class="nav-link">Homes for Sale</a>
+                <a href="#neighborhoodsSection" class="nav-link">Neighborhoods</a>
+                <a href="#buyersGuideSection" class="nav-link">Buyer's Guide</a>
+                <a href="#sellersGuideSection" class="nav-link">Seller's Guide</a>
+                <a href="#mortgageSection" class="nav-link">Mortgage Calc</a>
+                <a href="#sellFormSection" class="nav-link">Sell Your Home</a>
+                <a href="#agentsSection" class="nav-link">Our Agents</a>
+                <a href="#aboutSection" class="nav-link">About Us</a>
+            </nav>
+
+            <!-- Nav Actions -->
+            <div class="nav-actions">
+                <a href="#sellFormSection" class="btn btn-warm btn-sm">
+                    <i class="fa-solid fa-house-chimney-user"></i> Free Valuation
+                </a>
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Warm Editorial Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-grid">
+            <div>
+                <div class="hero-tagline">
+                    <span>Boutique Suburban Real Estate</span>
+                </div>
+
+                <h1 class="hero-headline">
+                    Helping Families Find Their Forever Home in <em>Communities They Love.</em>
+                </h1>
+
+                <p class="hero-description">
+                    Oak & Ivy is an independent boutique brokerage specializing in premium suburban residences, family-friendly cul-de-sacs, and top 1% ranked school districts. We offer thoughtful, patient guidance for every stage of family life.
+                </p>
+
+                <div class="hero-ctas">
+                    <a href="#homesSection" class="btn btn-primary">
+                        <i class="fa-solid fa-house-chimney-window"></i> Browse 25 Suburban Homes
+                    </a>
+                    <a href="#neighborhoodsSection" class="btn btn-outline">
+                        <i class="fa-solid fa-map-location-dot"></i> 6 Neighborhood Guides
+                    </a>
+                    <a href="#sellFormSection" class="btn btn-warm">
+                        <i class="fa-solid fa-hand-holding-dollar"></i> Free Home Valuation
+                    </a>
+                </div>
+
+                <!-- Hero Stats -->
+                <div class="hero-stats-row">
+                    <div class="hero-stat">
+                        <h4>$420M+</h4>
+                        <p>Family Homes Sold</p>
+                    </div>
+                    <div class="hero-stat">
+                        <h4>10/10</h4>
+                        <p>Top School Feeder Zones</p>
+                    </div>
+                    <div class="hero-stat">
+                        <h4>14 Days</h4>
+                        <p>Avg Days on Market</p>
+                    </div>
+                    <div class="hero-stat">
+                        <h4>98.8%</h4>
+                        <p>List-to-Sale Ratio</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Visual Media Frame -->
+            <div class="hero-visual-card">
+                <div class="hero-img-card">
+                    <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1000&q=80" alt="Oak & Ivy Suburban Family Home">
+                    <div class="hero-floating-box">
+                        <div>
+                            <h5 style="font-family:var(--font-heading); font-size:1.15rem; font-weight:700; color:var(--text-main);">Oakridge Estates</h5>
+                            <p style="font-size:0.8rem; color:var(--text-muted);"><i class="fa-solid fa-graduation-cap text-primary"></i> Oakridge Unified (10/10 Rated Schools)</p>
+                        </div>
+                        <a href="#neighborhoodsSection" class="btn btn-primary btn-sm">
+                            Explore <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================================================
+         HOMES FOR SALE & 25-PROPERTY SEARCH ENGINE
+         ======================================================================= -->
+    <section class="section" id="homesSection">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="badge-pill green">Curated Suburban Inventory</span>
+                <h2 class="section-title">Explore Active Homes for Sale</h2>
+                <p class="section-subtitle">
+                    Search 25 premium suburban homes across our 6 signature family neighborhoods with verified school ratings, lot acreage, and family amenities.
+                </p>
+            </div>
+
+            <!-- Search & Filter Controls Panel -->
+            <div class="property-search-panel">
+                <div class="search-controls-grid">
+                    <!-- 1. Neighborhood -->
+                    <div class="filter-group">
+                        <label for="filterNeighborhood">Target Neighborhood</label>
+                        <select id="filterNeighborhood" class="filter-control">
+                            <option value="all">All 6 Neighborhoods</option>
+                            <option value="oakridge">Oakridge Estates (10/10 Schools)</option>
+                            <option value="ivycreek">Ivy Creek Valley (Acreage & Farmhouses)</option>
+                            <option value="foxglove">Foxglove Meadows (Walkable Village)</option>
+                            <option value="willowbrook">Willowbrook Park (Riverfront & Woodlands)</option>
+                            <option value="silverleaf">Silverleaf Heights (Hilltop & Golf)</option>
+                            <option value="heronpoint">Heron Point (Lakefront & Docks)</option>
+                        </select>
+                    </div>
+
+                    <!-- 2. Home Style -->
+                    <div class="filter-group">
+                        <label for="filterStyle">Architectural Style</label>
+                        <select id="filterStyle" class="filter-control">
+                            <option value="all">All Architectural Styles</option>
+                            <option value="modern farmhouse">Modern Farmhouse</option>
+                            <option value="craftsman">Craftsman & Craftsman Estate</option>
+                            <option value="colonial">Colonial Revival</option>
+                            <option value="prairie">Prairie & Contemporary Modern</option>
+                            <option value="shingle">Coastal & Shingle Style</option>
+                        </select>
+                    </div>
+
+                    <!-- 3. Max Price -->
+                    <div class="filter-group">
+                        <label for="filterMaxPrice">Max Price Range</label>
+                        <select id="filterMaxPrice" class="filter-control">
+                            <option value="99999999">Any Budget</option>
+                            <option value="850000">Up to $850,000</option>
+                            <option value="1200000">Up to $1,200,000</option>
+                            <option value="1600000">Up to $1,600,000</option>
+                            <option value="2000000">Up to $2,000,000</option>
+                            <option value="2500000">Up to $2,500,000</option>
+                        </select>
+                    </div>
+
+                    <!-- 4. Min Bedrooms -->
+                    <div class="filter-group">
+                        <label for="filterMinBeds">Minimum Bedrooms</label>
+                        <select id="filterMinBeds" class="filter-control">
+                            <option value="0">Any Bedrooms</option>
+                            <option value="3">3+ Bedrooms</option>
+                            <option value="4">4+ Bedrooms</option>
+                            <option value="5">5+ Bedrooms</option>
+                        </select>
+                    </div>
+
+                    <!-- 5. Sort & Clear -->
+                    <div style="display:flex; gap:8px;">
+                        <div class="filter-group" style="flex:1;">
+                            <label for="filterSort">Sort Listings</label>
+                            <select id="filterSort" class="filter-control">
+                                <option value="featured">Featured Homes</option>
+                                <option value="price-asc">Price: Low to High</option>
+                                <option value="price-desc">Price: High to Low</option>
+                                <option value="sqft-desc">Square Footage</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn btn-outline btn-sm" id="clearHomesFilterBtn" title="Reset All Filters" style="align-self:flex-end; padding:10px 14px;">
+                            <i class="fa-solid fa-rotate-left"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Results Counter -->
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.8rem;">
+                <div id="homesCountText" style="font-weight:700; color:var(--text-main);">Showing 25 Premium Suburban Homes</div>
+                <div style="font-size:0.85rem; color:var(--text-muted);"><i class="fa-solid fa-circle-check text-primary"></i> Verified School Attendance Feeder Data</div>
+            </div>
+
+            <!-- Properties Grid (25 Homes) -->
+            <div class="properties-matrix-grid" id="homesGrid">
+                <!-- Populated dynamically by app.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================================================
+         6 IN-DEPTH NEIGHBORHOOD GUIDES & REUSABLE TEMPLATE
+         ======================================================================= -->
+    <section class="section section-subtle" id="neighborhoodsSection">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="badge-pill green">Local Community Intelligence</span>
+                <h2 class="section-title">Explore Our 6 Signature Neighborhoods</h2>
+                <p class="section-subtitle">
+                    Select a neighborhood below to explore in-depth community guides, school district ratings, park systems, dining hot spots, and currently available homes.
+                </p>
+            </div>
+
+            <!-- Neighborhood Selection Tabs -->
+            <div class="neighborhood-nav-bar">
+                <button class="neighborhood-tab-btn active" data-neighborhood="oakridge">Oakridge Estates</button>
+                <button class="neighborhood-tab-btn" data-neighborhood="ivycreek">Ivy Creek Valley</button>
+                <button class="neighborhood-tab-btn" data-neighborhood="foxglove">Foxglove Meadows</button>
+                <button class="neighborhood-tab-btn" data-neighborhood="willowbrook">Willowbrook Park</button>
+                <button class="neighborhood-tab-btn" data-neighborhood="silverleaf">Silverleaf Heights</button>
+                <button class="neighborhood-tab-btn" data-neighborhood="heronpoint">Heron Point Lakefront</button>
+            </div>
+
+            <!-- Reusable Neighborhood Showcase Panel -->
+            <div class="neighborhood-showcase-panel" id="neighborhoodShowcasePanel">
+                <!-- Rendered dynamically by app.js using the reusable template -->
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================================================
+         INTERACTIVE BUYER'S GUIDE
+         ======================================================================= -->
+    <section class="section" id="buyersGuideSection">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="badge-pill green">Family Homebuying Roadmap</span>
+                <h2 class="section-title">The Oak & Ivy Buyer's Guide</h2>
+                <p class="section-subtitle">
+                    A clear, step-by-step roadmap to navigating suburban home purchases with confidence, protection, and peace of mind.
+                </p>
+            </div>
+
+            <!-- Step Switcher Tabs -->
+            <div class="guide-tabs-container">
+                <button class="guide-step-btn buyer-step-btn active" data-step="0">1. Budget & Needs</button>
+                <button class="guide-step-btn buyer-step-btn" data-step="1">2. Tours & Community</button>
+                <button class="guide-step-btn buyer-step-btn" data-step="2">3. Strategic Offers</button>
+                <button class="guide-step-btn buyer-step-btn" data-step="3">4. Home Inspections</button>
+                <button class="guide-step-btn buyer-step-btn" data-step="4">5. Escrow & Moving</button>
+            </div>
+
+            <!-- Dynamic Guide Content Box -->
+            <div class="guide-content-box" id="buyerContentBox">
+                <!-- Populated dynamically by app.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================================================
+         INTERACTIVE SELLER'S GUIDE
+         ======================================================================= -->
+    <section class="section section-subtle" id="sellersGuideSection">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="badge-pill">Maximizing Your Equity</span>
+                <h2 class="section-title">The Oak & Ivy Seller's Guide</h2>
+                <p class="section-subtitle">
+                    How our tailored marketing, interior staging, and precision pricing strategies consistently achieve top-dollar net proceeds for our clients.
+                </p>
+            </div>
+
+            <!-- Seller Step Switcher Tabs -->
+            <div class="guide-tabs-container">
+                <button class="guide-step-btn seller-step-btn active" data-step="0">1. Staging & Prep</button>
+                <button class="guide-step-btn seller-step-btn" data-step="1">2. Precision Pricing</button>
+                <button class="guide-step-btn seller-step-btn" data-step="2">3. High-Impact Marketing</button>
+                <button class="guide-step-btn seller-step-btn" data-step="3">4. Private Showings</button>
+                <button class="guide-step-btn seller-step-btn" data-step="4">5. Negotiating Offers</button>
+                <button class="guide-step-btn seller-step-btn" data-step="5">6. Smooth Closing</button>
+            </div>
+
+            <!-- Dynamic Seller Content Box -->
+            <div class="guide-content-box" id="sellerContentBox">
+                <!-- Populated dynamically by app.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================================================
+         INTEGRATED MORTGAGE CALCULATOR
+         ======================================================================= -->
+    <section class="section" id="mortgageSection">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="badge-pill green">Financial Clarity</span>
+                <h2 class="section-title">Suburban Mortgage & Affordability Calculator</h2>
+                <p class="section-subtitle">
+                    Estimate your monthly mortgage payments including principal, interest, local property taxes, and hazard insurance in real time.
+                </p>
+            </div>
+
+            <div class="calculator-card">
+                <!-- Inputs Form -->
+                <div>
+                    <div style="margin-bottom:1.2rem;">
+                        <label class="filter-group" style="margin-bottom:5px; font-weight:700; font-size:0.85rem;" for="calcPrice">Target Home Purchase Price ($)</label>
+                        <input type="number" id="calcPrice" class="filter-control" value="1200000" step="25000" min="300000" max="5000000">
+                    </div>
+
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.2rem;">
+                        <div>
+                            <label class="filter-group" style="margin-bottom:5px; font-weight:700; font-size:0.85rem;" for="calcDown">Down Payment (%)</label>
+                            <input type="number" id="calcDown" class="filter-control" value="20" min="3" max="80">
+                        </div>
+                        <div>
+                            <label class="filter-group" style="margin-bottom:5px; font-weight:700; font-size:0.85rem;" for="calcRate">Interest Rate (%)</label>
+                            <input type="number" id="calcRate" class="filter-control" value="6.50" step="0.1" min="2" max="12">
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom:1.5rem;">
+                        <label class="filter-group" style="margin-bottom:5px; font-weight:700; font-size:0.85rem;" for="calcTerm">Loan Term</label>
+                        <select id="calcTerm" class="filter-control">
+                            <option value="30">30-Year Fixed Conventional</option>
+                            <option value="15">15-Year Fixed Conventional</option>
+                            <option value="20">20-Year Fixed Conventional</option>
+                        </select>
+                    </div>
+
+                    <p style="font-size:0.8rem; color:var(--text-light); line-height:1.5;">
+                        * Estimates include approximate 1.1% county property tax rate and 0.35% hazard insurance. Actual lender terms may vary.
+                    </p>
+                </div>
+
+                <!-- Outputs & Payment Breakdown Bar -->
+                <div class="calc-output-box">
+                    <span style="font-size:0.8rem; text-transform:uppercase; letter-spacing:0.1em; color:#cbd5e1; font-weight:700;">Estimated Monthly Payment</span>
+                    <div class="calc-payment-large" id="calcMonthlyTotal">$7,519</div>
+
+                    <!-- Proportional Breakdown Bar -->
+                    <div class="calc-breakdown-bar">
+                        <div class="calc-bar-pi" id="barPI" style="width: 80%;"></div>
+                        <div class="calc-bar-tax" id="barTax" style="width: 14%;"></div>
+                        <div class="calc-bar-ins" id="barIns" style="width: 6%;"></div>
+                    </div>
+
+                    <div class="calc-breakdown-legend">
+                        <div><strong id="calcBreakdownPI">$6,068</strong><br><span style="color:#c29f62;">Principal & Interest</span></div>
+                        <div><strong id="calcBreakdownTax">$1,100</strong><br><span style="color:#38bdf8;">Taxes</span></div>
+                        <div><strong id="calcBreakdownIns">$350</strong><br><span style="color:#10b981;">Insurance</span></div>
+                    </div>
+
+                    <div style="margin-top:2rem; padding-top:1.5rem; border-top:1px solid rgba(255,255,255,0.15);">
+                        <a href="#contact" class="btn btn-outline-light btn-sm" style="width:100%;">
+                            <i class="fa-solid fa-handshake"></i> Connect with Preferred Local Lenders
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================================================
+         SELL YOUR HOME & HOME VALUATION CONSULTATION FORM
+         ======================================================================= -->
+    <section class="section section-subtle" id="sellFormSection">
+        <div class="container">
+            <div class="sell-home-grid">
+                <div>
+                    <span class="badge-pill">Thinking of Selling?</span>
+                    <h2 class="section-title">Request a Confidential Home Valuation & Consultation</h2>
+                    <p class="section-subtitle" style="margin: 0 0 1.5rem;">
+                        Discover what your home is truly worth in today’s active suburban market. We prepare a comprehensive Comparative Market Analysis (CMA) customized to your neighborhood’s micro-trends.
+                    </p>
+
+                    <div style="display:flex; flex-direction:column; gap:1.2rem; margin-top:2rem;">
+                        <div style="display:flex; gap:14px; align-items:flex-start;">
+                            <div style="width:38px; height:38px; border-radius:50%; background:var(--primary-soft); color:var(--primary); display:flex; align-items:center; justify-content:center; font-weight:700; flex-shrink:0;">1</div>
+                            <div>
+                                <h4 style="font-size:1rem; font-weight:700; color:var(--text-main);">Complimentary Staging Consultation</h4>
+                                <p style="font-size:0.85rem; color:var(--text-muted);">In-person walkthrough with our design team to maximize your home’s visual equity.</p>
+                            </div>
+                        </div>
+
+                        <div style="display:flex; gap:14px; align-items:flex-start;">
+                            <div style="width:38px; height:38px; border-radius:50%; background:var(--primary-soft); color:var(--primary); display:flex; align-items:center; justify-content:center; font-weight:700; flex-shrink:0;">2</div>
+                            <div>
+                                <h4 style="font-size:1rem; font-weight:700; color:var(--text-main);">Recent Hyper-Local Sales Comps</h4>
+                                <p style="font-size:0.85rem; color:var(--text-muted);">Analysis of recent solds and pendings on your specific street and school attendance zone.</p>
+                            </div>
+                        </div>
+
+                        <div style="display:flex; gap:14px; align-items:flex-start;">
+                            <div style="width:38px; height:38px; border-radius:50%; background:var(--primary-soft); color:var(--primary); display:flex; align-items:center; justify-content:center; font-weight:700; flex-shrink:0;">3</div>
+                            <div>
+                                <h4 style="font-size:1rem; font-weight:700; color:var(--text-main);">Zero Obligation, Zero Pressure</h4>
+                                <p style="font-size:0.85rem; color:var(--text-muted);">Honest family-first advice whether you plan to move next month or in two years.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seller Form -->
+                <div style="background:var(--bg-surface); padding:2.5rem; border-radius:var(--radius-md); border:1px solid var(--border); box-shadow:var(--shadow-md);">
+                    <h3 class="heading-serif" style="font-size:1.6rem; margin-bottom:0.4rem;">Get Your Home Valuation</h3>
+                    <p style="font-size:0.88rem; color:var(--text-muted); margin-bottom:1.5rem;">Fill in your details below and our team will prepare your custom report within 24 hours.</p>
+
+                    <form id="sellerConsultForm">
+                        <div style="margin-bottom:1rem;">
+                            <label class="filter-group" style="margin-bottom:4px; font-weight:700; font-size:0.82rem;" for="sAddress">Property Address *</label>
+                            <input type="text" id="sAddress" class="filter-control" placeholder="123 Meadowbrook Lane, Oakridge" required>
+                        </div>
+
+                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
+                            <div>
+                                <label class="filter-group" style="margin-bottom:4px; font-weight:700; font-size:0.82rem;" for="sBeds">Bedrooms</label>
+                                <select id="sBeds" class="filter-control">
+                                    <option value="3">3 Bedrooms</option>
+                                    <option value="4" selected>4 Bedrooms</option>
+                                    <option value="5">5+ Bedrooms</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="filter-group" style="margin-bottom:4px; font-weight:700; font-size:0.82rem;" for="sTimeline">Estimated Timeline</label>
+                                <select id="sTimeline" class="filter-control">
+                                    <option value="soon">1 – 3 Months</option>
+                                    <option value="year">3 – 6 Months</option>
+                                    <option value="curious">Just Curious on Value</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
+                            <div>
+                                <label class="filter-group" style="margin-bottom:4px; font-weight:700; font-size:0.82rem;" for="sName">Your Full Name *</label>
+                                <input type="text" id="sName" class="filter-control" placeholder="Sarah Jenkins" required>
+                            </div>
+                            <div>
+                                <label class="filter-group" style="margin-bottom:4px; font-weight:700; font-size:0.82rem;" for="sPhone">Phone Number *</label>
+                                <input type="tel" id="sPhone" class="filter-control" placeholder="+1 (555) 000-0000" required>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom:1.5rem;">
+                            <label class="filter-group" style="margin-bottom:4px; font-weight:700; font-size:0.82rem;" for="sEmail">Email Address *</label>
+                            <input type="email" id="sEmail" class="filter-control" placeholder="sarah@example.com" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-warm" style="width:100%; padding:13px;">
+                            <i class="fa-solid fa-file-invoice-dollar"></i> Request Custom Home Valuation Report
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================================================
+         OUR BOUTIQUE AGENTS ROSTER
+         ======================================================================= -->
+    <section class="section" id="agentsSection">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="badge-pill green">Our Advisory Team</span>
+                <h2 class="section-title">Meet Your Neighborhood Specialists</h2>
+                <p class="section-subtitle">
+                    Experienced, community-rooted advisors who live, raise families, and volunteer in the neighborhoods we proudly represent.
+                </p>
+            </div>
+
+            <div class="agents-grid" id="agentsGrid">
+                <!-- Rendered dynamically by app.js with 4 agents -->
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================================================
+         ABOUT OAK & IVY SECTION
+         ======================================================================= -->
+    <section class="section section-dark" id="aboutSection">
+        <div class="container">
+            <div class="hero-grid" style="align-items:center;">
+                <div>
+                    <span class="badge-pill green" style="background:rgba(255,255,255,0.1); color:#ffffff; border-color:rgba(255,255,255,0.2); margin-bottom:1rem;">Our Boutique Heritage</span>
+                    <h2 class="section-title light">Rooted in Family Values & Community Stewardship</h2>
+                    <p class="section-subtitle light" style="margin: 0 0 1.5rem;">
+                        Oak & Ivy was founded on a simple conviction: real estate should be patient, personal, and deeply attentive to the milestones of growing families.
+                    </p>
+                    <p style="color:#cbd5e1; font-size:0.95rem; line-height:1.7; margin-bottom:2rem;">
+                        We are proud sponsors of local youth sports, public school arts programs, and neighborhood trail cleanups. When you partner with Oak & Ivy, you gain a trusted community advocate for life.
+                    </p>
+
+                    <div style="display:flex; gap:12px; flex-wrap:wrap;">
+                        <a href="#homesSection" class="btn btn-primary">
+                            <i class="fa-solid fa-house"></i> View Our Listings
+                        </a>
+                        <a href="#contact" class="btn btn-outline-light">
+                            <i class="fa-solid fa-coffee"></i> Let's Connect Over Coffee
+                        </a>
+                    </div>
+                </div>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.2rem;">
+                    <div style="background:var(--bg-dark-surface); padding:1.8rem; border-radius:var(--radius-md); border:1px solid var(--border-dark);">
+                        <div style="font-family:var(--font-heading); font-size:2.2rem; font-weight:700; color:var(--accent-gold); margin-bottom:0.2rem;">18+ Yrs</div>
+                        <div style="font-size:0.95rem; font-weight:700; color:#ffffff; margin-bottom:0.4rem;">Community Heritage</div>
+                        <p style="font-size:0.8rem; color:#cbd5e1; line-height:1.5;">Guiding multiple generations of families into their dream homes.</p>
+                    </div>
+
+                    <div style="background:var(--bg-dark-surface); padding:1.8rem; border-radius:var(--radius-md); border:1px solid var(--border-dark);">
+                        <div style="font-family:var(--font-heading); font-size:2.2rem; font-weight:700; color:#4ade80; margin-bottom:0.2rem;">$420M+</div>
+                        <div style="font-size:0.95rem; font-weight:700; color:#ffffff; margin-bottom:0.4rem;">Suburban Sales Volume</div>
+                        <p style="font-size:0.8rem; color:#cbd5e1; line-height:1.5;">Across our 6 signature suburban neighborhoods.</p>
+                    </div>
+
+                    <div style="background:var(--bg-dark-surface); padding:1.8rem; border-radius:var(--radius-md); border:1px solid var(--border-dark);">
+                        <div style="font-family:var(--font-heading); font-size:2.2rem; font-weight:700; color:#ffffff; margin-bottom:0.2rem;">100%</div>
+                        <div style="font-size:0.95rem; font-weight:700; color:#ffffff; margin-bottom:0.4rem;">Fiduciary Family Care</div>
+                        <p style="font-size:0.8rem; color:#cbd5e1; line-height:1.5;">Zero corporate pressure. We work entirely at your pace.</p>
+                    </div>
+
+                    <div style="background:var(--bg-dark-surface); padding:1.8rem; border-radius:var(--radius-md); border:1px solid var(--border-dark);">
+                        <div style="font-family:var(--font-heading); font-size:2.2rem; font-weight:700; color:var(--accent-gold); margin-bottom:0.2rem;">10%</div>
+                        <div style="font-size:0.95rem; font-weight:700; color:#ffffff; margin-bottom:0.4rem;">School Program Giving</div>
+                        <p style="font-size:0.8rem; color:#cbd5e1; line-height:1.5;">Of our profits re-invested directly into local public school grants.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =======================================================================
+         MODAL 1: HOME DETAIL VIEW
+         ======================================================================= -->
+    <div class="modal-overlay" id="homeDetailModal">
+        <div class="modal-dialog">
+            <button class="modal-close-btn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            <span class="badge-pill green" style="margin-bottom:0.8rem;">Oak & Ivy Featured Listing</span>
+            <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:0.3rem;">
+                <h2 id="modalHomeTitle" class="heading-serif" style="font-size:1.8rem; color:var(--text-main);">Home Title</h2>
+                <div id="modalHomePrice" class="heading-serif" style="font-size:1.8rem; color:var(--primary); font-weight:700;">$1,385,000</div>
+            </div>
+            <div id="modalHomeAddress" style="font-size:0.9rem; color:var(--text-muted); margin-bottom:1.5rem;">Address, Neighborhood</div>
+
+            <div style="height:240px; border-radius:var(--radius-sm); overflow:hidden; margin-bottom:1.5rem; border:1px solid var(--border);">
+                <img id="modalHomeImage" src="" alt="Home Photo" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+
+            <p id="modalHomeDesc" style="font-size:0.92rem; color:var(--text-muted); line-height:1.65; margin-bottom:1.5rem;">Description</p>
+
+            <h4 style="font-size:1rem; font-weight:700; margin-bottom:0.6rem; color:var(--text-main);">Property Specifications & School Attendance:</h4>
+            <table class="modal-specs-table" id="modalHomeSpecsTable" style="width:100%; border-collapse:collapse; margin-bottom:1.5rem; font-size:0.88rem;">
+                <!-- Populated by JS -->
+            </table>
+
+            <h4 style="font-size:1rem; font-weight:700; margin-bottom:0.6rem; color:var(--text-main);">Highlighted Family Features:</h4>
+            <ul id="modalHomeFeaturesList" style="list-style:none; display:flex; flex-direction:column; gap:8px; margin-bottom:1.8rem; font-size:0.88rem;">
+                <!-- Populated by JS -->
+            </ul>
+
+            <div style="background:var(--bg-subtle); padding:1.2rem; border-radius:var(--radius-sm); border:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-bottom:1.5rem;">
+                <div>
+                    <div style="font-size:0.75rem; text-transform:uppercase; color:var(--text-light); font-weight:700;">Listing Specialist</div>
+                    <div id="modalAgentName" style="font-weight:700; color:var(--text-main);">Clara Hawthorne</div>
+                </div>
+                <div style="display:flex; gap:8px;">
+                    <a id="modalAgentPhone" href="" class="btn btn-outline btn-sm"><i class="fa-solid fa-phone"></i> Call</a>
+                    <a id="modalAgentEmail" href="" class="btn btn-primary btn-sm"><i class="fa-solid fa-envelope"></i> Email</a>
+                </div>
+            </div>
+
+            <button class="btn btn-primary" id="modalBookTourDirectBtn" style="width:100%; padding:13px;">
+                <i class="fa-solid fa-calendar-check"></i> Schedule a Private Showing for This Home
+            </button>
+        </div>
+    </div>
+
+    <!-- =======================================================================
+         MODAL 2: SCHEDULE PRIVATE SHOWING
+         ======================================================================= -->
+    <div class="modal-overlay" id="tourModal">
+        <div class="modal-dialog" style="max-width: 560px;">
+            <button class="modal-close-btn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            <span class="badge-pill green">Private Showing</span>
+            <h2 class="heading-serif" style="font-size:1.7rem; margin-bottom:0.4rem;">Schedule a Home Tour</h2>
+            <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:1.5rem;">
+                We’ll coordinate a private walkthrough around your family schedule, complete with school zone packets and neighborhood comps.
+            </p>
+
+            <form id="tourForm">
+                <div style="margin-bottom:1rem;">
+                    <label class="filter-group" style="margin-bottom:4px; font-weight:700; font-size:0.82rem;" for="tourTargetHome">Selected Home</label>
+                    <input type="text" id="tourTargetHome" class="filter-control" readonly style="font-weight:700; background:var(--bg-subtle);">
+                </div>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1rem;">
+                    <div>
+                        <label class="filter-group" style="margin-bottom:4px; font-weight:700; font-size:0.82rem;" for="tName">Your Full Name *</label>
+                        <input type="text" id="tName" class="filter-control" placeholder="Eleanor Vance" required>
+                    </div>
+                    <div>
+                        <label class="filter-group" style="margin-bottom:4px; font-weight:700; font-size:0.82rem;" for="tPhone">Phone Number *</label>
+                        <input type="tel" id="tPhone" class="filter-control" placeholder="+1 (555) 000-0000" required>
+                    </div>
+                </div>
+
+                <div style="margin-bottom:1rem;">
+                    <label class="filter-group" style="margin-bottom:4px; font-weight:700; font-size:0.82rem;" for="tEmail">Email Address *</label>
+                    <input type="email" id="tEmail" class="filter-control" placeholder="eleanor@example.com" required>
+                </div>
+
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.5rem;">
+                    <div>
+                        <label class="filter-group" style="margin-bottom:4px; font-weight:700; font-size:0.82rem;" for="tDate">Preferred Date *</label>
+                        <input type="date" id="tDate" class="filter-control" required>
+                    </div>
+                    <div>
+                        <label class="filter-group" style="margin-bottom:4px; font-weight:700; font-size:0.82rem;" for="tTime">Time Window</label>
+                        <select id="tTime" class="filter-control">
+                            <option value="morning">Morning (9am – 12pm)</option>
+                            <option value="afternoon" selected>Afternoon (1pm – 4pm)</option>
+                            <option value="evening">Twilight (5pm – 6:30pm)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width:100%; padding:13px;">
+                    <i class="fa-solid fa-calendar-check"></i> Request Showing Appointment
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- =======================================================================
+         MODAL 3: THANK YOU CONFIRMATION
+         ======================================================================= -->
+    <div class="modal-overlay" id="thankYouModal">
+        <div class="modal-dialog" style="max-width: 480px; text-align:center; padding:3rem 2rem;">
+            <div style="width:64px; height:64px; background:var(--primary-soft); color:var(--primary); border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.8rem; margin:0 auto 1.2rem;">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+            <h2 class="heading-serif" style="font-size:1.8rem; margin-bottom:0.6rem;">Thank You!</h2>
+            <p style="color:var(--text-muted); font-size:0.92rem; line-height:1.6; margin-bottom:1.8rem;">
+                Your request has been received by the Oak & Ivy advisory team. Clara or Thomas will reach out personally to confirm details and provide your neighborhood packet.
+            </p>
+            <button class="btn btn-primary modal-close-trigger" style="min-width:160px;">
+                Return to Site
+            </button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div style="display:flex; align-items:center; gap:10px; margin-bottom:1rem;">
+                        <div class="brand-mark" style="background:var(--accent-warm);"><i class="fa-solid fa-leaf"></i></div>
+                        <h3 style="margin:0; font-size:1.4rem;">Oak & Ivy Property Group</h3>
+                    </div>
+                    <p>
+                        A boutique residential real estate brokerage dedicated to helping families find their forever homes in top school districts and welcoming suburban communities.
+                    </p>
+                    <div style="font-size:0.8rem; color:#94a3b8;">
+                        Main Office: 140 Village Square, Suite 200, Oakridge<br>
+                        Brokerage Desk: +1 (555) 234-5678
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Neighborhoods</h4>
+                    <ul class="footer-links">
+                        <li><a href="#neighborhoodsSection">Oakridge Estates</a></li>
+                        <li><a href="#neighborhoodsSection">Ivy Creek Valley</a></li>
+                        <li><a href="#neighborhoodsSection">Foxglove Meadows</a></li>
+                        <li><a href="#neighborhoodsSection">Willowbrook Park</a></li>
+                        <li><a href="#neighborhoodsSection">Silverleaf Heights</a></li>
+                        <li><a href="#neighborhoodsSection">Heron Point Lakefront</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Family Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="#homesSection">25 Active Homes</a></li>
+                        <li><a href="#buyersGuideSection">Family Buyer's Guide</a></li>
+                        <li><a href="#sellersGuideSection">Home Seller's Guide</a></li>
+                        <li><a href="#mortgageSection">Mortgage Calculator</a></li>
+                        <li><a href="#sellFormSection">Free CMA Valuation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Brokerage</h4>
+                    <ul class="footer-links">
+                        <li><a href="#agentsSection">Our Boutique Team</a></li>
+                        <li><a href="#aboutSection">About Oak & Ivy</a></li>
+                        <li><a href="#sellFormSection">Schedule Consultation</a></li>
+                        <li><a href="../index.html">Developer Portfolio Hub</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Oak & Ivy Property Group LLC. All Rights Reserved. Equal Housing Opportunity.</p>
+                <p>Designed & Developed by <a href="https://www.instagram.com/gchoyal_websitedeveloper/" target="_blank" class="author-link">Girdhari Choyal (@gchoyal_websitedeveloper)</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="app.js"></script>
+</body>
+</html>
